@@ -1,7 +1,7 @@
-import { ExternalLink, Mail } from "lucide-react";
+import {  Mail } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
-export default function SiteFooter({ navItems, onNavigate, onBook, socialLinks, faqUrl }) {
+export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
   const [footerRef, footerVisible] = useScrollReveal();
 
   return (
@@ -31,7 +31,7 @@ export default function SiteFooter({ navItems, onNavigate, onBook, socialLinks, 
 
           {/* Navigation */}
           <div>
-            <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/40 mb-6">
+            <h5 className="text-xs font-semibold  tracking-[0.25em] text-offwhite/40 mb-6">
               Navigation
             </h5>
             <nav className="space-y-3" aria-label="Footer navigation">
@@ -44,19 +44,10 @@ export default function SiteFooter({ navItems, onNavigate, onBook, socialLinks, 
                   {item.label}
                 </button>
               ))}
-              <a
-                href={faqUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-1 py-0.5"
-              >
-                FAQ
-                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-              </a>
+             
             </nav>
           </div>
 
-          {/* Contact */}
           <div>
             <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/40 mb-6">
               Contact

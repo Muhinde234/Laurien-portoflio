@@ -47,8 +47,7 @@ export default function HeroSection({ onBook, onNavigate }) {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          I partner with emerging authors, schools, and mission-driven organizations
-          who are committed — not curious — about producing results that hold.
+        I help emerging authors, schools, parents, and mission-driven organizations who are serious and ready to have their desired goals achieved. 
         </p>
 
         {/* CTAs */}

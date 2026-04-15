@@ -59,14 +59,14 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
                 alt="Coach Laurien"
                 className="w-11 h-11 rounded-full object-cover object-top border-2 border-champagne/40 shadow-md shadow-champagne/10"
               />
-              {/* Live / online dot */}
+           
               <span
                 className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-champagne rounded-full border-2 border-navy"
                 aria-hidden="true"
               />
             </div>
 
-            {/* Wordmark */}
+        
             <div>
               <h1
                 className="font-display text-xl font-semibold text-champagne leading-none tracking-wide cursor-default select-none"
@@ -74,9 +74,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
               >
                 Coach Laurien
               </h1>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-offwhite/30 mt-0.5 leading-none">
-                Youth Development &amp; Author Coach
-              </p>
+             
             </div>
           </div>
 

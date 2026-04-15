@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ExternalLink, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 import { useScrollLock } from "../../hooks/useScrollLock";
 import laurienPhoto from "../../assets/laurien.jpeg";
 
-export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
+export default function SiteHeader({ navItems, onNavigate, onBook }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -131,15 +131,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
                 {item.label}
               </button>
             ))}
-            <a
-              href={faqUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full font-display text-2xl font-light text-offwhite/70 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded py-3 px-2 border-b border-champagne/8 inline-flex items-center gap-2"
-            >
-              FAQ
-              <ExternalLink className="w-4 h-4" aria-hidden="true" />
-            </a>
+           
 
             <button
               onClick={() => {

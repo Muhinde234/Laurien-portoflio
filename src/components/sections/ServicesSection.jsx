@@ -182,7 +182,7 @@ export default function ServicesSection({ onBook }) {
                     <div className="mt-auto pt-2">
                       <button
                         onClick={onBook}
-                        className="group/btn w-full flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-xl hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+                        className="group/btn w-full flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
                       >
                         <span className="text-sm">{service.cta}</span>
                         <span className="w-7 h-7 rounded-full bg-navy/15 flex items-center justify-center group-hover/btn:bg-navy/20 transition-colors">

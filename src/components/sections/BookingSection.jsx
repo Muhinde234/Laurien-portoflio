@@ -124,7 +124,7 @@ export default function BookingSection({ onBook }) {
                   {/* Primary CTA */}
                   <button
                     onClick={onBook}
-                    className="group flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-xl hover:bg-champagne-light transition-colors duration-300 gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+                    className="group flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
                     aria-label="Book a consultation call"
                   >
                     <span className="text-sm">Book a Consultation</span>

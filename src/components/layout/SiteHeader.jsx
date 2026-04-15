@@ -89,15 +89,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
                 {item.label}
               </button>
             ))}
-            <a
-              href={faqUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm inline-flex items-center gap-1.5 text-offwhite/55 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-1 py-1"
-            >
-              FAQ
-              <ExternalLink className="w-3 h-3" aria-hidden="true" />
-            </a>
+          
             <button
               onClick={onBook}
               className="bg-champagne text-navy text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
@@ -107,7 +99,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
             </button>
           </div>
 
-          {/* ── Mobile menu toggle ── */}
+   
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-offwhite/55 hover:text-champagne rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-champagne/40"

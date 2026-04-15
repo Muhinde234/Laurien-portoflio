@@ -5,99 +5,166 @@ import { profileImages } from "../../data/siteData";
 export default function AboutSection({ onBook }) {
   const [aboutRef, aboutVisible] = useScrollReveal();
 
+  const values = [
+    { num: "01", text: "Depth over hesitation" },
+    { num: "02", text: "Discipline over shortcuts" },
+    { num: "03", text: "Excellence over convenience" },
+  ];
+
   return (
     <section
       ref={aboutRef}
       id="about"
-      className={`py-28 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
+      className={`py-24 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
       aria-labelledby="about-heading"
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      {/* Subtle section tint */}
+      <div className="absolute inset-0 bg-navy-light/20 pointer-events-none" aria-hidden="true" />
 
-        {/* Photo */}
-        <article className="relative">
-          <div className="relative overflow-hidden rounded-2xl border border-champagne/15 shadow-2xl shadow-navy/80">
-            <div className="aspect-4/5 bg-navy-light">
-              <img
-                src={profileImages.laurien}
-                alt="Coach Laurien"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover"
+      <div className="max-w-6xl mx-auto relative z-10">
+
+        {/* Section label — top of section, full width */}
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-14">
+          About Coach Laurien
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+          {/* ── LEFT: Photo ── */}
+          <div className="relative">
+
+            {/* Offset decorative frame behind image */}
+            <div
+              className="absolute top-6 left-6 w-full h-full border border-champagne/15 rounded-2xl -z-10"
+              aria-hidden="true"
+            />
+
+            {/* Photo card */}
+            <div className="relative overflow-hidden rounded-2xl border border-champagne/20 shadow-2xl shadow-navy">
+              <div className="aspect-3/4 bg-navy-light">
+                <img
+                  src={profileImages.laurien}
+                  alt="Coach Laurien"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              {/* Gradient fade at bottom for badge legibility */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-navy/85 to-transparent pointer-events-none"
+                aria-hidden="true"
               />
+
+              {/* Floating badge inside photo */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
+                <div>
+                  <p className="font-display text-lg font-semibold text-champagne leading-none">
+                    Coach Laurien
+                  </p>
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-offwhite/50 mt-1.5">
+                    Founder, KELP Education
+                  </p>
+                </div>
+                {/* Decorative corner mark */}
+                <div className="flex flex-col items-end gap-1" aria-hidden="true">
+                  <div className="w-8 h-px bg-champagne/40" />
+                  <div className="w-4 h-px bg-champagne/25" />
+                </div>
+              </div>
             </div>
-            {/* Subtle champagne overlay on hover */}
-            <div className="absolute inset-0 bg-champagne/5 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"></div>
-          </div>
-          {/* Decorative accent */}
-          <div
-            className="absolute -bottom-4 -right-4 w-24 h-24 border border-champagne/20 rounded-2xl -z-10"
-            aria-hidden="true"
-          ></div>
-        </article>
 
-        {/* Content */}
-        <div className="space-y-7">
-          {/* Label */}
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-champagne/70">
-            About Coach Laurien
-          </p>
-
-          {/* Headline */}
-          <h3
-            id="about-heading"
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-offwhite leading-[1.1]"
-          >
-            This is not <br />
-            <span className="italic text-champagne">motivational coaching.</span>
-          </h3>
-
-          {/* Pull quote */}
-          <p className="font-display text-lg italic text-offwhite/50 leading-relaxed border-l-2 border-champagne/30 pl-4">
-            It is structured, precise, hands-on work — built to produce outcomes that hold over time.
-          </p>
-
-          {/* Body copy */}
-          <div className="space-y-4 text-offwhite/60 leading-relaxed">
-            <p>
-              I am a youth development and emerging authors' coach, and the founder of KELP Education.
-             My work is positioned at a premium level because it is deep, hands-on, and has a sustained impact. I partner with clients through focused and collaborative engagements designed to achieve precision, clarity, and meaningful outcomes.
-            </p>
-            <p>
-            I am not a motivational coach; rather, I protect standards, strengthen thinking, and ensure that I serve with integrity and excellence.
-            </p>
+            {/* Stat pill below photo */}
+            <div className="mt-5 flex items-center gap-3 px-5 py-3.5 bg-navy border border-champagne/12 rounded-xl w-fit">
+              <span className="w-2 h-2 rounded-full bg-champagne animate-pulse shrink-0" aria-hidden="true" />
+              <p className="text-xs text-offwhite/50">
+                Accepting new clients &nbsp;·&nbsp;
+                <span className="text-champagne/70">Author Coaching &amp; School Programs</span>
+              </p>
+            </div>
           </div>
 
-          {/* Values */}
-          <div>
-            <p className="text-sm font-medium text-offwhite/80 mb-4">
-              Clients come to me when they have decided to prioritize:
-            </p>
-            <ul className="space-y-3">
-              {[
-                "Depth over hesitation",
-                "Discipline over shortcuts",
-                "Excellence over convenience",
-              ].map((value) => (
-                <li key={value} className="flex items-center gap-3 text-offwhite/60">
-                  <span className="w-1.5 h-1.5 rounded-full bg-champagne shrink-0" aria-hidden="true"></span>
-                  {value}
-                </li>
-              ))}
-            </ul>
-            <p>From book development to youth programs and school speaking, I guide clients through a structured process that moves from raw level to credible impact.
-Whether you are writing your first book, developing educational content, or engaging learners through presentations and programs, I am your right helper.
-</p>
-          </div>
+          {/* ── RIGHT: Content ── */}
+          <div className="flex flex-col gap-8 pt-2">
 
-          {/* CTA */}
-          <button
-            onClick={onBook}
-            className="group mt-4 bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
-          >
-           Book Me
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-          </button>
+            {/* Headline */}
+            <h3
+              id="about-heading"
+              className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-light text-offwhite leading-[1.08]"
+            >
+              This is not <br />
+              <span className="italic text-champagne">motivational coaching.</span>
+            </h3>
+
+            {/* Pull quote */}
+            <blockquote className="border-l-2 border-champagne/35 pl-5">
+              <p className="font-display text-lg italic text-offwhite/50 leading-relaxed">
+                It is structured, precise, hands-on work — built to produce outcomes that hold over time.
+              </p>
+            </blockquote>
+
+            {/* Body paragraphs */}
+            <div className="space-y-4 text-sm text-offwhite/55 leading-[1.9]">
+              <p>
+                I am a youth development and emerging authors' coach and the founder of KELP Education.
+                My work is positioned at a premium level because it is deep, hands-on, and has a sustained impact.
+                I partner with clients through focused and collaborative engagements designed to achieve
+                precision, clarity, and meaningful outcomes.
+              </p>
+              <p>
+                I am not a motivational coach; rather, I protect standards, strengthen thinking, and
+                ensure that I serve with integrity and excellence.
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div className="flex items-center gap-4" aria-hidden="true">
+              <div className="h-px flex-1 bg-champagne/10" />
+              <div className="w-1.5 h-1.5 rounded-full bg-champagne/30" />
+              <div className="h-px w-8 bg-champagne/10" />
+            </div>
+
+            {/* Values */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/35 mb-5">
+                Clients come to me when they have decided to prioritize:
+              </p>
+              <ul className="space-y-4">
+                {values.map(({ num, text }) => (
+                  <li key={num} className="flex items-center gap-5">
+                    <span className="font-display text-xs italic text-champagne/40 shrink-0 w-5">
+                      {num}
+                    </span>
+                    <div className="h-px w-5 bg-champagne/20 shrink-0" aria-hidden="true" />
+                    <span className="text-sm text-offwhite/65 font-medium">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-champagne/10" aria-hidden="true" />
+
+            {/* Closing statement */}
+            <p className="font-display text-base italic text-offwhite/40 leading-relaxed">
+              From book development to youth programs and school speaking, I guide clients through
+              a structured process that moves from raw level to credible impact. Whether you are
+              writing your first book, developing educational content, or engaging learners through
+              presentations and programs — I am your right helper.
+            </p>
+
+            {/* CTA */}
+            <div>
+              <button
+                onClick={onBook}
+                className="group bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+              >
+                Book Me
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

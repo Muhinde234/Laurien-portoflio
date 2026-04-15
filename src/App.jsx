@@ -7,7 +7,6 @@ import BookingSection from "./components/sections/BookingSection";
 import FeaturedStrip from "./components/sections/FeaturedStrip";
 import HeroSection from "./components/sections/HeroSection";
 import ServicesSection from "./components/sections/ServicesSection";
-import TestimonialsSection from "./components/sections/TestimonialsSection";
 import { CALENDLY_URL, CHATBASE_ID, FAQ_URL, navItems, socialLinks } from "./data/siteData";
 import { useChatbase } from "./hooks/useChatbase";
 
@@ -41,7 +40,6 @@ export default function Portfolio() {
         <FeaturedStrip />
         <AboutSection onBook={openCalendly} />
         <ServicesSection onBook={openCalendly} />
-        <TestimonialsSection onBook={openCalendly} />
         <BookingSection onBook={openCalendly} />
       </main>
 

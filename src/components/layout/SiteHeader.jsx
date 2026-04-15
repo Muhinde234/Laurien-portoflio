@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, ExternalLink, Menu, X } from "lucide-react";
+import { ExternalLink, Menu, X } from "lucide-react";
 import { useScrollLock } from "../../hooks/useScrollLock";
 
 export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
@@ -26,9 +26,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
-      if (rafId) {
-        window.cancelAnimationFrame(rafId);
-      }
+      if (rafId) window.cancelAnimationFrame(rafId);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -42,22 +40,29 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
     <header>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "bg-slate-900/90 md:backdrop-blur-lg md:shadow-2xl md:shadow-blue-500/10" : ""
+          scrolled
+            ? "bg-navy/95 border-b border-champagne/10 shadow-lg shadow-navy/50"
+            : ""
         }`}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-clip-text text-transparent animate-gradient bg-300%">
-            Laurien
+          {/* Wordmark */}
+          <h1
+            className="font-display text-2xl font-semibold text-champagne tracking-wide cursor-default select-none"
+            aria-label="Coach Laurien"
+          >
+            Coach Laurien
           </h1>
 
+          {/* Desktop nav */}
           <div className="hidden md:flex gap-8 items-center">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="hover:text-pink-400 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg px-2 py-1"
+                className="text-sm text-offwhite/60 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-2 py-1"
               >
                 {item.label}
               </button>
@@ -66,27 +71,24 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
               href={faqUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-blue-300 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg px-2 py-1"
+              className="text-sm inline-flex items-center gap-1.5 text-offwhite/60 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-2 py-1"
             >
               FAQ
-              <ExternalLink className="w-4 h-4" aria-hidden="true" />
+              <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
             </a>
             <button
               onClick={onBook}
-              className="relative bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-2.5 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 group overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-              aria-label="Book a consultation call"
+              className="bg-champagne text-navy text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+              aria-label="Book a consultation"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                Book Me
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              Book Me
             </button>
           </div>
 
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="md:hidden p-2 text-offwhite/60 hover:text-champagne rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-champagne/40"
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -94,8 +96,9 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
           </button>
         </div>
 
+        {/* Mobile menu */}
         <div
-          className={`md:hidden fixed inset-0 bg-slate-900/95 backdrop-blur-none md:backdrop-blur-lg z-40 transition-transform duration-300 ${
+          className={`md:hidden fixed inset-0 bg-navy z-40 transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{ top: "80px" }}
@@ -105,7 +108,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="text-2xl hover:text-pink-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400 rounded-lg px-4 py-2"
+                className="font-display text-2xl text-offwhite/70 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-4 py-2"
               >
                 {item.label}
               </button>
@@ -114,7 +117,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
               href={faqUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl hover:text-blue-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg px-4 py-2 inline-flex items-center gap-2"
+              className="font-display text-2xl text-offwhite/70 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-4 py-2 inline-flex items-center gap-2"
             >
               FAQ
               <ExternalLink className="w-5 h-5" aria-hidden="true" />
@@ -124,7 +127,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
                 onBook();
                 setMobileMenuOpen(false);
               }}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-pink-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="bg-champagne text-navy font-semibold px-10 py-4 rounded-full text-lg hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne"
             >
               Book Me
             </button>

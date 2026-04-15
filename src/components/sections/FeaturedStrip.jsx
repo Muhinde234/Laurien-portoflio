@@ -6,20 +6,21 @@ export default function FeaturedStrip() {
   return (
     <section
       ref={featuredRef}
-      className={`py-14 px-6 border-y border-slate-800 bg-slate-900/40 scroll-reveal perf-section ${
+      className={`py-12 px-6 border-y border-champagne/10 scroll-reveal perf-section ${
         featuredVisible ? "visible" : ""
       }`}
-      aria-label="Featured clients"
+      aria-label="Trusted by"
     >
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">
-          Trusted By
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-offwhite/30 shrink-0">
+          Trusted by
         </p>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+        <div className="h-px w-6 bg-champagne/20 hidden sm:block" aria-hidden="true"></div>
+        <div className="flex flex-wrap justify-center gap-3">
           {featuredLogos.map((logo) => (
             <span
               key={logo}
-              className="px-4 py-2 rounded-full border border-slate-700 text-gray-300 text-sm bg-slate-800/40 hover:border-blue-400/50 hover:text-blue-200 transition-colors"
+              className="px-4 py-1.5 text-xs font-medium tracking-wide text-offwhite/45 border border-champagne/12 rounded-full"
             >
               {logo}
             </span>

@@ -110,29 +110,16 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
           </button>
         </div>
 
-        {/* ── Mobile menu ── */}
+      
         <div
           className={`md:hidden fixed inset-0 bg-navy z-40 transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{ top: "72px" }}
         >
-          {/* Mobile menu header with photo */}
-          <div className="flex items-center gap-3 px-6 py-5 border-b border-champagne/10">
-            <img
-              src={laurienPhoto}
-              alt="Coach Laurien"
-              className="w-12 h-12 rounded-full object-cover object-top border-2 border-champagne/40"
-            />
-            <div>
-              <p className="font-display text-lg font-semibold text-champagne leading-none">
-                Coach Laurien
-              </p>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-offwhite/30 mt-1">
-                Where serious work begins.
-              </p>
-            </div>
-          </div>
+        
+        
+          
 
           <div className="flex flex-col items-start px-6 py-8 gap-1">
             {navItems.map((item) => (

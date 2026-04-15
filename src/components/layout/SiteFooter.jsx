@@ -18,7 +18,6 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
 
-          {/* Brand */}
           <div>
             <div className="relative shrink-0">
                          <img
@@ -53,7 +52,7 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
 
        
           <div>
-            <h5 className="text-xs font-semibold  tracking-[0.25em] text-offwhite/40 mb-6">
+            <h5 className="text-lg font-semibold  tracking-[0.25em] text-offwhite/40 mb-6">
               Navigation
             </h5>
             <nav className="space-y-3" aria-label="Footer navigation">

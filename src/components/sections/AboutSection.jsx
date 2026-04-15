@@ -61,12 +61,10 @@ export default function AboutSection({ onBook }) {
           <div className="space-y-4 text-offwhite/60 leading-relaxed">
             <p>
               I am a youth development and emerging authors' coach, and the founder of KELP Education.
-              My engagements are premium because they are deep, collaborative, and designed to
-              achieve precision — not comfort.
+             My work is positioned at a premium level because it is deep, hands-on, and has a sustained impact. I partner with clients through focused and collaborative engagements designed to achieve precision, clarity, and meaningful outcomes.
             </p>
             <p>
-              I don't offer encouragement as a substitute for structure. I challenge weak thinking,
-              raise standards, and hold clients to outcomes that are worth achieving.
+            I am not a motivational coach; rather, I protect standards, strengthen thinking, and ensure that I serve with integrity and excellence.
             </p>
           </div>
 
@@ -87,6 +85,9 @@ export default function AboutSection({ onBook }) {
                 </li>
               ))}
             </ul>
+            <p>From book development to youth programs and school speaking, I guide clients through a structured process that moves from raw level to credible impact.
+Whether you are writing your first book, developing educational content, or engaging learners through presentations and programs, I am your right helper.
+</p>
           </div>
 
           {/* CTA */}
@@ -94,7 +95,7 @@ export default function AboutSection({ onBook }) {
             onClick={onBook}
             className="group mt-4 bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
           >
-            Work With Me
+           Book Me
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
         </div>

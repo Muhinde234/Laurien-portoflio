@@ -48,7 +48,14 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          {/* Wordmark */}
+
+
+      <div className="rounded-full">
+
+      </div>
+         <img 
+         src="src/assets/laurien.ico" 
+         />
           <h1
             className="font-display text-2xl font-semibold text-champagne tracking-wide cursor-default select-none"
             aria-label="Coach Laurien"

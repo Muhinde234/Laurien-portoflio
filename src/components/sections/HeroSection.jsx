@@ -32,13 +32,12 @@ export default function HeroSection({ onBook, onNavigate }) {
 
         {/* Primary headline */}
         <h2
-          className={`font-display text-6xl md:text-8xl lg:text-9xl font-light text-offwhite leading-[1.05] mb-6 transition-all duration-700 delay-100 ${
+          className={`font-display text-5xl md:text-7xl lg:text-8xl font-light text-offwhite leading-[1.1] mb-6 transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Serious Work.
-          <br />
-          <span className="text-champagne italic">Lasting Impact.</span>
+          Hi, I am{" "}
+          <span className="italic text-champagne">Coach Laurien.</span>
         </h2>
 
         {/* Subheadline */}

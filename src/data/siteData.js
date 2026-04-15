@@ -1,15 +1,11 @@
+import { Award, BookOpen, Calendar, Mic, Users } from "lucide-react";
 import {
-  Award,
-  BookOpen,
-  Calendar,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mic,
-  Twitter,
-  Users,
-  Youtube,
-} from "lucide-react";
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+  YouTubeIcon,
+} from "../components/icons/BrandIcons";
 import laurien from "../assets/laurien.jpeg";
 import prof1 from "../assets/prof1.jpg";
 
@@ -27,44 +23,60 @@ export const navItems = [
 export const services = [
   {
     icon: BookOpen,
-    title: "Author Coaching",
+    title: "Author's Coaching",
+    intro: "For authors who want their work to stand,",
     description:
-      "For writers who are serious about the work — not just the idea of writing a book. I provide structured, personalized coaching to help you write with confidence, clarity, and purpose from idea to final draft.",
+      "I provide structured, personalized coaching to help you write with confidence, clarity, authenticity, and purpose—from idea to final draft.",
+    featuresLabel: "Services include:",
     features: [
-      "Manuscript development — Structure and architect your book from the inside out",
-      "Writing mentorship & accountability — Guided progress from concept to publication-ready draft",
-      "Editorial refinement — Precise, honest feedback that strengthens clarity, argument, and tone",
+      "Manuscript development — Architect book ideas into coherent, powerful structures",
+      "Writing mentorship & accountability — Guide you from concept → manuscript → publication readiness",
+      "Editorial refinement and honest and structural feedback designed to elevate the work — Refine language for clarity, credibility, and tone while challenging weak thinking, vague arguments, and unfocused storytelling",
     ],
-    note: "This engagement is for authors committed to producing work of substance — not speed.",
-    cta: "Begin the Work",
+    note: "This service is best suited for authors who are serious about producing work of substance and credibility, rather than speed or volume.",
+    cta: "Book Me",
   },
   {
     icon: Mic,
-    title: "Youth Coaching & School Programs",
+    title: "Youth Coaching",
+    subtitle: "Speaking & Learning programs for Schools and Educational Institutions",
     description:
-      "Speaking and learning programs for schools and institutions building disciplined, capable students — not passive learners.",
+      "Inspiring the next generation through language, literacy, and life skills, building disciplined thinkers, not passive learners.",
+    partnerLabel: "I partner with schools and educational institutions to:",
+    partnerWith: [
+      "Strengthen English proficiency and academic communication",
+      "Develop student confidence and critical thinking in writing and speaking",
+      "Deliver engaging talks and workshops that equip students with learning, academic skills and discipline, communication skills, confidence, vision, and purpose.",
+    ],
+    featuresLabel: "Services Include:",
     features: [
-      "Keynote addresses on literacy, purpose, and academic life",
-      "Masterclasses in literacy, life skills, and academic writing",
-      "Program and curriculum design and development",
+      "Keynote speeches",
+      "Literacy and life-skills masterclasses and workshops",
+      "Learning and purpose talks",
+      "Program and course design and development",
     ],
     focusAreas: [
-      "Stronger learning skills and strategies",
-      "Academic writing mastery",
+      "Better learning skills and strategies",
+      "Literacy & academic writing mastery",
       "Critical thinking and expression",
-      "Career clarity and communication",
+      "Career clarity and communication skills",
       "Life skills through language",
     ],
-    cta: "Invite Me to Your Institution",
+    suitedFor: [
+      "Structure",
+      "High standards",
+      "Long-term student development",
+    ],
+    cta: "Invite me to your school or institution",
   },
 ];
 
 export const socialLinks = [
-  { icon: Linkedin, url: "https://linkedin.com/in/your-profile", label: "LinkedIn" },
-  { icon: Twitter, url: "https://twitter.com/your-profile", label: "Twitter" },
-  { icon: Facebook, url: "https://facebook.com/your-profile", label: "Facebook" },
-  { icon: Instagram, url: "https://instagram.com/your-profile", label: "Instagram" },
-  { icon: Youtube, url: "https://youtube.com/@your-channel", label: "YouTube" },
+  { icon: LinkedInIcon, url: "https://linkedin.com/in/your-profile", label: "LinkedIn" },
+  { icon: XIcon, url: "https://twitter.com/your-profile", label: "X (Twitter)" },
+  { icon: FacebookIcon, url: "https://facebook.com/your-profile", label: "Facebook" },
+  { icon: InstagramIcon, url: "https://instagram.com/your-profile", label: "Instagram" },
+  { icon: YouTubeIcon, url: "https://youtube.com/@your-channel", label: "YouTube" },
 ];
 
 export const testimonials = [

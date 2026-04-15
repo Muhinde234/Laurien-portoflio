@@ -78,7 +78,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
             </div>
           </div>
 
-          {/* ── Desktop nav ── */}
+        
           <div className="hidden md:flex gap-7 items-center">
             {navItems.map((item) => (
               <button

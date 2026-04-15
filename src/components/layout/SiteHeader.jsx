@@ -52,7 +52,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook, faqUrl }) {
 
          
           <div className="flex items-center gap-3">
-            {/* Circular profile photo */}
+           
             <div className="relative shrink-0">
               <img
                 src={laurienPhoto}

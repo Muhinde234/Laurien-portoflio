@@ -1,5 +1,7 @@
 import {  Mail } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import laurienPhoto from "../../assets/laurien.jpeg";
+
 
 export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
   const [footerRef, footerVisible] = useScrollReveal();
@@ -18,9 +20,29 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
 
           {/* Brand */}
           <div>
-            <h4 className="font-display text-3xl font-semibold text-champagne mb-3">
-              Coach Laurien
-            </h4>
+            <div className="relative shrink-0">
+                         <img
+                           src={laurienPhoto}
+                           alt="Coach Laurien"
+                           className="w-11 h-11 rounded-full object-cover object-top border-2 border-champagne/40 shadow-md shadow-champagne/10"
+                         />
+                      
+                         <span
+                           className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-champagne rounded-full border-2 border-navy"
+                           aria-hidden="true"
+                         />
+                       </div>
+           
+                   
+                       <div>
+                         <h1
+                           className="font-display text-xl font-semibold text-champagne leading-none tracking-wide cursor-default select-none"
+                           aria-label="Coach Laurien"
+                         >
+                           Coach Laurien
+                         </h1>
+                        
+                       </div>
             <p className="text-xs uppercase tracking-[0.25em] text-offwhite/30 mb-5">
               Where serious work begins.
             </p>
@@ -29,7 +51,7 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
             </p>
           </div>
 
-          {/* Navigation */}
+       
           <div>
             <h5 className="text-xs font-semibold  tracking-[0.25em] text-offwhite/40 mb-6">
               Navigation

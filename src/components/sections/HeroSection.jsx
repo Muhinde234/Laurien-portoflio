@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { useContent } from "../../context/ContentContext";
 
 export default function HeroSection({ onBook, onNavigate }) {
   const [heroRef, heroRevealed] = useScrollReveal();
   const [visible, setVisible] = useState(false);
+  const { content } = useContent();
+  const h = content.hero;
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 100);
@@ -27,7 +30,7 @@ export default function HeroSection({ onBook, onNavigate }) {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Youth Development &amp; Author Coach &nbsp;·&nbsp; Founder, KELP Education
+          {h.label}
         </p>
 
         {/* Primary headline */}
@@ -36,8 +39,8 @@ export default function HeroSection({ onBook, onNavigate }) {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Hi, I am{" "}
-          <span className="italic text-champagne">Coach Laurien.</span>
+          {h.headlineStart}{" "}
+          <span className="italic text-champagne">{h.headlineHighlight}</span>
         </h2>
 
         {/* Subheadline */}
@@ -46,7 +49,7 @@ export default function HeroSection({ onBook, onNavigate }) {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-        I help emerging authors, schools, parents, and mission-driven organizations who are serious and ready to have their desired goals achieved. 
+          {h.subheadline}
         </p>
 
         {/* CTAs */}
@@ -59,14 +62,14 @@ export default function HeroSection({ onBook, onNavigate }) {
             onClick={onBook}
             className="group bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
           >
-            Begin the Work
+            {h.primaryCta}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
           <button
             onClick={() => onNavigate("services")}
             className="border border-champagne/25 text-offwhite/70 font-medium px-8 py-4 rounded-full hover:border-champagne/50 hover:text-champagne transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 focus:ring-offset-2 focus:ring-offset-navy"
           >
-            Explore Services
+            {h.secondaryCta}
           </button>
         </div>
 
@@ -78,7 +81,7 @@ export default function HeroSection({ onBook, onNavigate }) {
         >
           <div className="h-px w-16 bg-champagne/20"></div>
           <p className="text-xs tracking-[0.25em] uppercase text-offwhite/30 font-medium">
-            Where serious work begins
+            {h.tagline}
           </p>
           <div className="h-px w-16 bg-champagne/20"></div>
         </div>

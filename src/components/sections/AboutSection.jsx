@@ -1,15 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { useContent } from "../../context/ContentContext";
 import { profileImages } from "../../data/siteData";
 
 export default function AboutSection({ onBook }) {
   const [aboutRef, aboutVisible] = useScrollReveal();
+  const { content } = useContent();
+  const a = content.about;
 
-  const values = [
-    { num: "01", text: "Depth over hesitation" },
-    { num: "02", text: "Discipline over shortcuts" },
-    { num: "03", text: "Excellence over convenience" },
-  ];
+  const values = a.values.map((text, i) => ({
+    num: String(i + 1).padStart(2, "0"),
+    text,
+  }));
 
   return (
     <section
@@ -25,7 +27,7 @@ export default function AboutSection({ onBook }) {
 
         {/* Section label — top of section, full width */}
         <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-14">
-          About Coach Laurien
+          {a.label}
         </p>
 
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -53,7 +55,7 @@ export default function AboutSection({ onBook }) {
 
               {/* Gradient fade at bottom for badge legibility */}
               <div
-                className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-navy/85 to-transparent pointer-events-none"
+                className="absolute bottom-0 left-0 right-0 h-36 bg-linear-to-t from-navy/85 to-transparent pointer-events-none"
                 aria-hidden="true"
               />
 
@@ -78,10 +80,7 @@ export default function AboutSection({ onBook }) {
             {/* Stat pill below photo */}
             <div className="mt-5 flex items-center gap-3 px-5 py-3.5 bg-navy border border-champagne/12 rounded-xl w-fit">
               <span className="w-2 h-2 rounded-full bg-champagne animate-pulse shrink-0" aria-hidden="true" />
-              <p className="text-xs text-offwhite/50">
-                Accepting new clients &nbsp;·&nbsp;
-                <span className="text-champagne/70">Author Coaching &amp; School Programs</span>
-              </p>
+              <p className="text-xs text-offwhite/50">{a.statusPill}</p>
             </div>
           </div>
 
@@ -93,29 +92,21 @@ export default function AboutSection({ onBook }) {
               id="about-heading"
               className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-light text-offwhite leading-[1.08]"
             >
-              This is not <br />
-              <span className="italic text-champagne">motivational coaching.</span>
+              {a.headlineStart} <br />
+              <span className="italic text-champagne">{a.headlineHighlight}</span>
             </h3>
 
             {/* Pull quote */}
             <blockquote className="border-l-2 border-champagne/35 pl-5">
               <p className="font-display text-lg italic text-offwhite/50 leading-relaxed">
-                It is structured, precise, hands-on work — built to produce outcomes that hold over time.
+                {a.quote}
               </p>
             </blockquote>
 
             {/* Body paragraphs */}
             <div className="space-y-4 text-sm text-offwhite/55 leading-[1.9]">
-              <p>
-                I am a youth development and emerging authors' coach and the founder of KELP Education.
-                My work is positioned at a premium level because it is deep, hands-on, and has a sustained impact.
-                I partner with clients through focused and collaborative engagements designed to achieve
-                precision, clarity, and meaningful outcomes.
-              </p>
-              <p>
-                I am not a motivational coach; rather, I protect standards, strengthen thinking, and
-                ensure that I serve with integrity and excellence.
-              </p>
+              <p>{a.body1}</p>
+              <p>{a.body2}</p>
             </div>
 
             {/* Divider */}
@@ -128,7 +119,7 @@ export default function AboutSection({ onBook }) {
             {/* Values */}
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/35 mb-5">
-                Clients come to me when they have decided to prioritize:
+                {a.valuesHeading}
               </p>
               <ul className="space-y-4">
                 {values.map(({ num, text }) => (
@@ -148,10 +139,7 @@ export default function AboutSection({ onBook }) {
 
             {/* Closing statement */}
             <p className="font-display text-base italic text-offwhite/40 leading-relaxed">
-              From book development to youth programs and school speaking, I guide clients through
-              a structured process that moves from raw level to credible impact. Whether you are
-              writing your first book, developing educational content, or engaging learners through
-              presentations and programs — I am your right helper.
+              {a.closing}
             </p>
 
             {/* CTA */}
@@ -160,7 +148,7 @@ export default function AboutSection({ onBook }) {
                 onClick={onBook}
                 className="group bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
               >
-                Book Me
+                {a.cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>
             </div>

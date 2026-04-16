@@ -1,8 +1,11 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { featuredLogos } from "../../data/siteData";
+import { useContent } from "../../context/ContentContext";
 
 export default function FeaturedStrip() {
   const [featuredRef, featuredVisible] = useScrollReveal();
+  const { content } = useContent();
+  const logos = content.trustedBy;
+
   return (
     <section
       ref={featuredRef}
@@ -17,7 +20,7 @@ export default function FeaturedStrip() {
         </p>
         <div className="h-px w-6 bg-champagne/20 hidden sm:block" aria-hidden="true"></div>
         <div className="flex flex-wrap justify-center gap-3">
-          {featuredLogos.map((logo) => (
+          {logos.map((logo) => (
             <span
               key={logo}
               className="px-4 py-1.5 text-xs font-medium tracking-wide text-offwhite/45 border border-champagne/12 rounded-full"

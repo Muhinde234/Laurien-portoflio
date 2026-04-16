@@ -7,11 +7,13 @@ import BookingSection from "./components/sections/BookingSection";
 import FeaturedStrip from "./components/sections/FeaturedStrip";
 import HeroSection from "./components/sections/HeroSection";
 import ServicesSection from "./components/sections/ServicesSection";
-import { CALENDLY_URL, CHATBASE_ID, FAQ_URL, navItems, socialLinks } from "./data/siteData";
+import { useContent } from "./context/ContentContext";
+import { CHATBASE_ID, FAQ_URL, navItems } from "./data/siteData";
 import { useChatbase } from "./hooks/useChatbase";
 
 export default function Portfolio() {
   useChatbase({ chatbotId: CHATBASE_ID });
+  const { content } = useContent();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -19,7 +21,7 @@ export default function Portfolio() {
   };
 
   const openCalendly = () => {
-    window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
+    window.open(content.contact.calendlyUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -46,9 +48,6 @@ export default function Portfolio() {
       <SiteFooter
         navItems={navItems}
         onNavigate={scrollToSection}
-        onBook={openCalendly}
-        faqUrl={FAQ_URL}
-        socialLinks={socialLinks}
       />
     </div>
   );

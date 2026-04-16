@@ -1,9 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { services } from "../../data/siteData";
+import { useContent } from "../../context/ContentContext";
+import { services as staticServices } from "../../data/siteData";
 
 export default function ServicesSection({ onBook }) {
   const [servicesRef, servicesVisible] = useScrollReveal();
+  const { content } = useContent();
+
+  // Merge editable text from context with static icons from siteData
+  const services = content.services.map((s, i) => ({
+    ...s,
+    icon: staticServices[i]?.icon,
+  }));
 
   const cardNumbers = ["01", "02"];
 
@@ -47,7 +55,7 @@ export default function ServicesSection({ onBook }) {
               >
                 {/* Top gradient accent line */}
                 <div
-                  className="h-px bg-gradient-to-r from-champagne/50 via-champagne/20 to-transparent"
+                  className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
                   aria-hidden="true"
                 />
 
@@ -64,7 +72,7 @@ export default function ServicesSection({ onBook }) {
                   {/* ── Card top: icon + service number ── */}
                   <div className="flex items-start justify-between mb-8">
                     <div className="w-11 h-11 border border-champagne/20 rounded-xl flex items-center justify-center bg-champagne/5 group-hover:bg-champagne/10 transition-colors duration-300">
-                      <IconComponent className="w-5 h-5 text-champagne/70" />
+                      {IconComponent && <IconComponent className="w-5 h-5 text-champagne/70" />}
                     </div>
                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-champagne/35">
                       Service {num}
@@ -96,7 +104,7 @@ export default function ServicesSection({ onBook }) {
                   </p>
 
                   {/* ── Partner with — Youth Coaching only ── */}
-                  {service.partnerWith && (
+                  {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-7 bg-champagne/[0.04] border border-champagne/10 rounded-xl p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
                         {service.partnerLabel}
@@ -132,7 +140,7 @@ export default function ServicesSection({ onBook }) {
                   </ul>
 
                   {/* ── Focus areas — pills ── */}
-                  {service.focusAreas && (
+                  {service.focusAreas && service.focusAreas.length > 0 && (
                     <div className="mb-7">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
                         Students leave with:
@@ -151,7 +159,7 @@ export default function ServicesSection({ onBook }) {
                   )}
 
                   {/* ── Suited for ── */}
-                  {service.suitedFor && (
+                  {service.suitedFor && service.suitedFor.length > 0 && (
                     <div className="mb-7">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-3">
                         Especially suited for institutions that value:

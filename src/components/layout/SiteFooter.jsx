@@ -1,9 +1,28 @@
 import { Mail } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { useContent } from "../../context/ContentContext";
+import { socialLinks } from "../../data/siteData";
 import laurienPhoto from "../../assets/laurien.jpeg";
 
-export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
+export default function SiteFooter({ navItems, onNavigate }) {
   const [footerRef, footerVisible] = useScrollReveal();
+  const { content } = useContent();
+  const f = content.footer;
+  const email = content.contact.email;
+  const social = content.social;
+
+  // Map context URLs onto the static icon components from siteData
+  const socialWithUrls = socialLinks.map((s) => {
+    const keyMap = {
+      LinkedIn: "linkedin",
+      "X (Twitter)": "x",
+      Facebook: "facebook",
+      Instagram: "instagram",
+      YouTube: "youtube",
+    };
+    const key = keyMap[s.label];
+    return { ...s, url: key ? social[key] : s.url };
+  });
 
   return (
     <footer
@@ -22,15 +41,16 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
               Ready to begin?
             </p>
             <p className="font-display text-3xl md:text-4xl font-light text-offwhite leading-snug">
-              Let's do the work <span className="italic text-champagne">that holds.</span>
+              {f.ctaHeadingStart}{" "}
+              <span className="italic text-champagne">{f.ctaHeadingHighlight}</span>
             </p>
           </div>
           <a
-            href="mailto:hello@coachlaurien.com"
+            href={`mailto:${email}`}
             className="shrink-0 inline-flex items-center gap-2 bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
           >
             <Mail className="w-4 h-4" aria-hidden="true" />
-            hello@coachlaurien.com
+            {email}
           </a>
         </div>
       </div>
@@ -41,7 +61,6 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
 
           {/* Brand column */}
           <div className="md:col-span-1 flex flex-col gap-5">
-            {/* Photo + name */}
             <div className="flex items-center gap-3">
               <div className="relative shrink-0">
                 <img
@@ -64,20 +83,17 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
               </div>
             </div>
 
-          
-            <p className="text-sm text-offwhite/45 leading-relaxed">
-              Youth development and emerging authors' coach.
-              Founder of KELP Education.
+            <p className="text-sm text-offwhite/45 leading-relaxed whitespace-pre-line">
+              {f.bio}
             </p>
 
-            {/* Tagline */}
             <p className="font-display italic text-champagne/50 text-base leading-none">
-              "Where serious work begins."
+              "{f.tagline}"
             </p>
 
             {/* Social links */}
             <div className="flex gap-2 mt-1">
-              {socialLinks.map((social, index) => {
+              {socialWithUrls.map((social, index) => {
                 const Icon = social.icon;
                 return (
                   <a
@@ -120,11 +136,11 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
             </h5>
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:hello@coachlaurien.com"
+                href={`mailto:${email}`}
                 className="inline-flex items-center gap-2 text-sm text-offwhite/50 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
               >
                 <Mail className="w-4 h-4 shrink-0 text-champagne/50" aria-hidden="true" />
-                hello@coachlaurien.com
+                {email}
               </a>
 
               <div className="pt-3 border-t border-champagne/10">
@@ -145,7 +161,7 @@ export default function SiteFooter({ navItems, onNavigate, socialLinks }) {
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.
           </span>
           <span className="font-display italic text-sm text-offwhite/15">
-            Where serious work begins.
+            {f.tagline}
           </span>
         </div>
       </div>

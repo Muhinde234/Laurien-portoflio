@@ -84,7 +84,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="text-sm text-offwhite/55 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded px-1 py-1"
+                className="text-sm text-offwhite/55 hover:text-champagne transition-colors duration-300 focus:outline-none"
               >
                 {item.label}
               </button>
@@ -126,7 +126,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="w-full text-left font-display text-2xl font-light text-offwhite/70 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded py-3 px-2 border-b border-champagne/8"
+                className="w-full text-left font-display text-2xl font-light text-offwhite/70 hover:text-champagne transition-colors duration-300 focus:outline-none py-3 border-b border-champagne/8"
               >
                 {item.label}
               </button>

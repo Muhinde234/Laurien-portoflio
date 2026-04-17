@@ -81,7 +81,7 @@ export default function SettingsEditor({ onLogout }) {
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               placeholder="Enter new password"
-              className="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1B2452]/15 focus:border-[#1B2452] transition"
+              className="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition"
             />
           </Field>
           <Field label="Confirm New Password">
@@ -90,14 +90,14 @@ export default function SettingsEditor({ onLogout }) {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Repeat new password"
-              className="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1B2452]/15 focus:border-[#1B2452] transition"
+              className="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition"
             />
           </Field>
           {passwordError && <p className="text-xs text-red-600">{passwordError}</p>}
           {passwordSaved && <p className="text-xs text-green-600 font-medium">✓ Password updated successfully</p>}
           <button
             onClick={savePassword}
-            className="px-5 py-2 rounded-full bg-[#1B2452] text-[#E8D6B3] text-sm font-semibold hover:bg-[#222B5E] transition"
+            className="px-5 py-2 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition"
           >
             Update Password
           </button>

@@ -27,8 +27,8 @@ export default function AdminLogin({ onLogin }) {
       <div className="w-full max-w-sm">
         {/* Logo / Brand */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1B2452] mb-4">
-            <span className="text-[#E8D6B3] font-serif text-xl font-semibold italic">L</span>
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-navy mb-4">
+            <span className="text-champagne font-serif text-xl font-semibold italic">L</span>
           </div>
           <h1 className="text-2xl font-semibold text-gray-900">Content Manager</h1>
           <p className="text-sm text-gray-500 mt-1">Coach Laurien · KELP Education</p>
@@ -60,7 +60,7 @@ export default function AdminLogin({ onLogin }) {
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full py-3 rounded-xl bg-[#1B2452] text-[#E8D6B3] text-sm font-semibold hover:bg-[#222B5E] disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="w-full py-3 rounded-xl bg-navy text-champagne text-sm font-semibold hover:bg-navy-light disabled:opacity-50 disabled:cursor-not-allowed transition"
             >
               {loading ? "Signing in…" : "Sign In"}
             </button>

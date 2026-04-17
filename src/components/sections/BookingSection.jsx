@@ -22,7 +22,7 @@ export default function BookingSection({ onBook }) {
           {b.label}
         </p>
 
-        {/* ── Main panel ── */}
+       
         <div className="relative rounded-2xl border border-champagne/15 overflow-hidden">
 
           {/* Top gradient accent */}

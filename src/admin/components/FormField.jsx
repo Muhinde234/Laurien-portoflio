@@ -19,7 +19,7 @@ export function Input({ value, onChange, placeholder, className = "" }) {
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className={`w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1B2452]/15 focus:border-[#1B2452] transition ${className}`}
+      className={`w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition ${className}`}
     />
   );
 }
@@ -31,7 +31,7 @@ export function Textarea({ value, onChange, placeholder, rows = 3, className = "
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       rows={rows}
-      className={`w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1B2452]/15 focus:border-[#1B2452] transition resize-none ${className}`}
+      className={`w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition resize-none ${className}`}
     />
   );
 }
@@ -84,7 +84,7 @@ export function ListEditor({ items, onChange, addLabel = "Add item", placeholder
             onChange={(e) => update(idx, e.target.value)}
             placeholder={placeholder}
             rows={item.length > 80 ? 2 : 1}
-            className="flex-1 px-3 py-2 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1B2452]/15 focus:border-[#1B2452] transition resize-none"
+            className="flex-1 px-3 py-2 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition resize-none"
           />
 
           {/* Remove */}
@@ -100,7 +100,7 @@ export function ListEditor({ items, onChange, addLabel = "Add item", placeholder
       <button
         type="button"
         onClick={add}
-        className="flex items-center gap-1.5 text-sm text-[#1B2452] hover:text-[#222B5E] font-medium transition"
+        className="flex items-center gap-1.5 text-sm text-navy hover:text-navy-light font-medium transition"
       >
         <span className="text-base leading-none">+</span> {addLabel}
       </button>
@@ -119,7 +119,7 @@ export function SaveBar({ onSave, saved }) {
       <button
         type="button"
         onClick={onSave}
-        className="px-6 py-2.5 rounded-full bg-[#1B2452] text-[#E8D6B3] text-sm font-semibold hover:bg-[#222B5E] transition"
+        className="px-6 py-2.5 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition"
       >
         Save Changes
       </button>

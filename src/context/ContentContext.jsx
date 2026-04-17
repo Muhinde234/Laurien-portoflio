@@ -163,7 +163,7 @@ export function ContentProvider({ children }) {
         return deepMerge(DEFAULT_CONTENT, JSON.parse(saved));
       }
     } catch {
-      // ignore parse errors
+     
     }
     return DEFAULT_CONTENT;
   });

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useContent } from "../context/ContentContext";
+import laurienPhoto from "../assets/laurien.jpeg";
 
 export default function AdminLogin({ onLogin }) {
   const { content } = useContent();
@@ -27,11 +28,12 @@ export default function AdminLogin({ onLogin }) {
       <div className="w-full max-w-sm">
         {/* Logo / Brand */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-navy mb-4">
-            <span className="text-champagne font-serif text-xl font-semibold italic">L</span>
-          </div>
-          <h1 className="text-2xl font-semibold text-gray-900">Content Manager</h1>
-          <p className="text-sm text-gray-500 mt-1">Coach Laurien · KELP Education</p>
+           <img
+                        src={laurienPhoto}
+                        alt="Coach Laurien"
+                        className="w-11 h-11 rounded-full object-cover object-top border-2 border-champagne/40 shadow-md shadow-champagne/10"
+                      />
+         
         </div>
 
         {/* Card */}

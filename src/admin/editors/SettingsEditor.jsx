@@ -9,6 +9,9 @@ export default function SettingsEditor({ onLogout }) {
   const [photoPreview, setPhotoPreview] = useState(content.profilePhoto || null);
   const [photoSaved, setPhotoSaved] = useState(false);
   const photoInputRef = useRef(null);
+  const [aboutPhotoPreview, setAboutPhotoPreview] = useState(content.aboutPhoto || null);
+  const [aboutPhotoSaved, setAboutPhotoSaved] = useState(false);
+  const aboutPhotoInputRef = useRef(null);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -90,6 +93,30 @@ export default function SettingsEditor({ onLogout }) {
     if (photoInputRef.current) photoInputRef.current.value = "";
   };
 
+  const handleAboutPhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      alert("Please select an image file (JPG, PNG, WebP, etc.)");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (ev) => setAboutPhotoPreview(ev.target.result);
+    reader.readAsDataURL(file);
+  };
+
+  const saveAboutPhoto = () => {
+    updateContent("aboutPhoto", aboutPhotoPreview);
+    setAboutPhotoSaved(true);
+    setTimeout(() => setAboutPhotoSaved(false), 3000);
+  };
+
+  const removeAboutPhoto = () => {
+    setAboutPhotoPreview(null);
+    updateContent("aboutPhoto", null);
+    if (aboutPhotoInputRef.current) aboutPhotoInputRef.current.value = "";
+  };
+
   return (
     <div>
       <div className="p-6 space-y-6">
@@ -104,7 +131,7 @@ export default function SettingsEditor({ onLogout }) {
         <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Profile Photo</p>
           <p className="text-sm text-gray-500">
-            This photo appears across the entire site — header, chatbot, booking section, and more.
+            Small circular photo — appears in the header, chatbot, booking card, and footer.
           </p>
           <div className="flex items-center gap-5">
             <div className="relative shrink-0">
@@ -146,6 +173,56 @@ export default function SettingsEditor({ onLogout }) {
                 Remove Photo
               </button>
               {photoSaved && <p className="text-xs text-green-600 font-medium">✓ Photo saved to all pages</p>}
+            </div>
+          )}
+        </div>
+
+        {/* About Section Photo */}
+        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">About Section Photo</p>
+          <p className="text-sm text-gray-500">
+            Large portrait displayed in the About section. Best as a tall/portrait-oriented image.
+          </p>
+          <div className="flex items-center gap-5">
+            <div className="relative shrink-0">
+              <img
+                src={aboutPhotoPreview || defaultPhoto}
+                alt="About section preview"
+                className="w-16 h-20 rounded-xl object-cover object-top border-2 border-gray-200"
+              />
+              {aboutPhotoPreview && aboutPhotoPreview !== content.aboutPhoto && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white" title="Unsaved" />
+              )}
+            </div>
+            <div className="space-y-2 flex-1">
+              <label className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition cursor-pointer">
+                Choose Photo
+                <input
+                  ref={aboutPhotoInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleAboutPhotoChange}
+                  className="hidden"
+                />
+              </label>
+              <p className="text-xs text-gray-400">JPG, PNG, WebP · Recommended: portrait, at least 600×800px</p>
+            </div>
+          </div>
+          {aboutPhotoPreview && (
+            <div className="flex items-center gap-3 flex-wrap">
+              <button
+                onClick={saveAboutPhoto}
+                className="px-5 py-2 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition"
+              >
+                Save Photo
+              </button>
+              <button
+                onClick={removeAboutPhoto}
+                className="px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:bg-gray-100 transition"
+              >
+                Remove Photo
+              </button>
+              {aboutPhotoSaved && <p className="text-xs text-green-600 font-medium">✓ About photo saved</p>}
             </div>
           )}
         </div>

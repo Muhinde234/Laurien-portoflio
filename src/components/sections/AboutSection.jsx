@@ -1,12 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useContent } from "../../context/ContentContext";
-import { profileImages } from "../../data/siteData";
+import defaultPhoto from "../../assets/laurien.jpeg";
 
 export default function AboutSection({ onBook }) {
   const [aboutRef, aboutVisible] = useScrollReveal();
   const { content } = useContent();
   const a = content.about;
+  const laurienPhoto = content.aboutPhoto || defaultPhoto;
 
   const values = a.values.map((text, i) => ({
     num: String(i + 1).padStart(2, "0"),
@@ -45,7 +46,7 @@ export default function AboutSection({ onBook }) {
             <div className="relative overflow-hidden rounded-2xl border border-champagne/20 shadow-2xl shadow-navy">
               <div className="aspect-3/4 bg-navy-light">
                 <img
-                  src={profileImages.laurien}
+                  src={laurienPhoto}
                   alt="Coach Laurien"
                   loading="lazy"
                   decoding="async"

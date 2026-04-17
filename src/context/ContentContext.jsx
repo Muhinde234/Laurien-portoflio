@@ -133,6 +133,7 @@ export const DEFAULT_CONTENT = {
     adminPassword: "laurien2024",
   },
   profilePhoto: null,
+  aboutPhoto: null,
 };
 
 function deepMerge(defaults, saved) {

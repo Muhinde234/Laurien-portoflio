@@ -30,13 +30,13 @@ export default function AdminLogin({ onLogin }) {
     <div className="min-h-screen
       flex items-center justify-center px-4 relative overflow-hidden">
 
-      {/* Ambient background orbs */}
+    
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-champagne/4 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-64 h-64  rounded-full blur-3xl pointer-events-none" />
 
       <div className="w-full max-w-sm relative z-10">
 
-        {/* ── Brand block ── */}
+       
         <div className="flex flex-col items-center mb-10">
           <div className="relative mb-5">
             <div className="w-20 h-20 rounded-full p-0.5 bg-linear-to-br from-champagne/60 to-champagne/10">
@@ -56,9 +56,9 @@ export default function AdminLogin({ onLogin }) {
           </p>
         </div>
 
-        {/* ── Card ── */}
+       
         <div className="rounded-2xl border border-champagne/15 overflow-hidden">
-          {/* Top accent line */}
+        
           <div className="h-px bg-linear-to-r from-champagne/70 via-champagne/25 to-transparent" />
 
           <div className=" px-8 py-8">

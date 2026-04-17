@@ -10,12 +10,29 @@ export default function ChatbotBubble() {
   const [loaded, setLoaded] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
   const [pulse, setPulse] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Stop the pulse animation after first interaction
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   useEffect(() => {
     const t = setTimeout(() => setPulse(false), 6000);
     return () => clearTimeout(t);
   }, []);
+
+  // Lock body scroll on mobile when chat is open
+  useEffect(() => {
+    if (isMobile && open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobile, open]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -27,23 +44,42 @@ export default function ChatbotBubble() {
 
   return (
     <>
+      {/* ── Mobile: full-screen overlay backdrop ── */}
+      {isMobile && open && (
+        <div
+          className="fixed inset-0 z-40 bg-navy/80 backdrop-blur-sm"
+          onClick={handleClose}
+        />
+      )}
+
       {/* ── Chat window ── */}
       <div
-        className={`fixed bottom-24 right-6 z-50 w-[370px] max-w-[calc(100vw-2rem)] transition-all duration-300 origin-bottom-right
-          ${open
-            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 scale-95 translate-y-4 pointer-events-none"
-          }`}
-        style={{ filter: open ? "drop-shadow(0 25px 50px rgba(27,36,82,0.5))" : "none" }}
+        className={`
+          fixed z-50 transition-all duration-300
+          ${isMobile
+            /* Mobile: full width, slides up from bottom */
+            ? `inset-x-0 bottom-0 rounded-t-2xl rounded-b-none
+               ${open ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-full opacity-0 pointer-events-none"}`
+            /* Desktop: floating panel bottom-right */
+            : `bottom-24 right-6 w-[370px] rounded-2xl origin-bottom-right
+               ${open ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" : "opacity-0 scale-95 translate-y-4 pointer-events-none"}`
+          }
+        `}
+        style={{ filter: open && !isMobile ? "drop-shadow(0 25px 50px rgba(27,36,82,0.5))" : "none" }}
         role="dialog"
         aria-label="Chat with Coach Laurien AI"
+        aria-modal="true"
       >
-        <div className="flex flex-col rounded-2xl overflow-hidden border border-champagne/20 bg-navy">
+        <div className={`flex flex-col overflow-hidden border border-champagne/20 bg-navy ${isMobile ? "rounded-t-2xl" : "rounded-2xl"}`}>
 
           {/* ── Header ── */}
           <div className="relative bg-navy border-b border-champagne/10 px-4 py-3.5 flex items-center gap-3">
-            {/* Gradient accent line */}
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-champagne/60 via-champagne/25 to-transparent" />
+
+            {/* Drag handle — mobile only */}
+            {isMobile && (
+              <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-champagne/20" />
+            )}
 
             {/* Photo */}
             <div className="relative shrink-0">
@@ -67,13 +103,15 @@ export default function ChatbotBubble() {
 
             {/* Controls */}
             <div className="flex items-center gap-1 shrink-0">
-              <button
-                onClick={handleClose}
-                className="w-7 h-7 flex items-center justify-center rounded-full text-offwhite/40 hover:text-champagne hover:bg-champagne/10 transition-colors"
-                aria-label="Minimize chat"
-              >
-                <Minimize2 className="w-3.5 h-3.5" />
-              </button>
+              {!isMobile && (
+                <button
+                  onClick={handleClose}
+                  className="w-7 h-7 flex items-center justify-center rounded-full text-offwhite/40 hover:text-champagne hover:bg-champagne/10 transition-colors"
+                  aria-label="Minimize"
+                >
+                  <Minimize2 className="w-3.5 h-3.5" />
+                </button>
+              )}
               <button
                 onClick={handleClose}
                 className="w-7 h-7 flex items-center justify-center rounded-full text-offwhite/40 hover:text-red-400 hover:bg-red-400/10 transition-colors"
@@ -85,7 +123,10 @@ export default function ChatbotBubble() {
           </div>
 
           {/* ── Chat iframe ── */}
-          <div className="relative bg-navy" style={{ height: "480px" }}>
+          <div
+            className="relative bg-navy"
+            style={{ height: isMobile ? "calc(85vh - 64px)" : "480px" }}
+          >
             {/* Loading skeleton */}
             {!loaded && (
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-navy">
@@ -101,7 +142,6 @@ export default function ChatbotBubble() {
               </div>
             )}
 
-            {/* Only render iframe once opened (avoid loading on page load) */}
             {hasOpened && (
               <iframe
                 src={IFRAME_SRC}
@@ -117,7 +157,7 @@ export default function ChatbotBubble() {
 
       {/* ── Floating trigger button ── */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
-        {/* Greeting tooltip — shows before first open */}
+        {/* Greeting tooltip */}
         {!hasOpened && !open && (
           <div className="mr-1 mb-1 flex items-center gap-2 bg-navy border border-champagne/20 rounded-2xl rounded-br-sm px-4 py-2.5 shadow-xl shadow-navy/50 animate-fade-in">
             <img
@@ -135,20 +175,16 @@ export default function ChatbotBubble() {
           onClick={open ? handleClose : handleOpen}
           className="relative w-14 h-14 rounded-full bg-champagne text-navy flex items-center justify-center shadow-2xl shadow-navy/60 hover:bg-champagne-light transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
           aria-label={open ? "Close chat" : "Open chat"}
+          aria-expanded={open}
         >
-          {/* Pulse ring — attracts attention on first load */}
           {pulse && !open && (
             <span className="absolute inset-0 rounded-full bg-champagne/50 animate-ping" />
           )}
 
           <span className={`transition-all duration-200 ${open ? "rotate-90 scale-90" : "rotate-0 scale-100"}`}>
-            {open
-              ? <X className="w-5 h-5" />
-              : <MessageCircle className="w-5 h-5" />
-            }
+            {open ? <X className="w-5 h-5" /> : <MessageCircle className="w-5 h-5" />}
           </span>
 
-          {/* Unread dot — before first open */}
           {!hasOpened && (
             <span className="absolute top-0.5 right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-navy" />
           )}

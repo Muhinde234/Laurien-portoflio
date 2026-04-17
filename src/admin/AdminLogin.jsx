@@ -26,11 +26,12 @@ export default function AdminLogin({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen bg-navy flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen
+      flex items-center justify-center px-4 relative overflow-hidden">
 
       {/* Ambient background orbs */}
-      <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-champagne/[0.04] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-navy-light/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-champagne/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-64 h-64  rounded-full blur-3xl pointer-events-none" />
 
       <div className="w-full max-w-sm relative z-10">
 
@@ -44,13 +45,13 @@ export default function AdminLogin({ onLogin }) {
                 className="w-full h-full rounded-full object-cover object-top"
               />
             </div>
-            <span className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-emerald-400 rounded-full border-2 border-navy shadow-sm" />
+            <span className="absolute bottom-0.5 right-0.5 w-4 h-4  rounded-full border-2 border-navy shadow-sm" />
           </div>
           <h1 className="font-display text-2xl font-semibold text-champagne leading-none tracking-wide mb-1.5">
             Coach Laurien
           </h1>
           <p className="text-[11px] text-offwhite/30 uppercase tracking-[0.3em] font-medium">
-            Content Manager
+            Content Management
           </p>
         </div>
 
@@ -59,7 +60,7 @@ export default function AdminLogin({ onLogin }) {
           {/* Top accent line */}
           <div className="h-px bg-linear-to-r from-champagne/70 via-champagne/25 to-transparent" />
 
-          <div className="bg-navy-light/30 px-8 py-8">
+          <div className=" px-8 py-8">
 
             <div className="mb-7">
               <h2 className="text-lg font-semibold text-offwhite mb-1">Welcome back</h2>

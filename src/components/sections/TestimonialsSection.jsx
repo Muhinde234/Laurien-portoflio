@@ -12,7 +12,7 @@ export default function TestimonialsSection({ onBook }) {
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+    
         <header className="mb-16 max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-champagne/70 mb-5">
             Client Results
@@ -26,14 +26,14 @@ export default function TestimonialsSection({ onBook }) {
           </h3>
         </header>
 
-        {/* Testimonial cards */}
+     
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {testimonials.map((testimonial, index) => (
             <article
               key={index}
               className="bg-navy-light border border-champagne/12 rounded-2xl p-7 flex flex-col hover:border-champagne/22 transition-colors duration-300"
             >
-              {/* Stars */}
+        
               <div className="flex gap-1 mb-5" aria-label={`${testimonial.rating} out of 5`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-champagne/70" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -42,12 +42,12 @@ export default function TestimonialsSection({ onBook }) {
                 ))}
               </div>
 
-              {/* Quote */}
+            
               <blockquote className="font-display text-lg italic text-offwhite/65 leading-relaxed flex-1 mb-6">
                 "{testimonial.content}"
               </blockquote>
 
-              {/* Attribution */}
+           
               <div className="flex items-center gap-3 pt-5 border-t border-champagne/10">
                 <img
                   src={testimonial.image}
@@ -65,7 +65,7 @@ export default function TestimonialsSection({ onBook }) {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+   
         <div className="border-t border-champagne/10 pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-display text-xl italic text-offwhite/50">
             Ready to produce work you are proud of?

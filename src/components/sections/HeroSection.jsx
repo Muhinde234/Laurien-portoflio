@@ -24,7 +24,6 @@ export default function HeroSection({ onBook, onNavigate }) {
     >
       <div className="max-w-5xl mx-auto text-center relative z-10">
 
-        {/* Section label */}
         <p
           className={`text-xs font-semibold uppercase tracking-[0.3em] text-champagne/70 mb-8 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -33,7 +32,7 @@ export default function HeroSection({ onBook, onNavigate }) {
           {h.label}
         </p>
 
-        {/* Primary headline */}
+       
         <h2
           className={`font-display text-5xl md:text-7xl lg:text-8xl font-light text-offwhite leading-[1.1] mb-6 transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -43,7 +42,7 @@ export default function HeroSection({ onBook, onNavigate }) {
           <span className="italic text-champagne">{h.headlineHighlight}</span>
         </h2>
 
-        {/* Subheadline */}
+  
         <p
           className={`text-lg md:text-xl text-offwhite/55 max-w-2xl mx-auto leading-relaxed mb-12 transition-all duration-700 delay-200 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -52,7 +51,7 @@ export default function HeroSection({ onBook, onNavigate }) {
           {h.subheadline}
         </p>
 
-        {/* CTAs */}
+      
         <div
           className={`flex gap-4 justify-center flex-wrap transition-all duration-700 delay-300 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -73,7 +72,7 @@ export default function HeroSection({ onBook, onNavigate }) {
           </button>
         </div>
 
-        {/* Horizontal rule divider */}
+   
         <div
           className={`mt-20 flex items-center justify-center gap-6 transition-all duration-700 delay-500 ${
             visible ? "opacity-100" : "opacity-0"

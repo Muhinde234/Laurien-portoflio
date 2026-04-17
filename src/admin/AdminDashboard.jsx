@@ -103,17 +103,20 @@ export default function AdminDashboard({ onLogout }) {
               <button
                 key={tab.id}
                 onClick={() => { setActiveTab(tab.id); setSidebarOpen(false); }}
-                className="w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors duration-200 text-gray-400 hover:text-gray-900"
-                 
+                className={`w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200
+                  ${active
+                    ? "bg-gray-100 text-gray-900 shadow-sm"
+                    : "text-gray-500 hover:bg-gray-50 hover:text-gray-800"
+                  }`}
               >
                 <Icon
-                  className={`w-4 h-4 shrink-0 transition-colors duration-200 ${active ? "text-champagne" : ""}`}
+                  className={`w-4 h-4 shrink-0 transition-colors duration-200 ${active ? "text-navy" : "text-gray-400"}`}
                 />
                 <div className="min-w-0">
-                  <p className={`leading-none font-medium truncate ${active ? "text-white" : ""}`}>
+                  <p className={`leading-none truncate ${active ? "font-semibold text-gray-900" : "font-medium"}`}>
                     {tab.label}
                   </p>
-                  <p className={`text-[10px] mt-0.5 leading-none truncate ${active ? "text-white/55" : "text-gray-400"}`}>
+                  <p className={`text-[10px] mt-0.5 leading-none truncate ${active ? "text-gray-500" : "text-gray-400"}`}>
                     {tab.desc}
                   </p>
                 </div>

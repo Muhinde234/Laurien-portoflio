@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { X, MessageCircle, Minimize2 } from "lucide-react";
-import laurienPhoto from "../../assets/laurien.jpeg";
+import { useContent } from "../../context/ContentContext";
+import defaultPhoto from "../../assets/laurien.jpeg";
 import { CHATBASE_ID } from "../../data/siteData";
 
 const IFRAME_SRC = `https://www.chatbase.co/chatbot-iframe/${CHATBASE_ID}`;
 
 export default function ChatbotBubble() {
+  const { content } = useContent();
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
@@ -61,7 +64,7 @@ export default function ChatbotBubble() {
             ? `inset-x-0 bottom-0 rounded-t-2xl rounded-b-none
                ${open ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-full opacity-0 pointer-events-none"}`
             /* Desktop: floating panel bottom-right */
-            : `bottom-24 right-6 w-[370px] rounded-2xl origin-bottom-right
+            : `bottom-24 right-6 w-92.5 rounded-2xl origin-bottom-right
                ${open ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" : "opacity-0 scale-95 translate-y-4 pointer-events-none"}`
           }
         `}

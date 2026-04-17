@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useContent } from "../../context/ContentContext";
 import { socialLinks } from "../../data/siteData";
-import laurienPhoto from "../../assets/laurien.jpeg";
+import defaultPhoto from "../../assets/laurien.jpeg";
 
 export default function SiteFooter({ navItems, onNavigate }) {
   const [footerRef, footerVisible] = useScrollReveal();
@@ -10,6 +10,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
   const f = content.footer;
   const email = content.contact.email;
   const social = content.social;
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
 
   // Map context URLs onto the static icon components from siteData
   const socialWithUrls = socialLinks.map((s) => {

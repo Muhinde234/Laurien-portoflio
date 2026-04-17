@@ -1,13 +1,14 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useContent } from "../../context/ContentContext";
-import laurienPhoto from "../../assets/laurien.jpeg";
+import defaultPhoto from "../../assets/laurien.jpeg";
 
 export default function BookingSection({ onBook }) {
   const [bookingRef, bookingVisible] = useScrollReveal();
   const { content } = useContent();
   const b = content.booking;
   const email = content.contact.email;
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
 
   return (
     <section

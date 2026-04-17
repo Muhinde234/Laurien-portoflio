@@ -13,7 +13,8 @@ import {
   ExternalLink,
   LogOut,
 } from "lucide-react";
-import laurienPhoto from "../assets/laurien.jpeg";
+import defaultPhoto from "../assets/laurien.jpeg";
+import { useContent } from "../context/ContentContext";
 import HeroEditor from "./editors/HeroEditor";
 import AboutEditor from "./editors/AboutEditor";
 import ServicesEditor from "./editors/ServicesEditor";
@@ -35,6 +36,8 @@ const TABS = [
 ];
 
 export default function AdminDashboard({ onLogout }) {
+  const { content } = useContent();
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
   const [activeTab, setActiveTab] = useState("hero");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { useContent } from "../context/ContentContext";
-import laurienPhoto from "../assets/laurien.jpeg";
+import defaultPhoto from "../assets/laurien.jpeg";
 
 export default function AdminLogin({ onLogin }) {
   const { content } = useContent();
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");

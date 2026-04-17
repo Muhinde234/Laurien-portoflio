@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import {  Menu, X } from "lucide-react";
 import { useScrollLock } from "../../hooks/useScrollLock";
-import laurienPhoto from "../../assets/laurien.jpeg";
+import { useContent } from "../../context/ContentContext";
+import defaultPhoto from "../../assets/laurien.jpeg";
 
 export default function SiteHeader({ navItems, onNavigate, onBook }) {
+  const { content } = useContent();
+  const laurienPhoto = content.profilePhoto || defaultPhoto;
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

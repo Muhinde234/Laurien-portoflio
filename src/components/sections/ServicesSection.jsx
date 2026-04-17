@@ -7,7 +7,7 @@ export default function ServicesSection({ onBook }) {
   const [servicesRef, servicesVisible] = useScrollReveal();
   const { content } = useContent();
 
-  // Merge editable text from context with static icons from siteData
+
   const services = content.services.map((s, i) => ({
     ...s,
     icon: staticServices[i]?.icon,
@@ -24,7 +24,7 @@ export default function ServicesSection({ onBook }) {
     >
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Section header ── */}
+     
         <header className="mb-16 max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-5">
             Services
@@ -42,7 +42,7 @@ export default function ServicesSection({ onBook }) {
           </p>
         </header>
 
-        {/* ── Cards ── */}
+      
         <div className="grid md:grid-cols-2 gap-6 items-start">
           {services.map((service, index) => {
             const IconComponent = service.icon;
@@ -53,13 +53,13 @@ export default function ServicesSection({ onBook }) {
                 key={index}
                 className="relative flex flex-col bg-navy-light/40 border border-champagne/12 rounded-2xl overflow-hidden hover:border-champagne/22 transition-all duration-500 group"
               >
-                {/* Top gradient accent line */}
+             
                 <div
                   className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
                   aria-hidden="true"
                 />
 
-                {/* Ghost card number — large, background */}
+             
                 <span
                   className="absolute top-4 right-6 font-display text-[7rem] font-light leading-none text-champagne/[0.04] select-none pointer-events-none"
                   aria-hidden="true"
@@ -69,7 +69,7 @@ export default function ServicesSection({ onBook }) {
 
                 <div className="p-8 md:p-10 flex flex-col flex-1 relative z-10">
 
-                  {/* ── Card top: icon + service number ── */}
+              
                   <div className="flex items-start justify-between mb-8">
                     <div className="w-11 h-11 border border-champagne/20 rounded-xl flex items-center justify-center bg-champagne/5 group-hover:bg-champagne/10 transition-colors duration-300">
                       {IconComponent && <IconComponent className="w-5 h-5 text-champagne/70" />}
@@ -79,31 +79,29 @@ export default function ServicesSection({ onBook }) {
                     </p>
                   </div>
 
-                  {/* ── Title ── */}
+                
                   <h4 className="font-display text-3xl md:text-4xl font-light text-offwhite leading-tight mb-2">
                     {service.title}
                   </h4>
 
-                  {/* Subtitle — Youth Coaching */}
+               
                   {service.subtitle && (
                     <p className="font-display italic text-champagne/50 text-base mb-5 leading-snug">
                       {service.subtitle}
                     </p>
                   )}
 
-                  {/* Intro — Author's Coaching */}
                   {service.intro && (
                     <p className="font-display italic text-champagne/60 text-lg mb-5">
                       {service.intro}
                     </p>
                   )}
 
-                  {/* Description */}
+            
                   <p className="text-sm text-offwhite/50 leading-[1.85] mb-8">
                     {service.description}
                   </p>
 
-                  {/* ── Partner with — Youth Coaching only ── */}
                   {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-7 bg-champagne/[0.04] border border-champagne/10 rounded-xl p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
@@ -120,10 +118,10 @@ export default function ServicesSection({ onBook }) {
                     </div>
                   )}
 
-                  {/* ── Divider ── */}
+          
                   <div className="h-px bg-champagne/8 mb-7" aria-hidden="true" />
 
-                  {/* ── Features ── */}
+                
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-5">
                     {service.featuresLabel}
                   </p>
@@ -139,7 +137,7 @@ export default function ServicesSection({ onBook }) {
                     ))}
                   </ul>
 
-                  {/* ── Focus areas — pills ── */}
+                
                   {service.focusAreas && service.focusAreas.length > 0 && (
                     <div className="mb-7">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
@@ -158,7 +156,7 @@ export default function ServicesSection({ onBook }) {
                     </div>
                   )}
 
-                  {/* ── Suited for ── */}
+                
                   {service.suitedFor && service.suitedFor.length > 0 && (
                     <div className="mb-7">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-3">
@@ -175,7 +173,7 @@ export default function ServicesSection({ onBook }) {
                     </div>
                   )}
 
-                  {/* ── Note ── */}
+            
                   {service.note && (
                     <>
                       <div className="h-px bg-champagne/8 mb-5" aria-hidden="true" />
@@ -185,7 +183,7 @@ export default function ServicesSection({ onBook }) {
                     </>
                   )}
 
-                  {/* ── CTA ── */}
+           
                   {service.cta && (
                     <div className="mt-auto pt-2">
                       <button

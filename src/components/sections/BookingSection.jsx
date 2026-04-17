@@ -25,13 +25,13 @@ export default function BookingSection({ onBook }) {
        
         <div className="relative rounded-2xl border border-champagne/15 overflow-hidden">
 
-          {/* Top gradient accent */}
+        
           <div
             className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
             aria-hidden="true"
           />
 
-          {/* Ghost headline watermark */}
+      
           <span
             className="absolute top-6 right-8 font-display text-[8rem] font-light leading-none text-champagne/3 select-none pointer-events-none hidden md:block"
             aria-hidden="true"
@@ -41,10 +41,10 @@ export default function BookingSection({ onBook }) {
 
           <div className="grid md:grid-cols-5 min-h-135">
 
-            {/* ── LEFT: headline + photo ── */}
+          
             <div className="md:col-span-2 relative flex flex-col justify-between p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
 
-              {/* Headline block */}
+       
               <div>
                 <h3
                   id="booking-heading"
@@ -58,7 +58,7 @@ export default function BookingSection({ onBook }) {
                 </p>
               </div>
 
-              {/* Photo + identity card */}
+         
               <div className="mt-10 md:mt-0">
                 <div className="flex items-center gap-4 p-4 bg-navy/60 border border-champagne/12 rounded-xl">
                   <div className="relative shrink-0">
@@ -87,26 +87,25 @@ export default function BookingSection({ onBook }) {
               </div>
             </div>
 
-            {/* ── RIGHT: qualifications + CTA ── */}
+        
             <div className="md:col-span-3 flex flex-col p-8 md:p-10">
 
-              {/* Qualifications header */}
+         
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-7">
                 {b.qualificationsHeading}
               </p>
 
-              {/* Qualification list */}
               <ul className="flex flex-col flex-1 gap-0" role="list">
                 {b.qualifications.map((qualification, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-5 py-4 border-b border-champagne/8 last:border-b-0"
                   >
-                    {/* Row number */}
+            
                     <span className="font-display italic text-xs text-champagne/35 shrink-0 mt-0.5 w-5">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    {/* Dash */}
+            
                     <div
                       className="w-4 h-px bg-champagne/20 shrink-0 mt-[0.6rem]"
                       aria-hidden="true"
@@ -118,11 +117,11 @@ export default function BookingSection({ onBook }) {
                 ))}
               </ul>
 
-              {/* ── CTA block ── */}
+           
               <div className="mt-8 pt-7 border-t border-champagne/10">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
 
-                  {/* Primary CTA */}
+                
                   <button
                     onClick={onBook}
                     className="group flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
@@ -134,7 +133,7 @@ export default function BookingSection({ onBook }) {
                     </span>
                   </button>
 
-                  {/* Or email */}
+         
                   <span className="text-xs text-offwhite/25 hidden sm:block">or</span>
                   <a
                     href={`mailto:${email}`}
@@ -145,7 +144,7 @@ export default function BookingSection({ onBook }) {
                   </a>
                 </div>
 
-                {/* Microcopy */}
+             
                 <p className="text-xs text-offwhite/20 tracking-wide mt-4">
                   {b.microcopy}
                 </p>

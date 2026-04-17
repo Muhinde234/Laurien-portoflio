@@ -22,3 +22,6 @@ body {
   background-color: #1B2452;
   color: #F5F0E8;
 }
+
+/* Pointer cursor on all interactive elements */
+button, [role="button"], a, label[for], select { cursor: pointer; }

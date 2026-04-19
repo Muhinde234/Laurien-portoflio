@@ -47,7 +47,7 @@ export default function ChatbotBubble() {
 
   return (
     <>
-      {/* ── Mobile: full-screen overlay backdrop ── */}
+  
       {isMobile && open && (
         <div
           className="fixed inset-0 z-40 bg-navy/80 backdrop-blur-sm"

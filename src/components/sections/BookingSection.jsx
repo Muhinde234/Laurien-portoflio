@@ -40,16 +40,16 @@ export default function BookingSection({ onBook }) {
             Begin.
           </span>
 
-          <div className="grid md:grid-cols-5 min-h-135">
+          <div className="grid md:grid-cols-5 md:min-h-135">
 
           
-            <div className="md:col-span-2 relative flex flex-col justify-between p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
+            <div className="md:col-span-2 relative flex flex-col justify-between p-6 sm:p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
 
        
               <div>
                 <h3
                   id="booking-heading"
-                  className="font-display text-4xl md:text-5xl font-light text-offwhite leading-[1.1] mb-6"
+                  className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-offwhite leading-[1.1] mb-6"
                 >
                   {b.headingStart} <br />
                   <span className="italic text-champagne">{b.headingHighlight}</span>
@@ -89,7 +89,7 @@ export default function BookingSection({ onBook }) {
             </div>
 
         
-            <div className="md:col-span-3 flex flex-col p-8 md:p-10">
+            <div className="md:col-span-3 flex flex-col p-6 sm:p-8 md:p-10">
 
          
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-7">
@@ -125,7 +125,7 @@ export default function BookingSection({ onBook }) {
                 
                   <button
                     onClick={onBook}
-                    className="group flex items-center justify-between bg-champagne text-navy font-semibold px-7 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+                    className="group flex items-center justify-between bg-champagne text-navy font-semibold px-5 py-3 sm:px-7 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 gap-3 sm:gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
                     aria-label="Book a consultation call"
                   >
                     <span className="text-sm">{b.primaryCta}</span>

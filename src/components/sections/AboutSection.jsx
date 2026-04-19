@@ -38,7 +38,7 @@ export default function AboutSection({ onBook }) {
 
             {/* Offset decorative frame behind image */}
             <div
-              className="absolute top-6 left-6 w-full h-full border border-champagne/15 rounded-2xl -z-10"
+              className="absolute top-3 left-3 sm:top-6 sm:left-6 w-full h-full border border-champagne/15 rounded-2xl -z-10"
               aria-hidden="true"
             />
 
@@ -91,7 +91,7 @@ export default function AboutSection({ onBook }) {
             {/* Headline */}
             <h3
               id="about-heading"
-              className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-light text-offwhite leading-[1.08]"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-light text-offwhite leading-[1.08]"
             >
               {a.headlineStart} <br />
               <span className="italic text-champagne">{a.headlineHighlight}</span>
@@ -147,7 +147,7 @@ export default function AboutSection({ onBook }) {
             <div>
               <button
                 onClick={onBook}
-                className="group bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+                className="group bg-champagne text-navy font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm sm:text-base"
               >
                 {a.cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />

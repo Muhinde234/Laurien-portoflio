@@ -41,14 +41,14 @@ export default function SiteFooter({ navItems, onNavigate }) {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-champagne/60 mb-2">
               Ready to begin?
             </p>
-            <p className="font-display text-3xl md:text-4xl font-light text-offwhite leading-snug">
+            <p className="font-display text-2xl sm:text-3xl md:text-4xl font-light text-offwhite leading-snug">
               {f.ctaHeadingStart}{" "}
               <span className="italic text-champagne">{f.ctaHeadingHighlight}</span>
             </p>
           </div>
           <a
             href={`mailto:${email}`}
-            className="shrink-0 inline-flex items-center gap-2 bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
+            className="shrink-0 inline-flex items-center gap-2 bg-champagne text-navy font-semibold px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm break-all sm:break-normal"
           >
             <Mail className="w-4 h-4" aria-hidden="true" />
             {email}

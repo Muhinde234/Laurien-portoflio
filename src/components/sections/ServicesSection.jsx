@@ -31,7 +31,7 @@ export default function ServicesSection({ onBook }) {
           </p>
           <h3
             id="services-heading"
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-offwhite leading-[1.08] mb-5"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-offwhite leading-[1.08] mb-5"
           >
             Structured engagements <br />
             <span className="italic text-champagne">for serious outcomes.</span>
@@ -61,13 +61,13 @@ export default function ServicesSection({ onBook }) {
 
              
                 <span
-                  className="absolute top-4 right-6 font-display text-[7rem] font-light leading-none text-champagne/[0.04] select-none pointer-events-none"
+                  className="absolute top-4 right-6 font-display text-[4rem] md:text-[7rem] font-light leading-none text-champagne/4 select-none pointer-events-none"
                   aria-hidden="true"
                 >
                   {num}
                 </span>
 
-                <div className="p-8 md:p-10 flex flex-col flex-1 relative z-10">
+                <div className="p-6 sm:p-8 md:p-10 flex flex-col flex-1 relative z-10">
 
               
                   <div className="flex items-start justify-between mb-8">
@@ -80,7 +80,7 @@ export default function ServicesSection({ onBook }) {
                   </div>
 
                 
-                  <h4 className="font-display text-3xl md:text-4xl font-light text-offwhite leading-tight mb-2">
+                  <h4 className="font-display text-2xl sm:text-3xl md:text-4xl font-light text-offwhite leading-tight mb-2">
                     {service.title}
                   </h4>
 
@@ -103,7 +103,7 @@ export default function ServicesSection({ onBook }) {
                   </p>
 
                   {service.partnerWith && service.partnerWith.length > 0 && (
-                    <div className="mb-7 bg-champagne/[0.04] border border-champagne/10 rounded-xl p-5">
+                    <div className="mb-7 bg-champagne/4 border border-champagne/10 rounded-xl p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
                         {service.partnerLabel}
                       </p>

@@ -130,7 +130,7 @@ export default function ChatbotBubble() {
             className="relative bg-navy"
             style={{ height: isMobile ? "calc(85vh - 64px)" : "480px" }}
           >
-            {/* Loading skeleton */}
+          
             {!loaded && (
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-navy">
                 <div className="relative w-12 h-12">
@@ -158,7 +158,7 @@ export default function ChatbotBubble() {
         </div>
       </div>
 
-      {/* ── Floating trigger button ── */}
+     
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
         {/* Greeting tooltip */}
         {!hasOpened && !open && (

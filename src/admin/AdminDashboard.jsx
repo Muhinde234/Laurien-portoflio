@@ -105,12 +105,12 @@ export default function AdminDashboard({ onLogout }) {
                 onClick={() => { setActiveTab(tab.id); setSidebarOpen(false); }}
                 className={`w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200
                   ${active
-                    ? "bg-gray-100 text-gray-900 shadow-sm"
+                    ? "bg-amber-50 text-amber-900 shadow-sm"
                     : "text-gray-500 hover:bg-gray-50 hover:text-gray-800"
                   }`}
               >
                 <Icon
-                  className={`w-4 h-4 shrink-0 transition-colors duration-200 ${active ? "text-navy" : "text-gray-400"}`}
+                  className={`w-4 h-4 shrink-0 transition-colors duration-200 ${active ? "text-amber-500" : "text-gray-400"}`}
                 />
                 <div className="min-w-0">
                   <p className={`leading-none truncate ${active ? "font-semibold text-gray-900" : "font-medium"}`}>

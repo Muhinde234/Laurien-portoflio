@@ -27,7 +27,7 @@ export default function ChatbotBubble() {
     return () => clearTimeout(t);
   }, []);
 
-  // Lock body scroll on mobile when chat is open
+
   useEffect(() => {
     if (isMobile && open) {
       document.body.style.overflow = "hidden";

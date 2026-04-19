@@ -12,7 +12,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
   const social = content.social;
   const laurienPhoto = content.profilePhoto || defaultPhoto;
 
-  // Map context URLs onto the static icon components from siteData
+ 
   const socialWithUrls = socialLinks.map((s) => {
     const keyMap = {
       LinkedIn: "linkedin",

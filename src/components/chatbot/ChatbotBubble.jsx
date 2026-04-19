@@ -55,15 +55,15 @@ export default function ChatbotBubble() {
         />
       )}
 
-      {/* ── Chat window ── */}
+      
       <div
         className={`
           fixed z-50 transition-all duration-300
           ${isMobile
-            /* Mobile: full width, slides up from bottom */
+          
             ? `inset-x-0 bottom-0 rounded-t-2xl rounded-b-none
                ${open ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-full opacity-0 pointer-events-none"}`
-            /* Desktop: floating panel bottom-right */
+      
             : `bottom-24 right-6 w-92.5 rounded-2xl origin-bottom-right
                ${open ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" : "opacity-0 scale-95 translate-y-4 pointer-events-none"}`
           }
@@ -75,16 +75,16 @@ export default function ChatbotBubble() {
       >
         <div className={`flex flex-col overflow-hidden border border-champagne/20 bg-navy ${isMobile ? "rounded-t-2xl" : "rounded-2xl"}`}>
 
-          {/* ── Header ── */}
+      
           <div className="relative bg-navy border-b border-champagne/10 px-4 py-3.5 flex items-center gap-3">
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-champagne/60 via-champagne/25 to-transparent" />
 
-            {/* Drag handle — mobile only */}
+         
             {isMobile && (
               <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-champagne/20" />
             )}
 
-            {/* Photo */}
+         
             <div className="relative shrink-0">
               <img
                 src={laurienPhoto}
@@ -94,7 +94,7 @@ export default function ChatbotBubble() {
               <span className="absolute bottom-0 right-0 w-2 h-2 bg-emerald-400 rounded-full border border-navy" />
             </div>
 
-            {/* Identity */}
+         
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold text-champagne leading-none font-display">
                 Coach Laurien
@@ -104,7 +104,7 @@ export default function ChatbotBubble() {
               </p>
             </div>
 
-            {/* Controls */}
+          
             <div className="flex items-center gap-1 shrink-0">
               {!isMobile && (
                 <button
@@ -125,7 +125,7 @@ export default function ChatbotBubble() {
             </div>
           </div>
 
-          {/* ── Chat iframe ── */}
+        
           <div
             className="relative bg-navy"
             style={{ height: isMobile ? "calc(85vh - 64px)" : "480px" }}

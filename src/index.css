@@ -3,9 +3,9 @@
 
 @theme {
   /* Color palette */
-  --color-navy:          #B45309;
-  --color-navy-light:    #C2570A;
-  --color-navy-card:     #A34208;
+  --color-navy:          #0F1A4E;
+  --color-navy-light:    #152060;
+  --color-navy-card:     #122058;
   --color-champagne:     #E8D6B3;
   --color-champagne-light: #F5EDD8;
   --color-offwhite:      #F5F0E8;
@@ -19,7 +19,7 @@
 /* Base font */
 body {
   font-family: var(--font-body);
-  background-color: #B45309;
+  background-color: #0F1A4E;
   color: #F5F0E8;
 }
 

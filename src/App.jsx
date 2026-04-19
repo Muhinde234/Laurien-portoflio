@@ -24,7 +24,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-amber-900 text-offwhite overflow-hidden font-body">
+    <div className="min-h-screen bg-navy text-offwhite overflow-hidden font-body">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-500 text-white px-4 py-2 rounded-lg z-50"

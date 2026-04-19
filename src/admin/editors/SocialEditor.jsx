@@ -48,9 +48,9 @@ export default function SocialEditor() {
           ))}
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
-          <p className="text-xs font-semibold text-amber-700 mb-1">Tip</p>
-          <p className="text-xs text-amber-600">
+        <div className="bg-navy/5 border border-navy/20 rounded-xl p-4">
+          <p className="text-xs font-semibold text-navy mb-1">Tip</p>
+          <p className="text-xs text-navy/70">
             Copy the full URL from your browser's address bar when you're on your profile page.
             Make sure it starts with <span className="font-mono">https://</span>
           </p>

@@ -141,7 +141,7 @@ export default function SettingsEditor({ onLogout }) {
                 className="w-20 h-20 rounded-full object-cover object-top border-2 border-gray-200"
               />
               {photoPreview && photoPreview !== content.profilePhoto && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white" title="Unsaved" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-champagne rounded-full border-2 border-white" title="Unsaved" />
               )}
             </div>
             <div className="space-y-2 flex-1">
@@ -191,7 +191,7 @@ export default function SettingsEditor({ onLogout }) {
                 className="w-16 h-20 rounded-xl object-cover object-top border-2 border-gray-200"
               />
               {aboutPhotoPreview && aboutPhotoPreview !== content.aboutPhoto && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white" title="Unsaved" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-champagne rounded-full border-2 border-white" title="Unsaved" />
               )}
             </div>
             <div className="space-y-2 flex-1">

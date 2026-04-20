@@ -28,7 +28,7 @@ export default function AdminLogin({ onLogin }) {
 
   return (
     <div className="min-h-screen
-      flex items-center justify-center px-4 relative overflow-hidden">
+      flex items-center justify-center px-4 relative overflow-hidden ">
 
     
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-champagne/4 rounded-full blur-3xl pointer-events-none" />

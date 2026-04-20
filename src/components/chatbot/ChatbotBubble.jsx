@@ -160,7 +160,7 @@ export default function ChatbotBubble() {
 
      
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
-        {/* Greeting tooltip */}
+        
         {!hasOpened && !open && (
           <div className="mr-1 mb-1 flex items-center gap-2 bg-navy border border-champagne/20 rounded-2xl rounded-br-sm px-4 py-2.5 shadow-xl shadow-navy/50 animate-fade-in">
             <img

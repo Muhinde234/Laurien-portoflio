@@ -16,12 +16,12 @@
   --font-body:    'Inter', system-ui, sans-serif;
 }
 
-/* Base font */
+
 body {
   font-family: var(--font-body);
-  background-color: #0F1A4E;
+  background-color: #1c2033;
   color: #F5F0E8;
 }
 
-/* Pointer cursor on all interactive elements */
+
 button, [role="button"], a, label[for], select { cursor: pointer; }

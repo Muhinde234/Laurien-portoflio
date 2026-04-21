@@ -19,68 +19,63 @@ export default function BookingSection({ onBook }) {
     >
       <div className="max-w-6xl mx-auto">
 
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-14">
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-12">
           {b.label}
         </p>
 
-       
         <div className="relative rounded-2xl border border-champagne/15 overflow-hidden">
 
-        
           <div
             className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
             aria-hidden="true"
           />
 
-      
           <span
-            className="absolute top-6 right-8 font-display text-[8rem] font-light leading-none text-champagne/3 select-none pointer-events-none hidden md:block"
+            className="absolute top-6 right-8 font-display text-[6rem] font-bold leading-none text-champagne/3 select-none pointer-events-none hidden md:block"
             aria-hidden="true"
           >
             Begin.
           </span>
 
-          <div className="grid md:grid-cols-5 md:min-h-135">
+          <div className="grid md:grid-cols-5 md:min-h-136">
 
-          
+            {/* Left: heading + coach card */}
             <div className="md:col-span-2 relative flex flex-col justify-between p-6 sm:p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
 
-       
               <div>
-                <h3
+                <h2
                   id="booking-heading"
-                  className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-offwhite leading-[1.1] mb-6"
+                  className="font-display text-3xl sm:text-4xl md:text-[2.6rem] font-bold text-offwhite leading-[1.1] mb-5"
                 >
-                  {b.headingStart} <br />
-                  <span className="italic text-champagne">{b.headingHighlight}</span>
-                </h3>
-                <p className="text-sm text-offwhite/45 leading-[1.9]">
+                  {b.headingStart}{" "}
+                  <span className="italic font-light text-champagne">{b.headingHighlight}</span>
+                </h2>
+                <p className="text-sm text-offwhite/40 leading-[1.9]">
                   {b.subtext}
                 </p>
               </div>
 
-         
-              <div className="mt-10 md:mt-0">
-                <div className="flex items-center gap-4 p-4 bg-navy/60 border border-champagne/12 rounded-xl">
+              <div className="mt-8 md:mt-0">
+                <div className="flex items-center gap-4 p-4 bg-navy/60 border border-champagne/10 rounded-xl">
                   <div className="relative shrink-0">
                     <img
                       src={laurienPhoto}
                       alt={b.coachName}
-                      className="w-14 h-14 rounded-full object-cover object-top border-2 border-champagne/35"
+                      className="w-12 h-12 rounded-full object-cover object-top border-2 border-champagne/30"
                     />
                     <span
-                      className="absolute bottom-0 right-0 w-3 h-3 bg-champagne rounded-full border-2 border-navy"
+                      className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-champagne rounded-full border-2 border-navy"
                       aria-hidden="true"
                     />
                   </div>
                   <div>
-                    <p className="font-display text-base font-semibold text-champagne leading-none mb-1">
+                    <p className="font-display text-sm font-semibold text-champagne leading-none mb-1">
                       {b.coachName}
                     </p>
-                    <p className="text-[11px] text-offwhite/35 uppercase tracking-[0.18em]">
+                    <p className="text-[11px] text-offwhite/32 uppercase tracking-[0.18em]">
                       {b.coachRole}
                     </p>
-                    <p className="text-[11px] text-champagne/45 mt-1.5 italic font-display">
+                    <p className="text-[11px] text-champagne/40 mt-1 italic font-display">
                       {b.responseTime}
                     </p>
                   </div>
@@ -88,11 +83,10 @@ export default function BookingSection({ onBook }) {
               </div>
             </div>
 
-        
+            {/* Right: qualifications + CTA */}
             <div className="md:col-span-3 flex flex-col p-6 sm:p-8 md:p-10">
 
-         
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/28 mb-6">
                 {b.qualificationsHeading}
               </p>
 
@@ -100,53 +94,46 @@ export default function BookingSection({ onBook }) {
                 {b.qualifications.map((qualification, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-5 py-4 border-b border-champagne/8 last:border-b-0"
+                    className="flex items-start gap-5 py-3.5 border-b border-champagne/8 last:border-b-0"
                   >
-            
-                    <span className="font-display italic text-xs text-champagne/35 shrink-0 mt-0.5 w-5">
+                    <span className="font-display italic text-xs text-champagne/30 shrink-0 mt-0.5 w-5">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-            
                     <div
-                      className="w-4 h-px bg-champagne/20 shrink-0 mt-[0.6rem]"
+                      className="w-4 h-px bg-champagne/18 shrink-0 mt-[0.6rem]"
                       aria-hidden="true"
                     />
-                    <p className="text-sm text-offwhite/55 leading-relaxed">
+                    <p className="text-sm text-offwhite/50 leading-relaxed">
                       {qualification}
                     </p>
                   </li>
                 ))}
               </ul>
 
-           
-              <div className="mt-8 pt-7 border-t border-champagne/10">
+              <div className="mt-7 pt-6 border-t border-champagne/10">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-
-                
                   <button
                     onClick={onBook}
-                    className="group flex items-center justify-between bg-champagne text-navy font-semibold px-5 py-3 sm:px-7 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 gap-3 sm:gap-4 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
+                    className="group flex items-center gap-3 bg-champagne text-navy font-semibold px-6 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
                     aria-label="Book a consultation call"
                   >
-                    <span className="text-sm">{b.primaryCta}</span>
+                    <span>{b.primaryCta}</span>
                     <span className="w-7 h-7 rounded-full bg-navy/15 flex items-center justify-center group-hover:bg-navy/20 transition-colors shrink-0">
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                     </span>
                   </button>
 
-         
-                  <span className="text-xs text-offwhite/25 hidden sm:block">or</span>
+                  <span className="text-xs text-offwhite/22 hidden sm:block">or</span>
                   <a
                     href={`mailto:${email}`}
-                    className="inline-flex items-center gap-2 text-sm text-offwhite/40 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
+                    className="inline-flex items-center gap-2 text-sm text-offwhite/38 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
                   >
                     <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                     {email}
                   </a>
                 </div>
 
-             
-                <p className="text-xs text-offwhite/20 tracking-wide mt-4">
+                <p className="text-xs text-offwhite/18 tracking-wide mt-4">
                   {b.microcopy}
                 </p>
               </div>

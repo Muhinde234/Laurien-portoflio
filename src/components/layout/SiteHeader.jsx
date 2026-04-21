@@ -43,9 +43,10 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
   return (
     <header>
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 bg-navy border-b border-champagne/10 ${
+        className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-champagne/10 ${
           scrolled ? "shadow-lg shadow-navy/50" : ""
         }`}
+        style={{ backgroundColor: "#121836" }}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -107,10 +108,10 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden fixed inset-0 bg-navy z-40 transition-transform duration-300 ${
+          className={`md:hidden fixed inset-0 z-40 transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
-          style={{ top: "66px" }}
+          style={{ top: "66px", backgroundColor: "#121836" }}
         >
           <div className="flex flex-col items-start px-6 py-8 gap-1">
             {navItems.map((item) => (

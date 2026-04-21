@@ -2,26 +2,89 @@
 @import "./styles/animations.css";
 
 @theme {
-  /* Color palette */
-  --color-navy:          #0F1A4E;
-  --color-navy-light:    #152060;
-  --color-navy-card:     #122058;
-  --color-champagne:     #E8D6B3;
-  --color-champagne-light: #F5EDD8;
-  --color-offwhite:      #F5F0E8;
-  --color-muted:         #8A8FA8;
+  /* ── Primary color system: #121836 family ── */
+  --color-primary:        #121836;
+  --color-primary-light:  #1a2347;
+  --color-primary-card:   #1e2a52;
+  --color-primary-deep:   #0d1229;
 
-  /* Typography */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  /* ── Legacy aliases (keep for backward compat with all component classes) ── */
+  --color-navy:           #121836;
+  --color-navy-light:     #1a2347;
+  --color-navy-card:      #1e2a52;
+  --color-navy-dark:      #0d1229;
+
+  /* ── Accent & text ── */
+  --color-champagne:        #E8D6B3;
+  --color-champagne-light:  #F5EDD8;
+  --color-offwhite:         #F5F0E8;
+  --color-muted:            #8A8FA8;
+
+  /* ── Typography ── */
+  --font-display: 'Poppins', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
+
+  /* ── Spacing scale ── */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
 }
 
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
   background-color: #121836;
   color: #F5F0E8;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Form element resets ── */
+input, textarea, select {
+  font-family: var(--font-body);
+}
 
 button, [role="button"], a, label[for], select { cursor: pointer; }
+
+/* ── Contact form input base ── */
+.form-input {
+  width: 100%;
+  background-color: #1a2347;
+  border: 1px solid rgba(232, 214, 179, 0.12);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  color: #F5F0E8;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: rgba(138, 143, 168, 0.6);
+}
+
+.form-input:focus {
+  border-color: rgba(232, 214, 179, 0.4);
+  box-shadow: 0 0 0 3px rgba(232, 214, 179, 0.08);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: rgba(232, 214, 179, 0.22);
+}
+
+/* ── Form label base ── */
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(245, 240, 232, 0.5);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}

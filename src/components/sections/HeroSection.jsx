@@ -17,7 +17,7 @@ export default function HeroSection({ onBook, onNavigate }) {
   return (
     <section
       ref={heroRef}
-      className={`min-h-screen flex items-center justify-center px-6 pt-24 pb-16 relative scroll-reveal ${
+      className={`min-h-screen flex items-center justify-center px-4 sm:px-6 pt-16 pb-6 relative scroll-reveal ${
         heroRevealed ? "visible" : ""
       }`}
       aria-label="Introduction"
@@ -42,7 +42,7 @@ export default function HeroSection({ onBook, onNavigate }) {
         </h1>
 
         <p
-          className={`text-base sm:text-lg text-offwhite/50 max-w-xl mx-auto leading-relaxed mb-10 transition-all duration-700 delay-200 ${
+          className={`text-lg sm:text-xl md:text-2xl text-offwhite/55 max-w-2xl mx-auto leading-relaxed mb-10 transition-all duration-700 delay-200 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -70,7 +70,7 @@ export default function HeroSection({ onBook, onNavigate }) {
         </div>
 
         <div
-          className={`mt-16 sm:mt-20 flex items-center justify-center gap-4 sm:gap-6 transition-all duration-700 delay-500 ${
+          className={`mt-8 sm:mt-10 flex items-center justify-center gap-4 sm:gap-6 transition-all duration-700 delay-500 ${
             visible ? "opacity-100" : "opacity-0"
           }`}
         >

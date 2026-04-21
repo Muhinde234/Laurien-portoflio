@@ -19,7 +19,6 @@ export default function ContactSection() {
     const e = {};
     if (!form.firstName.trim()) e.firstName = "Required";
     if (!form.lastName.trim()) e.lastName = "Required";
-    if (!form.username.trim()) e.username = "Required";
     if (!form.email.trim()) e.email = "Required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
     if (!form.message.trim()) e.message = "Required";
@@ -194,25 +193,6 @@ export default function ContactSection() {
                         <p id="lastName-err" className="mt-1 text-xs text-red-400/80">{errors.lastName}</p>
                       )}
                     </div>
-                  </div>
-
-                  {/* Username */}
-                  <div>
-                    <label htmlFor="username" className="form-label">Username</label>
-                    <input
-                      id="username"
-                      name="username"
-                      type="text"
-                      autoComplete="username"
-                      value={form.username}
-                      onChange={onChange}
-                      placeholder="@yourhandle"
-                      className={`form-input${errors.username ? " border-red-400/60" : ""}`}
-                      aria-describedby={errors.username ? "username-err" : undefined}
-                    />
-                    {errors.username && (
-                      <p id="username-err" className="mt-1 text-xs text-red-400/80">{errors.username}</p>
-                    )}
                   </div>
 
                   {/* Email */}

@@ -43,10 +43,8 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
   return (
     <header>
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-navy/96 border-b border-champagne/10 shadow-lg shadow-navy/50 backdrop-blur-sm"
-            : ""
+        className={`fixed top-0 w-full z-50 transition-all duration-500 bg-navy border-b border-champagne/10 ${
+          scrolled ? "shadow-lg shadow-navy/50" : ""
         }`}
         role="navigation"
         aria-label="Main navigation"

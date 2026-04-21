@@ -3,7 +3,7 @@ import { Send, CheckCircle, Mail, MapPin, Clock } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useContent } from "../../context/ContentContext";
 
-const EMPTY_FORM = { firstName: "", lastName: "", username: "", email: "", message: "" };
+const EMPTY_FORM = { firstName: "", lastName: "", email: "", message: "" };
 
 export default function ContactSection() {
   const [ref, visible] = useScrollReveal();

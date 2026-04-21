@@ -32,44 +32,63 @@ export default function AboutSection({ onBook }) {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* ── LEFT: Photo ── */}
-          <div className="relative">
-            <div
-              className="absolute top-4 left-4 w-full h-full border border-champagne/12 rounded-2xl -z-10"
-              aria-hidden="true"
-            />
-            <div className="relative overflow-hidden rounded-2xl border border-champagne/18 shadow-2xl shadow-navy">
-              <div className="aspect-3/4 bg-navy-light">
-                <img
-                  src={laurienPhoto}
-                  alt="Coach Laurien"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top"
+          <div className="flex flex-col gap-4 max-w-xs">
+
+            {/* Profile card */}
+            <div className="p-6 bg-navy-light/30 border border-champagne/12 rounded-2xl flex flex-col items-center text-center gap-4">
+
+              {/* Circular avatar with decorative ring */}
+              <div className="relative">
+                <div className="w-24 h-24 rounded-full p-0.5 bg-linear-to-br from-champagne/40 to-champagne/10">
+                  <div className="w-full h-full rounded-full overflow-hidden border-2 border-navy">
+                    <img
+                      src={laurienPhoto}
+                      alt="Coach Laurien"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+                {/* Online dot */}
+                <span
+                  className="absolute bottom-1 right-1 w-3 h-3 bg-champagne rounded-full border-2 border-navy"
+                  aria-hidden="true"
                 />
               </div>
-              <div
-                className="absolute bottom-0 left-0 right-0 h-36 bg-linear-to-t from-navy/85 to-transparent pointer-events-none"
-                aria-hidden="true"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
-                <div>
-                  <p className="font-display text-base font-semibold text-champagne leading-none">
-                    Coach Laurien
-                  </p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-offwhite/45 mt-1.5">
-                    Founder, KELP Education
-                  </p>
-                </div>
-                <div className="flex flex-col items-end gap-1" aria-hidden="true">
-                  <div className="w-8 h-px bg-champagne/35" />
-                  <div className="w-4 h-px bg-champagne/20" />
-                </div>
+
+              {/* Name & role */}
+              <div>
+                <p className="font-display text-base font-semibold text-champagne leading-tight mb-1">
+                  Coach Laurien
+                </p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-offwhite/35">
+                  Founder, KELP Education
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div className="w-full h-px bg-champagne/10" aria-hidden="true" />
+
+              {/* Credential rows */}
+              <div className="w-full flex flex-col gap-2.5 text-left">
+                {[
+                  { label: "Focus", value: "Author Coaching" },
+                  { label: "Programs", value: "Schools & Institutions" },
+                  { label: "Approach", value: "Structured · Precise" },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex items-center justify-between gap-3">
+                    <span className="text-[10px] uppercase tracking-[0.15em] text-offwhite/28 shrink-0">{label}</span>
+                    <span className="text-xs text-offwhite/55 font-medium text-right">{value}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="mt-4 flex items-center gap-3 px-4 py-3 bg-navy border border-champagne/10 rounded-xl w-fit">
+            {/* Status pill */}
+            <div className="flex items-center gap-2.5 px-4 py-2.5 bg-navy border border-champagne/10 rounded-xl">
               <span className="w-2 h-2 rounded-full bg-champagne animate-pulse shrink-0" aria-hidden="true" />
-              <p className="text-xs text-offwhite/45">{a.statusPill}</p>
+              <p className="text-xs text-offwhite/38">{a.statusPill}</p>
             </div>
           </div>
 

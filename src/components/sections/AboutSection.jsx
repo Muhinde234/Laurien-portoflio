@@ -32,63 +32,107 @@ export default function AboutSection({ onBook }) {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* ── LEFT: Photo ── */}
-          <div className="flex flex-col gap-4 max-w-xs">
+          <div className="relative flex justify-center md:justify-start">
 
-            {/* Profile card */}
-            <div className="p-6 bg-navy-light/30 border border-champagne/12 rounded-2xl flex flex-col items-center text-center gap-4">
+            {/* Decorative dot grid — top-right */}
+            <div
+              className="absolute -top-4 -right-4 w-28 h-28 opacity-20 pointer-events-none"
+              aria-hidden="true"
+              style={{
+                backgroundImage: "radial-gradient(circle, #E8D6B3 1px, transparent 1px)",
+                backgroundSize: "10px 10px",
+              }}
+            />
 
-              {/* Circular avatar with decorative ring */}
-              <div className="relative">
-                <div className="w-24 h-24 rounded-full p-0.5 bg-linear-to-br from-champagne/40 to-champagne/10">
-                  <div className="w-full h-full rounded-full overflow-hidden border-2 border-navy">
-                    <img
-                      src={laurienPhoto}
-                      alt="Coach Laurien"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                </div>
-                {/* Online dot */}
-                <span
-                  className="absolute bottom-1 right-1 w-3 h-3 bg-champagne rounded-full border-2 border-navy"
-                  aria-hidden="true"
+            {/* Decorative dot grid — bottom-left */}
+            <div
+              className="absolute -bottom-4 -left-4 w-20 h-20 opacity-15 pointer-events-none"
+              aria-hidden="true"
+              style={{
+                backgroundImage: "radial-gradient(circle, #E8D6B3 1px, transparent 1px)",
+                backgroundSize: "10px 10px",
+              }}
+            />
+
+            {/* Offset accent card behind image */}
+            <div
+              className="absolute top-5 left-5 right-0 bottom-0 rounded-2xl border border-champagne/15"
+              style={{ background: "linear-gradient(135deg, #1a2347 0%, #1e2a52 100%)" }}
+              aria-hidden="true"
+            />
+
+            <div className="relative z-10 w-full max-w-[340px]">
+
+              {/* Image frame */}
+              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
+                   style={{ border: "1px solid rgba(232,214,179,0.18)" }}>
+                <img
+                  src={laurienPhoto}
+                  alt="Coach Laurien"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top"
                 />
+
+                {/* Bottom gradient fade */}
+                <div
+                  className="absolute inset-x-0 bottom-0 h-2/5 pointer-events-none"
+                  aria-hidden="true"
+                  style={{
+                    background: "linear-gradient(to top, rgba(18,24,54,0.85) 0%, transparent 100%)",
+                  }}
+                />
+
+                {/* Corner accent lines — top-left */}
+                <div className="absolute top-3 left-3 w-8 h-8 pointer-events-none" aria-hidden="true">
+                  <div className="absolute top-0 left-0 w-full h-px bg-champagne/50" />
+                  <div className="absolute top-0 left-0 h-full w-px bg-champagne/50" />
+                </div>
+                {/* Corner accent lines — bottom-right */}
+                <div className="absolute bottom-3 right-3 w-8 h-8 pointer-events-none" aria-hidden="true">
+                  <div className="absolute bottom-0 right-0 w-full h-px bg-champagne/50" />
+                  <div className="absolute bottom-0 right-0 h-full w-px bg-champagne/50" />
+                </div>
+
+                {/* Name overlay at bottom of image */}
+                <div className="absolute bottom-0 inset-x-0 px-5 pb-4 pt-2">
+                  <p className="font-display text-base font-bold text-offwhite leading-tight">
+                    Coach Laurien
+                  </p>
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-champagne/70 mt-0.5">
+                    Founder, KELP Education
+                  </p>
+                </div>
               </div>
 
-              {/* Name & role */}
-              <div>
-                <p className="font-display text-base font-semibold text-champagne leading-tight mb-1">
-                  Coach Laurien
+              {/* Floating status pill — top-right outside frame */}
+              <div
+                className="absolute -top-3 -right-3 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg z-20"
+                style={{
+                  background: "linear-gradient(135deg, #1e2a52 0%, #1a2347 100%)",
+                  border: "1px solid rgba(232,214,179,0.22)",
+                }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" aria-hidden="true" />
+                <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-offwhite/70 whitespace-nowrap">
+                  Accepting Clients
+                </span>
+              </div>
+
+              {/* Floating credential card — bottom-right outside frame */}
+              <div
+                className="absolute -bottom-5 -right-5 px-4 py-3 rounded-xl shadow-xl z-20 min-w-[130px]"
+                style={{
+                  background: "linear-gradient(135deg, #1e2a52 0%, #1a2347 100%)",
+                  border: "1px solid rgba(232,214,179,0.18)",
+                }}
+              >
+                <p className="font-display text-xl font-bold text-champagne leading-none">5+</p>
+                <p className="text-[10px] uppercase tracking-[0.15em] text-offwhite/45 mt-1 leading-tight">
+                  Years of<br />Impact
                 </p>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-offwhite/35">
-                  Founder, KELP Education
-                </p>
               </div>
 
-              {/* Divider */}
-              <div className="w-full h-px bg-champagne/10" aria-hidden="true" />
-
-              {/* Credential rows */}
-              <div className="w-full flex flex-col gap-2.5 text-left">
-                {[
-                  { label: "Focus", value: "Author Coaching" },
-                  { label: "Programs", value: "Schools & Institutions" },
-                  { label: "Approach", value: "Structured · Precise" },
-                ].map(({ label, value }) => (
-                  <div key={label} className="flex items-center justify-between gap-3">
-                    <span className="text-[10px] uppercase tracking-[0.15em] text-offwhite/28 shrink-0">{label}</span>
-                    <span className="text-xs text-offwhite/55 font-medium text-right">{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Status pill */}
-            <div className="flex items-center gap-2.5 px-4 py-2.5 bg-navy border border-champagne/10 rounded-xl">
-              <span className="w-2 h-2 rounded-full bg-champagne animate-pulse shrink-0" aria-hidden="true" />
-              <p className="text-xs text-offwhite/38">{a.statusPill}</p>
             </div>
           </div>
 

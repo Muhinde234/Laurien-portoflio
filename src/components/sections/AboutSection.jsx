@@ -93,21 +93,6 @@ export default function AboutSection({ onBook }) {
                     <div className="absolute top-0 right-0 h-full w-px bg-champagne/70" />
                   </div>
 
-                  {/* Status pill */}
-                  <div
-                    className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full"
-                    style={{
-                      background: "rgba(13,18,41,0.8)",
-                      border: "1px solid rgba(232,214,179,0.22)",
-                      backdropFilter: "blur(8px)",
-                    }}
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" aria-hidden="true" />
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-offwhite/80 whitespace-nowrap">
-                      Accepting Clients
-                    </span>
-                  </div>
-
                   {/* Name overlay — bottom */}
                   <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
                     <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
@@ -118,23 +103,6 @@ export default function AboutSection({ onBook }) {
                 </div>
               </div>
 
-              {/* Stats — float below image, full width of image */}
-              <div className="mt-3 grid grid-cols-2 gap-2.5">
-                <div
-                  className="px-4 py-3.5 rounded-xl text-center"
-                  style={{ background: "rgba(26,35,71,0.75)", border: "1px solid rgba(232,214,179,0.14)" }}
-                >
-                  <p className="font-display text-2xl font-bold text-champagne leading-none">5+</p>
-                  <p className="text-[10px] uppercase tracking-[0.12em] text-offwhite/40 mt-1.5 leading-tight">Years<br/>Impact</p>
-                </div>
-                <div
-                  className="px-4 py-3.5 rounded-xl text-center"
-                  style={{ background: "rgba(26,35,71,0.75)", border: "1px solid rgba(232,214,179,0.14)" }}
-                >
-                  <p className="font-display text-2xl font-bold text-champagne leading-none">100+</p>
-                  <p className="text-[10px] uppercase tracking-[0.12em] text-offwhite/40 mt-1.5 leading-tight">Clients<br/>Served</p>
-                </div>
-              </div>
 
             </div>
           </div>

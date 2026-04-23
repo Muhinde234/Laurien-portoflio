@@ -8,7 +8,8 @@ const EMPTY_FORM = { firstName: "", lastName: "", email: "", message: "" };
 export default function ContactSection() {
   const [ref, visible] = useScrollReveal();
   const { content } = useContent();
-  const email = content.contact.email;
+  const c = content.contact;
+  const email = c.email;
 
   const [form, setForm] = useState(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
@@ -56,17 +57,17 @@ export default function ContactSection() {
         {/* Section header */}
         <div className="mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-5">
-            Ready to Begin?
+            {c.label}
           </p>
           <h2
             id="contact-heading"
             className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-offwhite leading-tight mb-4"
           >
-            Let's start a{" "}
-            <span className="text-champagne italic font-light">conversation.</span>
+            {c.headlineStart}{" "}
+            <span className="text-champagne italic font-light">{c.headlineHighlight}</span>
           </h2>
           <p className="text-sm text-offwhite/45 max-w-lg leading-relaxed">
-            Fill in the form and I'll get back to you within 48 hours. Every serious enquiry receives a thoughtful, personal response.
+            {c.subtext}
           </p>
         </div>
 
@@ -81,19 +82,19 @@ export default function ContactSection() {
                 icon: Mail,
                 label: "Email",
                 value: email,
-                sub: "Direct line — always read personally",
+                sub: c.emailSub,
               },
               {
                 icon: Clock,
                 label: "Response time",
-                value: "Within 48 hours",
-                sub: "For all serious enquiries",
+                value: c.responseTime,
+                sub: c.responseTimeSub,
               },
               {
                 icon: MapPin,
                 label: "Availability",
-                value: "Remote & In-person",
-                sub: "Author coaching & school programs",
+                value: c.availability,
+                sub: c.availabilitySub,
               },
             ].map(({ icon: Icon, label, value, sub }) => (
               <div
@@ -115,7 +116,7 @@ export default function ContactSection() {
 
             {/* Tagline */}
             <p className="font-display italic text-champagne/40 text-sm leading-relaxed pl-1 mt-2">
-              "From book development to youth programs — I am your right helper."
+              "{c.tagline}"
             </p>
           </aside>
 
@@ -136,10 +137,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-display text-2xl font-semibold text-offwhite mb-2">
-                      Message Received.
+                      {c.successTitle}
                     </h3>
                     <p className="text-offwhite/45 text-sm leading-relaxed max-w-xs mx-auto">
-                      Thank you for reaching out. I'll be in touch within 48 hours with a thoughtful response.
+                      {c.successMessage}
                     </p>
                   </div>
                   <button
@@ -250,7 +251,7 @@ export default function ContactSection() {
                         </>
                       ) : (
                         <>
-                          Send Message
+                          {c.submitLabel}
                           <Send
                             className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                             aria-hidden="true"
@@ -259,7 +260,7 @@ export default function ContactSection() {
                       )}
                     </button>
                     <p className="mt-3 text-xs text-offwhite/20 tracking-wide">
-                      No spam, ever. I respond personally within 48 hours.
+                      {c.disclaimer}
                     </p>
                   </div>
                 </form>

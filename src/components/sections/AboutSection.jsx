@@ -18,18 +18,18 @@ export default function AboutSection({ onBook }) {
     <section
       ref={aboutRef}
       id="about"
-      className={`py-24 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
+      className={`py-16 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
       aria-labelledby="about-heading"
     >
       <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-12">
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-8">
           {a.label}
         </p>
 
-        <div className="grid md:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
+        <div className="grid md:grid-cols-[5fr_7fr] gap-8 lg:gap-12 items-start">
 
           {/* ── LEFT: Photo ── */}
           <div className="relative flex justify-center md:justify-start">
@@ -108,7 +108,7 @@ export default function AboutSection({ onBook }) {
           </div>
 
           {/* ── RIGHT: Content ── */}
-          <div className="flex flex-col gap-7 pt-2 md:pt-6">
+          <div className="flex flex-col gap-5 pt-2 md:pt-4">
 
             <h2
               id="about-heading"

@@ -15,7 +15,7 @@ export default function FeaturedStrip() {
       aria-label="Trusted by"
     >
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-offwhite/25 shrink-0">
+        <p className="text-xs font-semibold uppercase tracking-widest text-offwhite/25 shrink-0">
           Trusted by
         </p>
         <div className="h-px w-6 bg-champagne/18 hidden sm:block" aria-hidden="true" />
@@ -23,7 +23,7 @@ export default function FeaturedStrip() {
           {logos.map((logo) => (
             <span
               key={logo}
-              className="px-4 py-1.5 text-xs font-medium tracking-wide text-offwhite/40 border border-champagne/10 rounded-full"
+              className="px-4 py-1.5 text-sm font-medium tracking-wide text-offwhite/40 border border-champagne/10 rounded-full"
             >
               {logo}
             </span>

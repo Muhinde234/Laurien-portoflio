@@ -96,7 +96,7 @@ export default function AboutSection({ onBook }) {
                   {/* Name overlay — bottom */}
                   <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
                     <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-champagne/70 mt-1">
+                    <p className="text-xs uppercase tracking-wider text-champagne/70 mt-1">
                       Founder, KELP Education
                     </p>
                   </div>
@@ -112,7 +112,7 @@ export default function AboutSection({ onBook }) {
 
             <h2
               id="about-heading"
-              className="font-display text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-offwhite leading-[1.1]"
+              className="font-display text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-offwhite leading-tight"
             >
               {a.headlineStart}{" "}
               <span className="italic font-light text-champagne">{a.headlineHighlight}</span>
@@ -124,7 +124,7 @@ export default function AboutSection({ onBook }) {
               </p>
             </blockquote>
 
-            <div className="space-y-3.5 text-sm text-offwhite/50 leading-[1.9]">
+            <div className="space-y-3.5 text-sm text-offwhite/50 leading-loose">
               <p>{a.body1}</p>
               <p>{a.body2}</p>
             </div>

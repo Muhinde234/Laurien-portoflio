@@ -29,126 +29,129 @@ export default function AboutSection({ onBook }) {
           {a.label}
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid md:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
 
           {/* ── LEFT: Photo ── */}
           <div className="relative flex justify-center md:justify-start">
 
+            {/* Decorative background offset block */}
+            <div
+              className="absolute -bottom-4 -left-4 w-4/5 h-4/5 rounded-2xl pointer-events-none"
+              aria-hidden="true"
+              style={{
+                background: "linear-gradient(145deg, rgba(232,214,179,0.08) 0%, rgba(232,214,179,0.03) 100%)",
+                border: "1px solid rgba(232,214,179,0.1)",
+              }}
+            />
+
             {/* Decorative dot grid — top-right */}
             <div
-              className="absolute -top-4 -right-4 w-28 h-28 opacity-20 pointer-events-none"
+              className="absolute -top-6 -right-6 w-20 h-20 pointer-events-none hidden md:block"
               aria-hidden="true"
               style={{
-                backgroundImage: "radial-gradient(circle, #E8D6B3 1px, transparent 1px)",
-                backgroundSize: "10px 10px",
+                backgroundImage: "radial-gradient(rgba(232,214,179,0.25) 1px, transparent 1px)",
+                backgroundSize: "8px 8px",
               }}
             />
 
-            {/* Decorative dot grid — bottom-left */}
-            <div
-              className="absolute -bottom-4 -left-4 w-20 h-20 opacity-15 pointer-events-none"
-              aria-hidden="true"
-              style={{
-                backgroundImage: "radial-gradient(circle, #E8D6B3 1px, transparent 1px)",
-                backgroundSize: "10px 10px",
-              }}
-            />
+            <div className="relative w-full max-w-sm md:max-w-none">
 
-            {/* Offset accent card behind image */}
-            <div
-              className="absolute top-5 left-5 right-0 bottom-0 rounded-2xl border border-champagne/15"
-              style={{ background: "linear-gradient(135deg, #1a2347 0%, #1e2a52 100%)" }}
-              aria-hidden="true"
-            />
+              {/* Champagne ring frame */}
+              <div
+                className="relative rounded-2xl overflow-visible"
+                style={{
+                  padding: "3px",
+                  background: "linear-gradient(145deg, rgba(232,214,179,0.45) 0%, rgba(232,214,179,0.06) 55%, rgba(232,214,179,0.22) 100%)",
+                }}
+              >
+                <div className="relative rounded-[14px] overflow-hidden aspect-[3/4]">
+                  <img
+                    src={laurienPhoto}
+                    alt="Coach Laurien"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-top"
+                  />
 
-            <div className="relative z-10 w-full max-w-[340px]">
+                  {/* Bottom gradient overlay */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
+                    aria-hidden="true"
+                    style={{
+                      background: "linear-gradient(to top, rgba(13,18,41,0.95) 0%, rgba(13,18,41,0.45) 55%, transparent 100%)",
+                    }}
+                  />
 
-              {/* Image frame */}
-              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
-                   style={{ border: "1px solid rgba(232,214,179,0.18)" }}>
-                <img
-                  src={laurienPhoto}
-                  alt="Coach Laurien"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top"
-                />
+                  {/* Corner bracket — top-left */}
+                  <div className="absolute top-4 left-4 w-7 h-7 pointer-events-none" aria-hidden="true">
+                    <div className="absolute top-0 left-0 w-full h-px bg-champagne/70" />
+                    <div className="absolute top-0 left-0 h-full w-px bg-champagne/70" />
+                  </div>
+                  {/* Corner bracket — top-right */}
+                  <div className="absolute top-4 right-4 w-7 h-7 pointer-events-none" aria-hidden="true">
+                    <div className="absolute top-0 right-0 w-full h-px bg-champagne/70" />
+                    <div className="absolute top-0 right-0 h-full w-px bg-champagne/70" />
+                  </div>
 
-                {/* Bottom gradient fade */}
+                  {/* Status pill */}
+                  <div
+                    className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full"
+                    style={{
+                      background: "rgba(13,18,41,0.8)",
+                      border: "1px solid rgba(232,214,179,0.22)",
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" aria-hidden="true" />
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-offwhite/80 whitespace-nowrap">
+                      Accepting Clients
+                    </span>
+                  </div>
+
+                  {/* Name overlay — bottom */}
+                  <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
+                    <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-champagne/70 mt-1">
+                      Founder, KELP Education
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Stats — float below image, full width of image */}
+              <div className="mt-3 grid grid-cols-2 gap-2.5">
                 <div
-                  className="absolute inset-x-0 bottom-0 h-2/5 pointer-events-none"
-                  aria-hidden="true"
-                  style={{
-                    background: "linear-gradient(to top, rgba(18,24,54,0.85) 0%, transparent 100%)",
-                  }}
-                />
-
-                {/* Corner accent lines — top-left */}
-                <div className="absolute top-3 left-3 w-8 h-8 pointer-events-none" aria-hidden="true">
-                  <div className="absolute top-0 left-0 w-full h-px bg-champagne/50" />
-                  <div className="absolute top-0 left-0 h-full w-px bg-champagne/50" />
+                  className="px-4 py-3.5 rounded-xl text-center"
+                  style={{ background: "rgba(26,35,71,0.75)", border: "1px solid rgba(232,214,179,0.14)" }}
+                >
+                  <p className="font-display text-2xl font-bold text-champagne leading-none">5+</p>
+                  <p className="text-[10px] uppercase tracking-[0.12em] text-offwhite/40 mt-1.5 leading-tight">Years<br/>Impact</p>
                 </div>
-                {/* Corner accent lines — bottom-right */}
-                <div className="absolute bottom-3 right-3 w-8 h-8 pointer-events-none" aria-hidden="true">
-                  <div className="absolute bottom-0 right-0 w-full h-px bg-champagne/50" />
-                  <div className="absolute bottom-0 right-0 h-full w-px bg-champagne/50" />
+                <div
+                  className="px-4 py-3.5 rounded-xl text-center"
+                  style={{ background: "rgba(26,35,71,0.75)", border: "1px solid rgba(232,214,179,0.14)" }}
+                >
+                  <p className="font-display text-2xl font-bold text-champagne leading-none">100+</p>
+                  <p className="text-[10px] uppercase tracking-[0.12em] text-offwhite/40 mt-1.5 leading-tight">Clients<br/>Served</p>
                 </div>
-
-                {/* Name overlay at bottom of image */}
-                <div className="absolute bottom-0 inset-x-0 px-5 pb-4 pt-2">
-                  <p className="font-display text-base font-bold text-offwhite leading-tight">
-                    Coach Laurien
-                  </p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-champagne/70 mt-0.5">
-                    Founder, KELP Education
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating status pill — top-right outside frame */}
-              <div
-                className="absolute -top-3 -right-3 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg z-20"
-                style={{
-                  background: "linear-gradient(135deg, #1e2a52 0%, #1a2347 100%)",
-                  border: "1px solid rgba(232,214,179,0.22)",
-                }}
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" aria-hidden="true" />
-                <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-offwhite/70 whitespace-nowrap">
-                  Accepting Clients
-                </span>
-              </div>
-
-              {/* Floating credential card — bottom-right outside frame */}
-              <div
-                className="absolute -bottom-5 -right-5 px-4 py-3 rounded-xl shadow-xl z-20 min-w-[130px]"
-                style={{
-                  background: "linear-gradient(135deg, #1e2a52 0%, #1a2347 100%)",
-                  border: "1px solid rgba(232,214,179,0.18)",
-                }}
-              >
-                <p className="font-display text-xl font-bold text-champagne leading-none">5+</p>
-                <p className="text-[10px] uppercase tracking-[0.15em] text-offwhite/45 mt-1 leading-tight">
-                  Years of<br />Impact
-                </p>
               </div>
 
             </div>
           </div>
 
           {/* ── RIGHT: Content ── */}
-          <div className="flex flex-col gap-7 pt-2">
+          <div className="flex flex-col gap-7 pt-2 md:pt-6">
 
             <h2
               id="about-heading"
-              className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite leading-[1.1]"
+              className="font-display text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-offwhite leading-[1.1]"
             >
               {a.headlineStart}{" "}
               <span className="italic font-light text-champagne">{a.headlineHighlight}</span>
             </h2>
 
-            <blockquote className="border-l-2 border-champagne/30 pl-5">
-              <p className="font-display text-base italic font-light text-offwhite/50 leading-relaxed">
+            <blockquote className="border-l-2 border-champagne/35 pl-5">
+              <p className="font-display text-base italic font-light text-offwhite/55 leading-relaxed">
                 {a.quote}
               </p>
             </blockquote>
@@ -171,11 +174,11 @@ export default function AboutSection({ onBook }) {
               <ul className="space-y-3.5">
                 {values.map(({ num, text }) => (
                   <li key={num} className="flex items-center gap-4">
-                    <span className="font-display text-xs italic text-champagne/35 shrink-0 w-5">
+                    <span className="font-display text-xs italic text-champagne/40 shrink-0 w-5">
                       {num}
                     </span>
                     <div className="h-px w-4 bg-champagne/18 shrink-0" aria-hidden="true" />
-                    <span className="text-sm text-offwhite/60 font-medium">{text}</span>
+                    <span className="text-sm text-offwhite/65 font-medium">{text}</span>
                   </li>
                 ))}
               </ul>

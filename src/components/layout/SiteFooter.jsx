@@ -32,11 +32,11 @@ export default function SiteFooter({ navItems, onNavigate }) {
       }`}
       role="contentinfo"
     >
-      {/* ── Main footer grid ── */}
+   
       <div className="max-w-6xl mx-auto px-6 py-14">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
 
-          {/* Brand column */}
+       
           <div className="md:col-span-1 flex flex-col gap-5">
             <div className="flex items-center gap-3">
               <div className="relative shrink-0">
@@ -68,7 +68,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
               "{f.tagline}"
             </p>
 
-            {/* Social links */}
+       
             <div className="flex gap-2 mt-1">
               {socialWithUrls.map((social, index) => {
                 const Icon = social.icon;
@@ -88,7 +88,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
             </div>
           </div>
 
-          {/* Navigation column */}
+         
           <div>
             <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-5">
               Navigation
@@ -106,7 +106,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
             </nav>
           </div>
 
-          {/* Contact column */}
+         
           <div>
             <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-5">
               Get in Touch
@@ -132,7 +132,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
           </div>
         </div>
 
-        {/* ── Bottom bar ── */}
+       
         <div className="border-t border-champagne/10 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-xs text-offwhite/20">
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.

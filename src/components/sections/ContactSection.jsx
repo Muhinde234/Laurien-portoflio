@@ -223,7 +223,7 @@ export default function ContactSection() {
                       rows={5}
                       value={form.message}
                       onChange={onChange}
-                      placeholder="Tell me about your project, goals, or how you'd like to work together…"
+                      placeholder="Tell me about your goals, or how you'd like to work together…"
                       className={`form-input resize-none${errors.message ? " border-red-400/60" : ""}`}
                       aria-describedby={errors.message ? "message-err" : undefined}
                     />

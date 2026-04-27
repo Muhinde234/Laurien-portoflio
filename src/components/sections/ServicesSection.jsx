@@ -95,12 +95,12 @@ export default function ServicesSection({ onBook }) {
 
                   {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-6 bg-champagne/4 border border-champagne/8 rounded-xl p-4">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-offwhite/28 mb-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
                         {service.partnerLabel}
                       </p>
                       <ul className="space-y-2.5">
                         {service.partnerWith.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-base text-offwhite/45 leading-relaxed">
+                          <li key={idx} className="flex items-start gap-3 text-sm text-offwhite/45 leading-relaxed">
                             <span className="text-champagne/35 shrink-0 mt-0.5 font-display">—</span>
                             {item}
                           </li>
@@ -111,13 +111,13 @@ export default function ServicesSection({ onBook }) {
 
                   <div className="h-px bg-champagne/8 mb-6" aria-hidden="true" />
 
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-offwhite/28 mb-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-4">
                     {service.featuresLabel}
                   </p>
                   <ul className="space-y-3.5 mb-7" role="list">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-4">
-                        <span className="font-display italic text-sm text-champagne/35 shrink-0 mt-0.5 w-5">
+                        <span className="font-display italic text-xs text-champagne/35 shrink-0 mt-0.5 w-5">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
                         <div className="h-px w-4 bg-champagne/18 shrink-0 mt-[0.55rem]" aria-hidden="true" />
@@ -128,14 +128,14 @@ export default function ServicesSection({ onBook }) {
 
                   {service.focusAreas && service.focusAreas.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-offwhite/28 mb-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
                         Students leave with:
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {service.focusAreas.map((area, idx) => (
                           <span
                             key={idx}
-                            className="text-sm text-champagne/55 border border-champagne/12 rounded-full px-3 py-1.5 leading-none"
+                            className="text-xs text-champagne/55 border border-champagne/12 rounded-full px-3 py-1.5 leading-none"
                           >
                             {area}
                           </span>
@@ -146,12 +146,12 @@ export default function ServicesSection({ onBook }) {
 
                   {service.suitedFor && service.suitedFor.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-offwhite/28 mb-2.5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-2.5">
                         Especially suited for institutions that value:
                       </p>
                       <div className="flex gap-3 flex-wrap">
                         {service.suitedFor.map((s, idx) => (
-                          <span key={idx} className="flex items-center gap-2 text-base text-offwhite/45">
+                          <span key={idx} className="flex items-center gap-2 text-sm text-offwhite/45">
                             <span className="w-1 h-1 rounded-full bg-champagne/45 shrink-0" aria-hidden="true" />
                             {s}
                           </span>
@@ -163,7 +163,7 @@ export default function ServicesSection({ onBook }) {
                   {service.note && (
                     <>
                       <div className="h-px bg-champagne/8 mb-4" aria-hidden="true" />
-                      <p className="font-display italic font-light text-sm text-offwhite/28 leading-relaxed mb-6">
+                      <p className="font-display italic font-light text-xs text-offwhite/28 leading-relaxed mb-6">
                         {service.note}
                       </p>
                     </>

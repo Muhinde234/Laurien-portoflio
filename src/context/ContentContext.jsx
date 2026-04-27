@@ -1,4 +1,6 @@
-import { createContext, useContext, useState, useCallback } from "react";
+import { createContext, useContext, useState, useCallback, useEffect } from "react";
+import { ref, onValue, set } from "firebase/database";
+import { db } from "../lib/firebase";
 
 export const DEFAULT_CONTENT = {
   hero: {
@@ -172,33 +174,58 @@ function deepMerge(defaults, saved) {
 const ContentContext = createContext(null);
 
 export function ContentProvider({ children }) {
+  // Seed from localStorage cache for instant first render, Firebase overwrites it
   const [content, setContent] = useState(() => {
     try {
       const saved = localStorage.getItem("coach_laurien_content");
-      if (saved) {
-        return deepMerge(DEFAULT_CONTENT, JSON.parse(saved));
-      }
-    } catch {
-     
-    }
+      if (saved) return deepMerge(DEFAULT_CONTENT, JSON.parse(saved));
+    } catch {}
     return DEFAULT_CONTENT;
   });
+
+  const [loading, setLoading] = useState(true);
+
+  // Subscribe to Firebase — all visitors receive live updates
+  useEffect(() => {
+    const contentRef = ref(db, "content");
+    const unsubscribe = onValue(
+      contentRef,
+      (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const merged = deepMerge(DEFAULT_CONTENT, data);
+          setContent(merged);
+          localStorage.setItem("coach_laurien_content", JSON.stringify(merged));
+        }
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Firebase read error:", error);
+        setLoading(false);
+      }
+    );
+    return () => unsubscribe();
+  }, []);
 
   const updateContent = useCallback((section, data) => {
     setContent((prev) => {
       const next = { ...prev, [section]: data };
+      // Write to Firebase so every visitor sees the change
+      set(ref(db, "content"), next).catch(console.error);
+      // Update local cache
       localStorage.setItem("coach_laurien_content", JSON.stringify(next));
       return next;
     });
   }, []);
 
   const resetContent = useCallback(() => {
+    set(ref(db, "content"), DEFAULT_CONTENT).catch(console.error);
     localStorage.removeItem("coach_laurien_content");
     setContent(DEFAULT_CONTENT);
   }, []);
 
   return (
-    <ContentContext.Provider value={{ content, updateContent, resetContent }}>
+    <ContentContext.Provider value={{ content, updateContent, resetContent, loading }}>
       {children}
     </ContentContext.Provider>
   );

@@ -60,11 +60,11 @@ export default function SiteFooter({ navItems, onNavigate }) {
               </div>
             </div>
 
-            <p className="text-sm text-offwhite/40 leading-relaxed whitespace-pre-line">
+            <p className="text-base text-offwhite/40 leading-relaxed whitespace-pre-line">
               {f.bio}
             </p>
 
-            <p className="font-display italic text-champagne/45 text-sm leading-none">
+            <p className="font-display italic text-champagne/45 text-base leading-none">
               "{f.tagline}"
             </p>
 
@@ -90,7 +90,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
          
           <div>
-            <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-5">
+            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-5">
               Navigation
             </h5>
             <nav className="flex flex-col gap-3" aria-label="Footer navigation">
@@ -98,7 +98,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className="text-sm text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
+                  className="text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
                 >
                   {item.label}
                 </button>
@@ -108,23 +108,23 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
          
           <div>
-            <h5 className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-5">
+            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-5">
               Get in Touch
             </h5>
             <div className="flex flex-col gap-4">
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center gap-2 text-sm text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
+                className="inline-flex items-center gap-2 text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
               >
                 <Mail className="w-4 h-4 shrink-0 text-champagne/45" aria-hidden="true" />
                 {email}
               </a>
 
               <div className="pt-3 border-t border-champagne/10">
-                <p className="text-xs text-offwhite/28 leading-relaxed mb-3">
+                <p className="text-sm text-offwhite/28 leading-relaxed mb-3">
                   For enquiries regarding author coaching, school programs, or institutional partnerships.
                 </p>
-                <p className="text-xs uppercase tracking-[0.2em] text-champagne/35 font-medium">
+                <p className="text-sm uppercase tracking-[0.18em] text-champagne/35 font-medium">
                   Response within 48 hours.
                 </p>
               </div>
@@ -134,10 +134,10 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
        
         <div className="border-t border-champagne/10 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <span className="text-xs text-offwhite/20">
+          <span className="text-sm text-offwhite/20">
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.
           </span>
-          <span className="font-display italic text-sm text-offwhite/15">
+          <span className="font-display italic text-base text-offwhite/15">
             {f.tagline}
           </span>
         </div>

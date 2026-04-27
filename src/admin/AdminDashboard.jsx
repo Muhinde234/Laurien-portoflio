@@ -116,7 +116,7 @@ export default function AdminDashboard({ onLogout }) {
                   <p className={`leading-none truncate ${active ? "font-semibold text-gray-900" : "font-medium"}`}>
                     {tab.label}
                   </p>
-                  <p className={`text-[10px] mt-0.5 leading-none truncate ${active ? "text-gray-500" : "text-gray-400"}`}>
+                  <p className={`text-sm mt-0.5 leading-none truncate ${active ? "text-gray-500" : "text-gray-400"}`}>
                     {tab.desc}
                   </p>
                 </div>
@@ -131,14 +131,14 @@ export default function AdminDashboard({ onLogout }) {
             href="/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-2 text-xs text-gray-400 hover:text-navy transition-colors duration-200 font-medium"
+              className="flex items-center gap-2 px-3 py-2 text-sm text-gray-400 hover:text-navy transition-colors duration-200 font-medium"
           >
             <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             Preview Live Site
           </a>
           <button
             onClick={onLogout}
-            className="w-full flex items-center gap-2 px-3 py-2 text-xs text-gray-400 hover:text-red-500 transition-colors duration-200 font-medium"
+              className="w-full flex items-center gap-2 px-3 py-2 text-sm text-gray-400 hover:text-red-500 transition-colors duration-200 font-medium"
           >
             <LogOut className="w-3.5 h-3.5 shrink-0" />
             Sign Out
@@ -175,7 +175,7 @@ export default function AdminDashboard({ onLogout }) {
               <h1 className="text-base font-bold text-gray-900 leading-none">
                 {activeTabData?.label}
               </h1>
-              <p className="text-xs text-gray-400 mt-0.5">{activeTabData?.desc}</p>
+              <p className="text-sm text-gray-400 mt-0.5">{activeTabData?.desc}</p>
             </div>
           </div>
 
@@ -184,14 +184,14 @@ export default function AdminDashboard({ onLogout }) {
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-1.5 text-xs text-gray-500 hover:text-navy font-medium transition"
+              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-navy font-medium transition"
             >
               <ExternalLink className="w-3 h-3" />
               Preview Site
             </a>
             <button
               onClick={onLogout}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-xs text-gray-500 hover:bg-gray-50 hover:text-red-600 transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-sm text-gray-500 hover:bg-gray-50 hover:text-red-600 transition"
             >
               <LogOut className="w-3 h-3" />
               Sign Out

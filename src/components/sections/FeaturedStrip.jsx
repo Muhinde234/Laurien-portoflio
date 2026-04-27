@@ -15,7 +15,7 @@ export default function FeaturedStrip() {
       aria-label="Trusted by"
     >
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-offwhite/25 shrink-0">
+        <p className="text-sm font-semibold uppercase tracking-widest text-offwhite/25 shrink-0">
           Trusted by
         </p>
         <div className="h-px w-6 bg-champagne/18 hidden sm:block" aria-hidden="true" />

@@ -28,7 +28,7 @@ export default function HeroEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Top Label</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Top Label</p>
           <Field label="Small Label Text" hint="Appears above the main headline in small caps">
             <Input
               value={form.label}
@@ -39,7 +39,7 @@ export default function HeroEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Main Headline</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Main Headline</p>
           <Field label="Headline — Regular Part" hint='The part shown in white, e.g. "Hi, I am"'>
             <Input
               value={form.headlineStart}
@@ -57,7 +57,7 @@ export default function HeroEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Description</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Description</p>
           <Field label="Subheadline / Description" hint="The paragraph below the main headline">
             <Textarea
               value={form.subheadline}
@@ -69,7 +69,7 @@ export default function HeroEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Buttons</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Buttons</p>
           <Field label="Primary Button Text" hint='The gold button, e.g. "Begin the Work"'>
             <Input
               value={form.primaryCta}
@@ -87,7 +87,7 @@ export default function HeroEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Tagline</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Tagline</p>
           <Field label="Bottom Tagline" hint="The small text shown between two lines at the bottom of the hero">
             <Input
               value={form.tagline}

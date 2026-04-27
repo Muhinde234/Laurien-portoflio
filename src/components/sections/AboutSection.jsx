@@ -25,7 +25,7 @@ export default function AboutSection({ onBook }) {
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-champagne/60 mb-8">
           {a.label}
         </p>
 
@@ -96,7 +96,7 @@ export default function AboutSection({ onBook }) {
              
                   <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
                     <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
-                    <p className="text-xs uppercase tracking-wider text-champagne/70 mt-1">
+                    <p className="text-sm uppercase tracking-wider text-champagne/70 mt-1">
                       Founder, KELP Education
                     </p>
                   </div>
@@ -124,7 +124,7 @@ export default function AboutSection({ onBook }) {
               </p>
             </blockquote>
 
-            <div className="space-y-3.5 text-sm text-offwhite/50 leading-loose">
+            <div className="space-y-3.5 text-base text-offwhite/50 leading-loose">
               <p>{a.body1}</p>
               <p>{a.body2}</p>
             </div>
@@ -136,17 +136,17 @@ export default function AboutSection({ onBook }) {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/30 mb-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-4">
                 {a.valuesHeading}
               </p>
               <ul className="space-y-3.5">
                 {values.map(({ num, text }) => (
                   <li key={num} className="flex items-center gap-4">
-                    <span className="font-display text-xs italic text-champagne/40 shrink-0 w-5">
+                    <span className="font-display text-sm italic text-champagne/40 shrink-0 w-5">
                       {num}
                     </span>
                     <div className="h-px w-4 bg-champagne/18 shrink-0" aria-hidden="true" />
-                    <span className="text-sm text-offwhite/65 font-medium">{text}</span>
+                    <span className="text-base text-offwhite/65 font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -154,14 +154,14 @@ export default function AboutSection({ onBook }) {
 
             <div className="h-px bg-champagne/10" aria-hidden="true" />
 
-            <p className="font-display text-sm italic font-light text-offwhite/38 leading-relaxed">
+            <p className="font-display text-base italic font-light text-offwhite/38 leading-relaxed">
               {a.closing}
             </p>
 
             <div>
               <button
                 onClick={onBook}
-                className="group bg-champagne text-navy font-semibold px-7 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
+                className="group bg-champagne text-navy font-semibold px-7 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
               >
                 {a.cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />

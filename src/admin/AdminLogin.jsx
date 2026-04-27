@@ -51,7 +51,7 @@ export default function AdminLogin({ onLogin }) {
           <h1 className="font-display text-2xl font-semibold text-champagne leading-none tracking-wide mb-1.5">
             Coach Laurien
           </h1>
-          <p className="text-[11px] text-offwhite/30 uppercase tracking-[0.3em] font-medium">
+          <p className="text-sm text-offwhite/30 uppercase tracking-[0.22em] font-medium">
             Content Management
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function AdminLogin({ onLogin }) {
 
               {/* Password field */}
               <div className="space-y-2">
-                <label className="block text-[11px] font-semibold text-offwhite/45 uppercase tracking-[0.2em]">
+                <label className="block text-sm font-semibold text-offwhite/45 uppercase tracking-[0.18em]">
                   Password
                 </label>
                 <div className="relative">
@@ -101,7 +101,7 @@ export default function AdminLogin({ onLogin }) {
                 </div>
 
                 {error && (
-                  <p className="flex items-center gap-2 text-xs text-red-400 pt-0.5">
+                  <p className="flex items-center gap-2 text-sm text-red-400 pt-0.5">
                     <span className="w-1 h-1 rounded-full bg-red-400 shrink-0" />
                     {error}
                   </p>
@@ -126,7 +126,7 @@ export default function AdminLogin({ onLogin }) {
         </div>
 
         {/* Hint */}
-        <p className="text-center text-xs text-offwhite/20 mt-6 leading-relaxed">
+        <p className="text-center text-sm text-offwhite/20 mt-6 leading-relaxed">
           Default password:{" "}
           <span className="font-mono text-champagne/40 bg-champagne/5 border border-champagne/10 px-1.5 py-0.5 rounded">
             laurien2024

@@ -129,7 +129,7 @@ export default function SettingsEditor({ onLogout }) {
 
         {/* Profile Photo */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Profile Photo</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Profile Photo</p>
           <p className="text-sm text-gray-500">
             Small circular photo — appears in the header, chatbot, booking card, and footer.
           </p>
@@ -155,7 +155,7 @@ export default function SettingsEditor({ onLogout }) {
                   className="hidden"
                 />
               </label>
-              <p className="text-xs text-gray-400">JPG, PNG, WebP · Recommended: square, at least 400×400px</p>
+              <p className="text-sm text-gray-400">JPG, PNG, WebP · Recommended: square, at least 400×400px</p>
             </div>
           </div>
           {photoPreview && (
@@ -172,14 +172,14 @@ export default function SettingsEditor({ onLogout }) {
               >
                 Remove Photo
               </button>
-              {photoSaved && <p className="text-xs text-green-600 font-medium">✓ Photo saved to all pages</p>}
+              {photoSaved && <p className="text-sm text-green-600 font-medium">✓ Photo saved to all pages</p>}
             </div>
           )}
         </div>
 
         {/* About Section Photo */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">About Section Photo</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">About Section Photo</p>
           <p className="text-sm text-gray-500">
             Large portrait displayed in the About section. Best as a tall/portrait-oriented image.
           </p>
@@ -205,7 +205,7 @@ export default function SettingsEditor({ onLogout }) {
                   className="hidden"
                 />
               </label>
-              <p className="text-xs text-gray-400">JPG, PNG, WebP · Recommended: portrait, at least 600×800px</p>
+              <p className="text-sm text-gray-400">JPG, PNG, WebP · Recommended: portrait, at least 600×800px</p>
             </div>
           </div>
           {aboutPhotoPreview && (
@@ -222,14 +222,14 @@ export default function SettingsEditor({ onLogout }) {
               >
                 Remove Photo
               </button>
-              {aboutPhotoSaved && <p className="text-xs text-green-600 font-medium">✓ About photo saved</p>}
+              {aboutPhotoSaved && <p className="text-sm text-green-600 font-medium">✓ About photo saved</p>}
             </div>
           )}
         </div>
 
         {/* Change password */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Change Password</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Change Password</p>
           <Field label="New Password" hint="At least 6 characters">
             <input
               type="password"
@@ -248,8 +248,8 @@ export default function SettingsEditor({ onLogout }) {
               className="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy/15 focus:border-navy transition"
             />
           </Field>
-          {passwordError && <p className="text-xs text-red-600">{passwordError}</p>}
-          {passwordSaved && <p className="text-xs text-green-600 font-medium">✓ Password updated successfully</p>}
+          {passwordError && <p className="text-sm text-red-600">{passwordError}</p>}
+          {passwordSaved && <p className="text-sm text-green-600 font-medium">✓ Password updated successfully</p>}
           <button
             onClick={savePassword}
             className="px-5 py-2 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition"
@@ -260,7 +260,7 @@ export default function SettingsEditor({ onLogout }) {
 
         {/* Backup & Restore */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Backup & Restore</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Backup & Restore</p>
           <p className="text-sm text-gray-500">
             Export your current content as a backup file. You can use this file to restore your content later or move it to another device.
           </p>
@@ -280,7 +280,7 @@ export default function SettingsEditor({ onLogout }) {
 
         {/* Reset */}
         <div className="bg-red-50 rounded-xl p-3 border border-red-200 space-y-2.5">
-          <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">Danger Zone</p>
+          <p className="text-sm font-semibold text-red-600 uppercase tracking-wide">Danger Zone</p>
           <p className="text-sm text-gray-600">
             Reset all content back to the original defaults. This will erase all your changes permanently.
           </p>
@@ -312,7 +312,7 @@ export default function SettingsEditor({ onLogout }) {
 
         {/* Sign out */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Session</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Session</p>
           <button
             onClick={onLogout}
             className="px-5 py-2 rounded-full bg-white border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition"

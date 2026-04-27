@@ -36,7 +36,7 @@ export default function ContactEditor() {
 
         {/* Contact info */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Details</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Contact Details</p>
           <Field label="Email Address" hint="Used on the contact page and footer">
             <Input
               value={contactForm.email}
@@ -55,7 +55,7 @@ export default function ContactEditor() {
 
         {/* Contact section heading */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Section — Heading</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Contact Section — Heading</p>
           <Field label="Eyebrow Label" hint='Small uppercase text above the heading, e.g. "Ready to Begin?"'>
             <Input
               value={contactForm.label}
@@ -89,7 +89,7 @@ export default function ContactEditor() {
 
         {/* Info cards */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Info Cards</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Contact Info Cards</p>
           <Field label="Email Card — Sub-line" hint='Below your email address, e.g. "Direct line — always read personally"'>
             <Input
               value={contactForm.emailSub}
@@ -136,7 +136,7 @@ export default function ContactEditor() {
 
         {/* Form text */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Form Text</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Form Text</p>
           <Field label="Submit Button Label" hint='Text on the send button, e.g. "Send Message"'>
             <Input
               value={contactForm.submitLabel}
@@ -170,7 +170,7 @@ export default function ContactEditor() {
 
         {/* Footer text */}
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Footer Bio & Taglines</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Footer Bio & Taglines</p>
           <Field label="Bio Text" hint="Short description shown below your name in the footer">
             <Textarea
               value={footerForm.bio}
@@ -190,7 +190,7 @@ export default function ContactEditor() {
 
         {/* Footer CTA */}
         <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Footer Top Banner</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Footer Top Banner</p>
           <Field label="Banner Heading — Regular Part" hint={`e.g. "Let's do the work"`}>
             <Input
               value={footerForm.ctaHeadingStart}

@@ -25,7 +25,7 @@ export default function HeroSection({ onBook, onNavigate }) {
       <div className="max-w-4xl mx-auto text-center relative z-10">
 
         <p
-          className={`text-xs font-semibold uppercase tracking-[0.3em] text-champagne/60 mb-6 transition-all duration-700 ${
+          className={`text-sm font-semibold uppercase tracking-[0.28em] text-champagne/60 mb-6 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -56,14 +56,14 @@ export default function HeroSection({ onBook, onNavigate }) {
         >
           <button
             onClick={onBook}
-            className="group bg-champagne text-navy font-semibold px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
+            className="group bg-champagne text-navy font-semibold px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
           >
             {h.primaryCta}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
           <button
             onClick={() => onNavigate("services")}
-            className="border border-champagne/25 text-offwhite/65 font-medium px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:border-champagne/50 hover:text-champagne transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 focus:ring-offset-2 focus:ring-offset-navy text-sm"
+            className="border border-champagne/25 text-offwhite/65 font-medium px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:border-champagne/50 hover:text-champagne transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 focus:ring-offset-2 focus:ring-offset-navy text-base"
           >
             {h.secondaryCta}
           </button>
@@ -75,7 +75,7 @@ export default function HeroSection({ onBook, onNavigate }) {
           }`}
         >
           <div className="h-px w-10 sm:w-16 bg-champagne/20" aria-hidden="true" />
-          <p className="text-xs tracking-[0.25em] uppercase text-offwhite/25 font-medium">
+          <p className="text-sm tracking-[0.22em] uppercase text-offwhite/25 font-medium">
             {h.tagline}
           </p>
           <div className="h-px w-10 sm:w-16 bg-champagne/20" aria-hidden="true" />

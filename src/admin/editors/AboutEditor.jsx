@@ -28,14 +28,14 @@ export default function AboutEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Section Label</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Section Label</p>
           <Field label="Section Label" hint='Small text above the headline, e.g. "About Coach Laurien"'>
             <Input value={form.label} onChange={(v) => set("label", v)} placeholder="About Coach Laurien" />
           </Field>
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Headline</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Headline</p>
           <Field label="Headline — Regular Part" hint='Shown in white, e.g. "This is not"'>
             <Input value={form.headlineStart} onChange={(v) => set("headlineStart", v)} placeholder="This is not" />
           </Field>
@@ -45,14 +45,14 @@ export default function AboutEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Quote</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Quote</p>
           <Field label="Pull Quote" hint="The italic quote shown in the left border block">
             <Textarea value={form.quote} onChange={(v) => set("quote", v)} rows={2} placeholder="It is structured, precise, hands-on work…" />
           </Field>
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Body Text</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Body Text</p>
           <Field label="First Paragraph">
             <Textarea value={form.body1} onChange={(v) => set("body1", v)} rows={4} placeholder="I am a youth development and emerging authors' coach…" />
           </Field>
@@ -62,7 +62,7 @@ export default function AboutEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Values List</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Values List</p>
           <Field label="Values Section Heading" hint='e.g. "Clients come to me when they have decided to prioritize:"'>
             <Textarea value={form.valuesHeading} onChange={(v) => set("valuesHeading", v)} rows={2} placeholder="Clients come to me when they have decided to prioritize:" />
           </Field>
@@ -77,7 +77,7 @@ export default function AboutEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Closing & CTA</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Closing & CTA</p>
           <Field label="Closing Statement" hint="The italic paragraph near the bottom of the section">
             <Textarea value={form.closing} onChange={(v) => set("closing", v)} rows={4} placeholder="From book development to youth programs…" />
           </Field>
@@ -87,7 +87,7 @@ export default function AboutEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Status Pill</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Status Pill</p>
           <Field label="Availability Pill" hint='The small green-dot pill below your photo, e.g. "Accepting new clients · Author Coaching & School Programs"'>
             <Input value={form.statusPill} onChange={(v) => set("statusPill", v)} placeholder="Accepting new clients · Author Coaching & School Programs" />
           </Field>

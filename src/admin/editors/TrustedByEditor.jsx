@@ -23,7 +23,7 @@ export default function TrustedByEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Pills / Tags</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Pills / Tags</p>
           <Field label="Featured Clients / Partners" hint="Each item shows up as a pill tag in the strip">
             <ListEditor
               items={items}
@@ -35,12 +35,12 @@ export default function TrustedByEditor() {
 
           {/* Live preview */}
           <div>
-            <p className="text-xs text-gray-400 mb-2">Preview</p>
+            <p className="text-sm text-gray-400 mb-2">Preview</p>
             <div className="flex flex-wrap gap-2">
               {items.map((item, idx) => (
                 <span
                   key={idx}
-                  className="text-xs px-3 py-1.5 rounded-full border border-gray-300 text-gray-600 bg-white"
+                  className="text-sm px-3 py-1.5 rounded-full border border-gray-300 text-gray-600 bg-white"
                 >
                   {item || <span className="text-gray-300">empty</span>}
                 </span>

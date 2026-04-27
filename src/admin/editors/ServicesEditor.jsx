@@ -10,7 +10,7 @@ function ServiceCard({ service, index, onChange }) {
   return (
     <div className={`rounded-xl border-2 ${color === "blue" ? "border-blue-100" : "border-purple-100"} overflow-hidden`}>
       <div className={`px-5 py-3 ${color === "blue" ? "bg-blue-50" : "bg-purple-50"}`}>
-        <p className={`text-xs font-bold uppercase tracking-wide ${color === "blue" ? "text-blue-600" : "text-purple-600"}`}>
+        <p className={`text-sm font-bold uppercase tracking-wide ${color === "blue" ? "text-blue-600" : "text-purple-600"}`}>
           {label}
         </p>
       </div>

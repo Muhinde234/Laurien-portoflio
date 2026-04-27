@@ -19,7 +19,7 @@ export default function BookingSection({ onBook }) {
     >
       <div className="max-w-6xl mx-auto">
 
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-12">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-champagne/60 mb-12">
           {b.label}
         </p>
 
@@ -50,7 +50,7 @@ export default function BookingSection({ onBook }) {
                   {b.headingStart}{" "}
                   <span className="italic font-light text-champagne">{b.headingHighlight}</span>
                 </h2>
-                <p className="text-sm text-offwhite/40 leading-[1.9]">
+                <p className="text-base text-offwhite/40 leading-[1.9]">
                   {b.subtext}
                 </p>
               </div>
@@ -69,13 +69,13 @@ export default function BookingSection({ onBook }) {
                     />
                   </div>
                   <div>
-                    <p className="font-display text-sm font-semibold text-champagne leading-none mb-1">
+                    <p className="font-display text-base font-semibold text-champagne leading-none mb-1">
                       {b.coachName}
                     </p>
-                    <p className="text-[11px] text-offwhite/32 uppercase tracking-[0.18em]">
+                    <p className="text-sm text-offwhite/32 uppercase tracking-[0.16em]">
                       {b.coachRole}
                     </p>
-                    <p className="text-[11px] text-champagne/40 mt-1 italic font-display">
+                    <p className="text-sm text-champagne/40 mt-1 italic font-display">
                       {b.responseTime}
                     </p>
                   </div>
@@ -86,7 +86,7 @@ export default function BookingSection({ onBook }) {
             
             <div className="md:col-span-3 flex flex-col p-5 sm:p-7 md:p-8">
 
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/28 mb-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-offwhite/28 mb-6">
                 {b.qualificationsHeading}
               </p>
 
@@ -96,14 +96,14 @@ export default function BookingSection({ onBook }) {
                     key={index}
                     className="flex items-start gap-5 py-3.5 border-b border-champagne/8 last:border-b-0"
                   >
-                    <span className="font-display italic text-xs text-champagne/30 shrink-0 mt-0.5 w-5">
+                    <span className="font-display italic text-sm text-champagne/30 shrink-0 mt-0.5 w-5">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div
                       className="w-4 h-px bg-champagne/18 shrink-0 mt-[0.6rem]"
                       aria-hidden="true"
                     />
-                    <p className="text-sm text-offwhite/50 leading-relaxed">
+                    <p className="text-base text-offwhite/50 leading-relaxed">
                       {qualification}
                     </p>
                   </li>
@@ -114,7 +114,7 @@ export default function BookingSection({ onBook }) {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   <button
                     onClick={onBook}
-                    className="group flex items-center gap-3 bg-champagne text-navy font-semibold px-6 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-sm"
+                    className="group flex items-center gap-3 bg-champagne text-navy font-semibold px-6 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
                     aria-label="Book a consultation call"
                   >
                     <span>{b.primaryCta}</span>
@@ -123,17 +123,17 @@ export default function BookingSection({ onBook }) {
                     </span>
                   </button>
 
-                  <span className="text-xs text-offwhite/22 hidden sm:block">or</span>
+                  <span className="text-sm text-offwhite/22 hidden sm:block">or</span>
                   <a
                     href={`mailto:${email}`}
-                    className="inline-flex items-center gap-2 text-sm text-offwhite/38 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
+                    className="inline-flex items-center gap-2 text-base text-offwhite/38 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
                   >
                     <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                     {email}
                   </a>
                 </div>
 
-                <p className="text-xs text-offwhite/18 tracking-wide mt-4">
+                <p className="text-sm text-offwhite/18 tracking-wide mt-4">
                   {b.microcopy}
                 </p>
               </div>

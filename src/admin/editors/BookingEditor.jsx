@@ -28,7 +28,7 @@ export default function BookingEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Section Label & Heading</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Section Label & Heading</p>
           <Field label="Section Label" hint='Small text above the panel, e.g. "Work With Me"'>
             <Input value={form.label} onChange={(v) => set("label", v)} placeholder="Work With Me" />
           </Field>
@@ -44,7 +44,7 @@ export default function BookingEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Qualification Checklist</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Qualification Checklist</p>
           <Field label="Qualifications Heading" hint='e.g. "This engagement is right for you if:"'>
             <Input value={form.qualificationsHeading} onChange={(v) => set("qualificationsHeading", v)} placeholder="This engagement is right for you if:" />
           </Field>
@@ -59,7 +59,7 @@ export default function BookingEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Call to Action</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Call to Action</p>
           <Field label="Button Text" hint='e.g. "Book a Consultation"'>
             <Input value={form.primaryCta} onChange={(v) => set("primaryCta", v)} placeholder="Book a Consultation" />
           </Field>
@@ -69,7 +69,7 @@ export default function BookingEditor() {
         </div>
 
         <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Identity Card</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Identity Card</p>
           <Field label="Your Name" hint="Displayed on the identity card in the panel">
             <Input value={form.coachName} onChange={(v) => set("coachName", v)} placeholder="Coach Laurien" />
           </Field>

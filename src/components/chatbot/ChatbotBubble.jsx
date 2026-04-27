@@ -141,7 +141,7 @@ export default function ChatbotBubble() {
                   />
                   <span className="absolute inset-0 rounded-full border-2 border-champagne/40 animate-ping" />
                 </div>
-                <p className="text-xs text-offwhite/30 tracking-wide">Starting conversation…</p>
+                <p className="text-sm text-offwhite/30 tracking-wide">Starting conversation…</p>
               </div>
             )}
 
@@ -168,7 +168,7 @@ export default function ChatbotBubble() {
               alt=""
               className="w-6 h-6 rounded-full object-cover object-top border border-champagne/40 shrink-0"
             />
-            <p className="text-xs text-offwhite/70 leading-snug whitespace-nowrap font-display italic">
+            <p className="text-sm text-offwhite/70 leading-snug whitespace-nowrap font-display italic">
               Ask me anything ✦
             </p>
           </div>

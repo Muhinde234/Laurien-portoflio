@@ -3,10 +3,10 @@
 export function Field({ label, hint, children }) {
   return (
     <div className="space-y-1">
-      <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wide">
+      <label className="block text-sm font-semibold text-gray-600 uppercase tracking-wide">
         {label}
       </label>
-      {hint && <p className="text-xs text-gray-400 -mt-1">{hint}</p>}
+      {hint && <p className="text-sm text-gray-400 -mt-0.5">{hint}</p>}
       {children}
     </div>
   );
@@ -66,14 +66,14 @@ export function ListEditor({ items, onChange, addLabel = "Add item", placeholder
               type="button"
               onClick={() => move(idx, -1)}
               disabled={idx === 0}
-              className="text-gray-300 hover:text-gray-600 disabled:opacity-0 text-xs leading-none transition"
+              className="text-gray-300 hover:text-gray-600 disabled:opacity-0 text-sm leading-none transition"
               title="Move up"
             >▲</button>
             <button
               type="button"
               onClick={() => move(idx, 1)}
               disabled={idx === items.length - 1}
-              className="text-gray-300 hover:text-gray-600 disabled:opacity-0 text-xs leading-none transition"
+              className="text-gray-300 hover:text-gray-600 disabled:opacity-0 text-sm leading-none transition"
               title="Move down"
             >▼</button>
           </div>
@@ -100,7 +100,7 @@ export function ListEditor({ items, onChange, addLabel = "Add item", placeholder
       <button
         type="button"
         onClick={add}
-        className="flex items-center gap-1.5 text-sm text-navy hover:text-navy-light font-medium transition"
+        className="flex items-center gap-1.5 text-base text-navy hover:text-navy-light font-medium transition"
       >
         <span className="text-base leading-none">+</span> {addLabel}
       </button>
@@ -112,14 +112,14 @@ export function SaveBar({ onSave, saved }) {
   return (
     <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between">
       {saved ? (
-        <p className="text-sm text-green-600 font-medium">✓ Changes saved</p>
+        <p className="text-base text-green-600 font-medium">✓ Changes saved</p>
       ) : (
-        <p className="text-sm text-gray-400">Unsaved changes</p>
+        <p className="text-base text-gray-400">Unsaved changes</p>
       )}
       <button
         type="button"
         onClick={onSave}
-        className="px-5 py-2 rounded-full bg-navy text-champagne text-sm font-semibold hover:bg-navy-light transition"
+        className="px-5 py-2 rounded-full bg-navy text-champagne text-base font-semibold hover:bg-navy-light transition"
       >
         Save Changes
       </button>

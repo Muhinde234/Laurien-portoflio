@@ -20,16 +20,16 @@
   --color-offwhite:         #F5F0E8;
   --color-muted:            #8A8FA8;
 
-  /* ── Typography ── */
+ 
   --font-display: 'Poppins', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
 
-  /* ── Spacing scale ── */
+  
   --spacing-section: 6rem;
   --spacing-section-sm: 4rem;
 }
 
-/* ── Base ── */
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,14 +44,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Form element resets ── */
+
 input, textarea, select {
   font-family: var(--font-body);
 }
 
 button, [role="button"], a, label[for], select { cursor: pointer; }
 
-/* ── Contact form input base ── */
+
 .form-input {
   width: 100%;
   background-color: #1a2347;
@@ -78,7 +78,7 @@ button, [role="button"], a, label[for], select { cursor: pointer; }
   border-color: rgba(232, 214, 179, 0.22);
 }
 
-/* ── Form label base ── */
+
 .form-label {
   display: block;
   font-size: 0.75rem;

@@ -39,7 +39,7 @@ export default function BookingSection({ onBook }) {
 
           <div className="grid md:grid-cols-5 md:min-h-136">
 
-            {/* Left: heading + coach card */}
+     
             <div className="md:col-span-2 relative flex flex-col justify-between p-6 sm:p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
 
               <div>
@@ -83,7 +83,7 @@ export default function BookingSection({ onBook }) {
               </div>
             </div>
 
-            {/* Right: qualifications + CTA */}
+            
             <div className="md:col-span-3 flex flex-col p-6 sm:p-8 md:p-10">
 
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/28 mb-6">

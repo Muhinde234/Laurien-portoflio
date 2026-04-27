@@ -31,10 +31,10 @@ export default function AboutSection({ onBook }) {
 
         <div className="grid md:grid-cols-[5fr_7fr] gap-8 lg:gap-12 items-start">
 
-          {/* ── LEFT: Photo ── */}
+         
           <div className="relative flex justify-center md:justify-start">
 
-            {/* Decorative background offset block */}
+          
             <div
               className="absolute -bottom-4 -left-4 w-4/5 h-4/5 rounded-2xl pointer-events-none"
               aria-hidden="true"
@@ -44,7 +44,7 @@ export default function AboutSection({ onBook }) {
               }}
             />
 
-            {/* Decorative dot grid — top-right */}
+           
             <div
               className="absolute -top-6 -right-6 w-20 h-20 pointer-events-none hidden md:block"
               aria-hidden="true"
@@ -56,7 +56,7 @@ export default function AboutSection({ onBook }) {
 
             <div className="relative w-full max-w-sm md:max-w-none">
 
-              {/* Champagne ring frame */}
+         
               <div
                 className="relative rounded-2xl overflow-visible"
                 style={{
@@ -73,7 +73,7 @@ export default function AboutSection({ onBook }) {
                     className="w-full h-full object-cover object-top"
                   />
 
-                  {/* Bottom gradient overlay */}
+               
                   <div
                     className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
                     aria-hidden="true"
@@ -82,18 +82,18 @@ export default function AboutSection({ onBook }) {
                     }}
                   />
 
-                  {/* Corner bracket — top-left */}
+               
                   <div className="absolute top-4 left-4 w-7 h-7 pointer-events-none" aria-hidden="true">
                     <div className="absolute top-0 left-0 w-full h-px bg-champagne/70" />
                     <div className="absolute top-0 left-0 h-full w-px bg-champagne/70" />
                   </div>
-                  {/* Corner bracket — top-right */}
+                 
                   <div className="absolute top-4 right-4 w-7 h-7 pointer-events-none" aria-hidden="true">
                     <div className="absolute top-0 right-0 w-full h-px bg-champagne/70" />
                     <div className="absolute top-0 right-0 h-full w-px bg-champagne/70" />
                   </div>
 
-                  {/* Name overlay — bottom */}
+             
                   <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
                     <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
                     <p className="text-xs uppercase tracking-wider text-champagne/70 mt-1">
@@ -107,7 +107,7 @@ export default function AboutSection({ onBook }) {
             </div>
           </div>
 
-          {/* ── RIGHT: Content ── */}
+       
           <div className="flex flex-col gap-5 pt-2 md:pt-4">
 
             <h2

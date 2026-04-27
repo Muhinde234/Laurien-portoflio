@@ -49,12 +49,12 @@ export default function ContactSection() {
       className={`py-24 px-6 relative scroll-reveal perf-section ${visible ? "visible" : ""}`}
       aria-labelledby="contact-heading"
     >
-      {/* Subtle background tint */}
+   
       <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-        {/* Section header */}
+ 
         <div className="mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/60 mb-5">
             {c.label}
@@ -73,10 +73,10 @@ export default function ContactSection() {
 
         <div className="grid lg:grid-cols-5 gap-10 items-start">
 
-          {/* ── Left: info column ── */}
+        
           <aside className="lg:col-span-2 flex flex-col gap-6">
 
-            {/* Info cards */}
+          
             {[
               {
                 icon: Mail,
@@ -114,23 +114,22 @@ export default function ContactSection() {
               </div>
             ))}
 
-            {/* Tagline */}
+         
             <p className="font-display italic text-champagne/40 text-sm leading-relaxed pl-1 mt-2">
               "{c.tagline}"
             </p>
           </aside>
 
-          {/* ── Right: form card ── */}
           <div className="lg:col-span-3">
             <div className="relative rounded-2xl border border-champagne/15 overflow-hidden">
-              {/* Top accent line */}
+            
               <div
                 className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
                 aria-hidden="true"
               />
 
               {submitted ? (
-                /* ── Success state ── */
+             
                 <div className="p-10 sm:p-14 flex flex-col items-center text-center gap-5">
                   <div className="w-16 h-16 rounded-full bg-champagne/10 border border-champagne/20 flex items-center justify-center">
                     <CheckCircle className="w-8 h-8 text-champagne" aria-hidden="true" />
@@ -151,14 +150,14 @@ export default function ContactSection() {
                   </button>
                 </div>
               ) : (
-                /* ── Form ── */
+               
                 <form
                   onSubmit={onSubmit}
                   noValidate
                   className="p-6 sm:p-8 md:p-10 flex flex-col gap-5"
                   aria-label="Contact form"
                 >
-                  {/* Row: First + Last name */}
+                  
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="form-label">First Name</label>
@@ -196,7 +195,7 @@ export default function ContactSection() {
                     </div>
                   </div>
 
-                  {/* Email */}
+              
                   <div>
                     <label htmlFor="email" className="form-label">Email Address</label>
                     <input
@@ -215,7 +214,7 @@ export default function ContactSection() {
                     )}
                   </div>
 
-                  {/* Message */}
+               
                   <div>
                     <label htmlFor="message" className="form-label">Message</label>
                     <textarea
@@ -233,7 +232,7 @@ export default function ContactSection() {
                     )}
                   </div>
 
-                  {/* Submit */}
+                 
                   <div className="pt-1">
                     <button
                       type="submit"

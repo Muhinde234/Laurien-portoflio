@@ -8,7 +8,6 @@ import ContactSection from "./components/sections/ContactSection";
 import FeaturedStrip from "./components/sections/FeaturedStrip";
 import HeroSection from "./components/sections/HeroSection";
 import ServicesSection from "./components/sections/ServicesSection";
-import ChatbotBubble from "./components/chatbot/ChatbotBubble";
 import { useContent } from "./context/ContentContext";
 import { FAQ_URL, navItems } from "./data/siteData";
 
@@ -50,8 +49,6 @@ export default function Portfolio() {
         navItems={navItems}
         onNavigate={scrollToSection}
       />
-
-      <ChatbotBubble />
     </div>
   );
 }

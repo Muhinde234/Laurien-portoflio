@@ -14,7 +14,7 @@ export default function BookingSection({ onBook }) {
     <section
       ref={bookingRef}
       id="booking"
-      className={`py-24 px-6 relative scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
       aria-labelledby="booking-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -40,7 +40,7 @@ export default function BookingSection({ onBook }) {
           <div className="grid md:grid-cols-5 md:min-h-136">
 
      
-            <div className="md:col-span-2 relative flex flex-col justify-between p-6 sm:p-8 md:p-10 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
+            <div className="md:col-span-2 relative flex flex-col justify-between p-5 sm:p-7 md:p-8 border-b md:border-b-0 md:border-r border-champagne/10 bg-champagne/2">
 
               <div>
                 <h2
@@ -84,7 +84,7 @@ export default function BookingSection({ onBook }) {
             </div>
 
             
-            <div className="md:col-span-3 flex flex-col p-6 sm:p-8 md:p-10">
+            <div className="md:col-span-3 flex flex-col p-5 sm:p-7 md:p-8">
 
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-offwhite/28 mb-6">
                 {b.qualificationsHeading}

@@ -18,7 +18,7 @@ export default function ServicesSection({ onBook }) {
     <section
       ref={servicesRef}
       id="services"
-      className={`py-24 px-6 relative scroll-reveal perf-section ${servicesVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${servicesVisible ? "visible" : ""}`}
       aria-labelledby="services-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -40,7 +40,7 @@ export default function ServicesSection({ onBook }) {
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-6 items-start">
+        <div className="grid md:grid-cols-2 gap-5 items-start">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             const num = cardNumbers[index];
@@ -62,7 +62,7 @@ export default function ServicesSection({ onBook }) {
                   {num}
                 </span>
 
-                <div className="p-6 sm:p-8 md:p-10 flex flex-col flex-1 relative z-10">
+                <div className="p-5 sm:p-7 md:p-8 flex flex-col flex-1 relative z-10">
 
                   <div className="flex items-start justify-between mb-7">
                     <div className="w-10 h-10 border border-champagne/18 rounded-xl flex items-center justify-center bg-champagne/5 group-hover:bg-champagne/10 transition-colors duration-300">

@@ -8,7 +8,7 @@ export default function TestimonialsSection({ onBook }) {
   return (
     <section
       ref={testimonialsRef}
-      className={`py-28 px-6 relative scroll-reveal perf-section ${testimonialsVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${testimonialsVisible ? "visible": ""}`}
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -27,11 +27,11 @@ export default function TestimonialsSection({ onBook }) {
         </header>
 
      
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-5 mb-16">
           {testimonials.map((testimonial, index) => (
             <article
               key={index}
-              className="bg-navy-light border border-champagne/12 rounded-2xl p-7 flex flex-col hover:border-champagne/22 transition-colors duration-300"
+              className="bg-navy-light border border-champagne/12 rounded-2xl p-6 sm:p-7 flex flex-col hover:border-champagne/22 transition-colors duration-300"
             >
         
               <div className="flex gap-1 mb-5" aria-label={`${testimonial.rating} out of 5`}>

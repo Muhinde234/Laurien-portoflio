@@ -33,7 +33,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
       role="contentinfo"
     >
    
-      <div className="max-w-6xl mx-auto px-6 py-14">
+      <div className="max-w-6xl mx-auto px-6 py-16 sm:py-20">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
 
        

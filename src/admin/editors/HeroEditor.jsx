@@ -19,7 +19,7 @@ export default function HeroEditor() {
 
   return (
     <div>
-      <div className="p-6 space-y-6">
+      <div className="p-4 space-y-4">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">Hero Section</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -27,7 +27,7 @@ export default function HeroEditor() {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Top Label</p>
           <Field label="Small Label Text" hint="Appears above the main headline in small caps">
             <Input
@@ -38,7 +38,7 @@ export default function HeroEditor() {
           </Field>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Main Headline</p>
           <Field label="Headline — Regular Part" hint='The part shown in white, e.g. "Hi, I am"'>
             <Input
@@ -56,7 +56,7 @@ export default function HeroEditor() {
           </Field>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Description</p>
           <Field label="Subheadline / Description" hint="The paragraph below the main headline">
             <Textarea
@@ -68,7 +68,7 @@ export default function HeroEditor() {
           </Field>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Buttons</p>
           <Field label="Primary Button Text" hint='The gold button, e.g. "Begin the Work"'>
             <Input
@@ -86,7 +86,7 @@ export default function HeroEditor() {
           </Field>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Tagline</p>
           <Field label="Bottom Tagline" hint="The small text shown between two lines at the bottom of the hero">
             <Input

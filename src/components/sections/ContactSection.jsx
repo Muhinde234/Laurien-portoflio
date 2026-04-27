@@ -46,7 +46,7 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className={`py-24 px-6 relative scroll-reveal perf-section ${visible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${visible ? "visible" : ""}`}
       aria-labelledby="contact-heading"
     >
    
@@ -71,7 +71,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10 items-start">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-start">
 
         
           <aside className="lg:col-span-2 flex flex-col gap-6">
@@ -99,7 +99,7 @@ export default function ContactSection() {
             ].map(({ icon: Icon, label, value, sub }) => (
               <div
                 key={label}
-                className="flex items-start gap-4 p-5 bg-navy-card/40 border border-champagne/10 rounded-xl"
+                className="flex items-start gap-4 p-4 sm:p-5 bg-navy-card/40 border border-champagne/10 rounded-xl"
               >
                 <div className="w-9 h-9 shrink-0 rounded-lg bg-champagne/8 border border-champagne/15 flex items-center justify-center">
                   <Icon className="w-4 h-4 text-champagne/60" aria-hidden="true" />
@@ -154,7 +154,7 @@ export default function ContactSection() {
                 <form
                   onSubmit={onSubmit}
                   noValidate
-                  className="p-6 sm:p-8 md:p-10 flex flex-col gap-5"
+                  className="p-5 sm:p-7 md:p-8 flex flex-col gap-5"
                   aria-label="Contact form"
                 >
                   

@@ -18,7 +18,7 @@ export default function AboutSection({ onBook }) {
     <section
       ref={aboutRef}
       id="about"
-      className={`py-16 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
       aria-labelledby="about-heading"
     >
       <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />
@@ -29,7 +29,7 @@ export default function AboutSection({ onBook }) {
           {a.label}
         </p>
 
-        <div className="grid md:grid-cols-[5fr_7fr] gap-8 lg:gap-12 items-start">
+        <div className="grid md:grid-cols-[5fr_7fr] gap-6 lg:gap-10 items-start">
 
          
           <div className="relative flex justify-center md:justify-start">
@@ -64,7 +64,7 @@ export default function AboutSection({ onBook }) {
                   background: "linear-gradient(145deg, rgba(232,214,179,0.45) 0%, rgba(232,214,179,0.06) 55%, rgba(232,214,179,0.22) 100%)",
                 }}
               >
-                <div className="relative rounded-[14px] overflow-hidden aspect-[3/4]">
+                <div className="relative rounded-[14px] overflow-hidden aspect-3/4">
                   <img
                     src={laurienPhoto}
                     alt="Coach Laurien"

@@ -50,7 +50,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-6 py-5 sm:py-5 flex justify-between items-center">
 
        
           <div className="flex items-center gap-3">
@@ -111,7 +111,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
           className={`md:hidden fixed inset-0 z-40 transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
-          style={{ top: "66px", backgroundColor: "#121836" }}
+          style={{ top: "72px", backgroundColor: "#121836" }}
         >
           <div className="flex flex-col items-start px-6 py-8 gap-1">
             {navItems.map((item) => (

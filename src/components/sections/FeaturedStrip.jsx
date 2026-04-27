@@ -9,12 +9,12 @@ export default function FeaturedStrip() {
   return (
     <section
       ref={featuredRef}
-      className={`py-10 px-6 border-y border-champagne/8 scroll-reveal perf-section ${
+      className={`py-12 sm:py-14 px-6 border-y border-champagne/8 scroll-reveal perf-section ${
         featuredVisible ? "visible" : ""
       }`}
       aria-label="Trusted by"
     >
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-offwhite/25 shrink-0">
           Trusted by
         </p>

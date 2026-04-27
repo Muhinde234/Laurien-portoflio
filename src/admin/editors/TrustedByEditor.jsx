@@ -14,7 +14,7 @@ export default function TrustedByEditor() {
 
   return (
     <div>
-      <div className="p-6 space-y-6">
+      <div className="p-4 space-y-4">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">Trusted By Strip</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -22,7 +22,7 @@ export default function TrustedByEditor() {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Pills / Tags</p>
           <Field label="Featured Clients / Partners" hint="Each item shows up as a pill tag in the strip">
             <ListEditor

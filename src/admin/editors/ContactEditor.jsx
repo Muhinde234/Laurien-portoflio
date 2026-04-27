@@ -26,7 +26,7 @@ export default function ContactEditor() {
 
   return (
     <div>
-      <div className="p-6 space-y-6">
+      <div className="p-4 space-y-4">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">Contact & Footer</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -35,7 +35,7 @@ export default function ContactEditor() {
         </div>
 
         {/* Contact info */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Details</p>
           <Field label="Email Address" hint="Used on the contact page and footer">
             <Input
@@ -54,7 +54,7 @@ export default function ContactEditor() {
         </div>
 
         {/* Contact section heading */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Section — Heading</p>
           <Field label="Eyebrow Label" hint='Small uppercase text above the heading, e.g. "Ready to Begin?"'>
             <Input
@@ -88,7 +88,7 @@ export default function ContactEditor() {
         </div>
 
         {/* Info cards */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Contact Info Cards</p>
           <Field label="Email Card — Sub-line" hint='Below your email address, e.g. "Direct line — always read personally"'>
             <Input
@@ -135,7 +135,7 @@ export default function ContactEditor() {
         </div>
 
         {/* Form text */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Form Text</p>
           <Field label="Submit Button Label" hint='Text on the send button, e.g. "Send Message"'>
             <Input
@@ -169,7 +169,7 @@ export default function ContactEditor() {
         </div>
 
         {/* Footer text */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Footer Bio & Taglines</p>
           <Field label="Bio Text" hint="Short description shown below your name in the footer">
             <Textarea

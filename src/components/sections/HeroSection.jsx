@@ -17,7 +17,7 @@ export default function HeroSection({ onBook, onNavigate }) {
   return (
     <section
       ref={heroRef}
-      className={`min-h-screen flex items-center justify-center px-4 sm:px-6 pt-16 pb-6 relative scroll-reveal ${
+      className={`min-h-screen flex items-center justify-center px-4 sm:px-6 pt-28 pb-24 sm:pt-32 sm:pb-28 relative scroll-reveal ${
         heroRevealed ? "visible" : ""
       }`}
       aria-label="Introduction"

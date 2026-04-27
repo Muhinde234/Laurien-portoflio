@@ -119,7 +119,7 @@ export default function SettingsEditor({ onLogout }) {
 
   return (
     <div>
-      <div className="p-6 space-y-6">
+      <div className="p-4 space-y-4">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">Settings</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -128,7 +128,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* Profile Photo */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Profile Photo</p>
           <p className="text-sm text-gray-500">
             Small circular photo — appears in the header, chatbot, booking card, and footer.
@@ -178,7 +178,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* About Section Photo */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">About Section Photo</p>
           <p className="text-sm text-gray-500">
             Large portrait displayed in the About section. Best as a tall/portrait-oriented image.
@@ -228,7 +228,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* Change password */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Change Password</p>
           <Field label="New Password" hint="At least 6 characters">
             <input
@@ -259,7 +259,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* Backup & Restore */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-4">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Backup & Restore</p>
           <p className="text-sm text-gray-500">
             Export your current content as a backup file. You can use this file to restore your content later or move it to another device.
@@ -279,7 +279,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* Reset */}
-        <div className="bg-red-50 rounded-xl p-4 border border-red-200 space-y-3">
+        <div className="bg-red-50 rounded-xl p-3 border border-red-200 space-y-2.5">
           <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">Danger Zone</p>
           <p className="text-sm text-gray-600">
             Reset all content back to the original defaults. This will erase all your changes permanently.
@@ -311,7 +311,7 @@ export default function SettingsEditor({ onLogout }) {
         </div>
 
         {/* Sign out */}
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Session</p>
           <button
             onClick={onLogout}

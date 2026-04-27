@@ -72,7 +72,7 @@ export default function AdminDashboard({ onLogout }) {
         `}
       >
       
-        <div className="shrink-0 px-5 py-5 border-b border-gray-100 flex items-center gap-3">
+        <div className="shrink-0 px-4 py-4 border-b border-gray-100 flex items-center gap-3">
           <div className="relative shrink-0">
             <img
               src={laurienPhoto}
@@ -95,7 +95,7 @@ export default function AdminDashboard({ onLogout }) {
         </div>
 
         
-        <nav className="flex-1 py-4 px-3 flex flex-col gap-0.5">
+        <nav className="flex-1 py-3 px-3 flex flex-col gap-0.5">
           {TABS.map((tab) => {
             const Icon = tab.Icon;
             const active = activeTab === tab.id;
@@ -126,7 +126,7 @@ export default function AdminDashboard({ onLogout }) {
         </nav>
 
     
-        <div className="shrink-0 px-4 py-4 border-t border-gray-100 space-y-1">
+        <div className="shrink-0 px-3 py-3 border-t border-gray-100 space-y-1">
           <a
             href="/"
             target="_blank"
@@ -158,7 +158,7 @@ export default function AdminDashboard({ onLogout }) {
       <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
 
  
-        <header className="shrink-0 bg-white border-b border-gray-200 px-4 lg:px-6 py-4 flex items-center gap-4">
+        <header className="shrink-0 bg-white border-b border-gray-200 px-4 lg:px-6 py-3 flex items-center gap-4">
           <button
             onClick={() => setSidebarOpen(true)}
             className="lg:hidden text-gray-500 hover:text-gray-900 transition"
@@ -201,7 +201,7 @@ export default function AdminDashboard({ onLogout }) {
 
     
         <main className="flex-1 overflow-y-auto">
-          <div className="max-w-2xl w-full mx-auto pb-24">
+          <div className="max-w-2xl w-full mx-auto pb-16">
             {renderEditor()}
           </div>
         </main>

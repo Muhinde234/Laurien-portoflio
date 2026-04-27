@@ -27,7 +27,7 @@ export default function SocialEditor() {
 
   return (
     <div>
-      <div className="p-6 space-y-6">
+      <div className="p-4 space-y-4">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">Social Media Links</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -36,7 +36,7 @@ export default function SocialEditor() {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-5">
+        <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 space-y-3.5">
           {PLATFORMS.map(({ key, label, hint, placeholder }) => (
             <Field key={key} label={label} hint={hint}>
               <Input
@@ -48,7 +48,7 @@ export default function SocialEditor() {
           ))}
         </div>
 
-        <div className="bg-navy/5 border border-navy/20 rounded-xl p-4">
+        <div className="bg-navy/5 border border-navy/20 rounded-xl p-3">
           <p className="text-xs font-semibold text-navy mb-1">Tip</p>
           <p className="text-xs text-navy/70">
             Copy the full URL from your browser's address bar when you're on your profile page.

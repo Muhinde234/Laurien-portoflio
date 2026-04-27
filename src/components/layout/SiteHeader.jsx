@@ -52,7 +52,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          {/* Brand */}
+       
           <div className="flex items-center gap-3">
             <div className="relative shrink-0">
               <img
@@ -75,7 +75,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
             </div>
           </div>
 
-          {/* Desktop nav */}
+         
           <div className="hidden md:flex gap-7 items-center">
             {navItems.map((item) => (
               <button
@@ -95,7 +95,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
             </button>
           </div>
 
-          {/* Mobile toggle */}
+        
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-offwhite/50 hover:text-champagne rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-champagne/40"
@@ -106,7 +106,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
           </button>
         </div>
 
-        {/* Mobile menu */}
+   
         <div
           className={`md:hidden fixed inset-0 z-40 transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"

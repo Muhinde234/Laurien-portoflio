@@ -118,7 +118,7 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="w-full text-left font-display text-2xl font-light text-offwhite/65 hover:text-champagne transition-colors duration-300 focus:outline-none py-3 border-b border-champagne/8"
+                className="w-full text-left font-display text-base font-light text-offwhite/65 hover:text-champagne transition-colors duration-300 focus:outline-none py-3 border-b border-champagne/8"
               >
                 {item.label}
               </button>

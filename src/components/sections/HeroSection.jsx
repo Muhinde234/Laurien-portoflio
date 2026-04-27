@@ -22,7 +22,7 @@ export default function HeroSection({ onBook, onNavigate }) {
       }`}
       aria-label="Introduction"
     >
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-6xl mx-auto text-center relative z-10">
 
         <p
           className={`text-sm font-semibold uppercase tracking-[0.28em] text-champagne/60 mb-6 transition-all duration-700 ${
@@ -33,7 +33,7 @@ export default function HeroSection({ onBook, onNavigate }) {
         </p>
 
         <h1
-          className={`font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-offwhite leading-[1.08] mb-5 transition-all duration-700 delay-100 ${
+          className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-offwhite leading-[1.08] mb-5 transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -42,7 +42,7 @@ export default function HeroSection({ onBook, onNavigate }) {
         </h1>
 
         <p
-          className={`text-lg sm:text-xl md:text-2xl text-offwhite/55 max-w-2xl mx-auto leading-relaxed mb-10 transition-all duration-700 delay-200 ${
+          className={`text-sm sm:text-base md:text-lg text-offwhite/55 max-w-3xl mx-auto leading-relaxed mb-10 transition-all duration-700 delay-200 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >

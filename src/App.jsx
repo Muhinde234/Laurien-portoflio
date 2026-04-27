@@ -32,7 +32,6 @@ export default function Portfolio() {
         Skip to main content
       </a>
 
-      <ScrollProgressBar />
       <BackgroundDecor />
       <SiteHeader navItems={navItems} onNavigate={scrollToSection} onBook={openCalendly} faqUrl={FAQ_URL} />
 
@@ -41,6 +40,9 @@ export default function Portfolio() {
         <FeaturedStrip />
         <AboutSection onBook={openCalendly} />
         <ServicesSection onBook={openCalendly} />
+        <div className="max-w-6xl mx-auto px-6" aria-hidden="true">
+          <hr className="border-champagne/10" />
+        </div>
         <BookingSection onBook={openCalendly} />
         <ContactSection />
       </main>
@@ -49,6 +51,8 @@ export default function Portfolio() {
         navItems={navItems}
         onNavigate={scrollToSection}
       />
+
+      <ScrollProgressBar />
     </div>
   );
 }

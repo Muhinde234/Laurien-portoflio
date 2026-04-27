@@ -56,7 +56,7 @@ export default function BookingSection({ onBook }) {
               </div>
 
               <div className="mt-8 md:mt-0">
-                <div className="flex items-center gap-4 p-4 bg-navy/60 border border-champagne/10 rounded-xl">
+                <div className="flex items-center gap-4 p-4 bg-navy/60 border border-champagne/10 rounded-full">
                   <div className="relative shrink-0">
                     <img
                       src={laurienPhoto}

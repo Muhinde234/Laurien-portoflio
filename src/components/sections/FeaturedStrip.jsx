@@ -9,7 +9,7 @@ export default function FeaturedStrip() {
   return (
     <section
       ref={featuredRef}
-      className={`py-12 sm:py-14 px-6 border-y border-champagne/8 scroll-reveal perf-section ${
+      className={`py-12 sm:py-14 px-4 sm:px-6 border-y border-champagne/8 scroll-reveal perf-section ${
         featuredVisible ? "visible" : ""
       }`}
       aria-label="Trusted by"

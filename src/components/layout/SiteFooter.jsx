@@ -114,10 +114,10 @@ export default function SiteFooter({ navItems, onNavigate }) {
             <div className="flex flex-col gap-4">
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center gap-2 text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
+                className="inline-flex items-center gap-2 text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded min-w-0"
               >
                 <Mail className="w-4 h-4 shrink-0 text-champagne/45" aria-hidden="true" />
-                {email}
+                <span className="break-all">{email}</span>
               </a>
 
               <div className="pt-3 border-t border-champagne/10">

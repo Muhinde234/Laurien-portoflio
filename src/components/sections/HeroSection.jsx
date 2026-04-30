@@ -17,7 +17,7 @@ export default function HeroSection({ onBook, onNavigate }) {
   return (
     <section
       ref={heroRef}
-      className={`min-h-screen flex items-center justify-center px-4 sm:px-6 pt-28 pb-24 sm:pt-32 sm:pb-28 relative scroll-reveal ${
+      className={`min-h-svh flex items-center justify-center px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 relative scroll-reveal ${
         heroRevealed ? "visible" : ""
       }`}
       aria-label="Introduction"
@@ -50,13 +50,13 @@ export default function HeroSection({ onBook, onNavigate }) {
         </p>
 
         <div
-          className={`flex gap-3 sm:gap-4 justify-center flex-wrap transition-all duration-700 delay-300 ${
+          className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center transition-all duration-700 delay-300 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           <button
             onClick={onBook}
-            className="group bg-champagne text-navy font-semibold px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
+            className="group bg-champagne text-navy font-semibold px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
           >
             {h.primaryCta}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />

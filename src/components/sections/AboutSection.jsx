@@ -18,7 +18,7 @@ export default function AboutSection({ onBook }) {
     <section
       ref={aboutRef}
       id="about"
-      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
       aria-labelledby="about-heading"
     >
       <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />
@@ -161,7 +161,7 @@ export default function AboutSection({ onBook }) {
             <div>
               <button
                 onClick={onBook}
-                className="group bg-champagne text-navy font-semibold px-7 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
+                className="group bg-champagne text-navy font-semibold px-7 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 inline-flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base w-full sm:w-auto"
               >
                 {a.cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />

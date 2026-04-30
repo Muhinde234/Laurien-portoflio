@@ -14,7 +14,7 @@ export default function BookingSection({ onBook }) {
     <section
       ref={bookingRef}
       id="booking"
-      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
       aria-labelledby="booking-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -111,10 +111,10 @@ export default function BookingSection({ onBook }) {
               </ul>
 
               <div className="mt-7 pt-6 border-t border-champagne/10">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                   <button
                     onClick={onBook}
-                    className="group flex items-center gap-3 bg-champagne text-navy font-semibold px-6 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base"
+                    className="group flex items-center justify-center gap-3 bg-champagne text-navy font-semibold px-6 py-3.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy text-base w-full sm:w-auto"
                     aria-label="Book a consultation call"
                   >
                     <span>{b.primaryCta}</span>
@@ -126,10 +126,10 @@ export default function BookingSection({ onBook }) {
                   <span className="text-sm text-offwhite/22 hidden sm:block">or</span>
                   <a
                     href={`mailto:${email}`}
-                    className="inline-flex items-center gap-2 text-base text-offwhite/38 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded"
+                    className="inline-flex items-center gap-2 text-sm text-offwhite/38 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded min-w-0"
                   >
                     <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-                    {email}
+                    <span className="truncate">{email}</span>
                   </a>
                 </div>
 

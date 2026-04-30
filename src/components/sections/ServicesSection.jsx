@@ -18,7 +18,7 @@ export default function ServicesSection({ onBook }) {
     <section
       ref={servicesRef}
       id="services"
-      className={`py-24 sm:py-28 px-6 relative scroll-reveal perf-section ${servicesVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${servicesVisible ? "visible" : ""}`}
       aria-labelledby="services-heading"
     >
       <div className="max-w-6xl mx-auto">

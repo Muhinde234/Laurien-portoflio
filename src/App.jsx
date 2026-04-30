@@ -40,7 +40,7 @@ export default function Portfolio() {
         <FeaturedStrip />
         <AboutSection onBook={openCalendly} />
         <ServicesSection onBook={openCalendly} />
-        <div className="max-w-6xl mx-auto px-6" aria-hidden="true">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6" aria-hidden="true">
           <hr className="border-champagne/10" />
         </div>
         <BookingSection onBook={openCalendly} />

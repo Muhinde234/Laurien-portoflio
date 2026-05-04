@@ -50,6 +50,16 @@ export const DEFAULT_CONTENT = {
         "Writing mentorship & accountability — Guide you from concept → manuscript → publication readiness",
         "Editorial refinement and honest and structural feedback designed to elevate the work — Refine language for clarity, credibility, and tone while challenging weak thinking, vague arguments, and unfocused storytelling",
       ],
+      offerings: [
+        {
+          title: "Writing Skills Development for Young Learners",
+          description: "Coaching children and teens to improve writing through creative exercises and personalized feedback.",
+        },
+        {
+          title: "Online Writing Masterclass Series",
+          description: "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
+        },
+      ],
       focusAreas: [],
       suitedFor: [],
       note: "This service is best suited for authors who are serious about producing work of substance and credibility, rather than speed or volume.",
@@ -85,44 +95,6 @@ export const DEFAULT_CONTENT = {
       suitedFor: ["Structure", "High standards", "Long-term student development"],
       note: "",
       cta: "Invite me to your school or institution",
-    },
-    {
-      title: "Writing Skills Development for Young Learners",
-      intro: "",
-      subtitle: "",
-      description:
-        "Coaching children and teens to improve writing through creative exercises and personalized feedback.",
-      partnerLabel: "",
-      partnerWith: [],
-      featuresLabel: "What's included:",
-      features: [
-        "Creative writing exercises tailored to each child's age and level",
-        "Personalized feedback on structure, clarity, and expression",
-        "Building writing confidence through consistent, guided practice",
-      ],
-      focusAreas: [],
-      suitedFor: [],
-      note: "",
-      cta: "Book Me",
-    },
-    {
-      title: "Online Writing Masterclass Series",
-      intro: "",
-      subtitle: "",
-      description:
-        "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
-      partnerLabel: "",
-      partnerWith: [],
-      featuresLabel: "What's included:",
-      features: [
-        "Expert feedback on writing craft, voice, and structure",
-        "Publishing strategies and author branding guidance",
-        "Peer networking and collaborative learning environment",
-      ],
-      focusAreas: [],
-      suitedFor: [],
-      note: "",
-      cta: "Book Me",
     },
   ],
   booking: {
@@ -195,6 +167,16 @@ function deepMerge(defaults, saved) {
   for (const key of Object.keys(saved)) {
     if (
       key in defaults &&
+      Array.isArray(defaults[key]) &&
+      Array.isArray(saved[key])
+    ) {
+      // Keep saved items but append any new default items not yet in saved
+      result[key] =
+        saved[key].length < defaults[key].length
+          ? [...saved[key], ...defaults[key].slice(saved[key].length)]
+          : saved[key];
+    } else if (
+      key in defaults &&
       typeof defaults[key] === "object" &&
       !Array.isArray(defaults[key]) &&
       saved[key] !== null &&
@@ -217,7 +199,9 @@ export function ContentProvider({ children }) {
     try {
       const saved = localStorage.getItem("coach_laurien_content");
       if (saved) return deepMerge(DEFAULT_CONTENT, JSON.parse(saved));
-    } catch {}
+    } catch {
+      localStorage.removeItem("coach_laurien_content");
+    }
     return DEFAULT_CONTENT;
   });
 

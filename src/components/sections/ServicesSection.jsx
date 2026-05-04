@@ -109,22 +109,25 @@ export default function ServicesSection({ onBook }) {
                     </div>
                   )}
 
-                  <div className="h-px bg-champagne/8 mb-6" aria-hidden="true" />
-
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-4">
-                    {service.featuresLabel}
-                  </p>
-                  <ul className="space-y-3.5 mb-7" role="list">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-4">
-                        <span className="font-display italic text-xs text-champagne/35 shrink-0 mt-0.5 w-5">
-                          {String(idx + 1).padStart(2, "0")}
-                        </span>
-                        <div className="h-px w-4 bg-champagne/18 shrink-0 mt-[0.55rem]" aria-hidden="true" />
-                        <span className="text-sm text-offwhite/50 leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {service.features && service.features.length > 0 && (
+                    <>
+                      <div className="h-px bg-champagne/8 mb-6" aria-hidden="true" />
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-4">
+                        {service.featuresLabel}
+                      </p>
+                      <ul className="space-y-3.5 mb-7" role="list">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-4">
+                            <span className="font-display italic text-xs text-champagne/35 shrink-0 mt-0.5 w-5">
+                              {String(idx + 1).padStart(2, "0")}
+                            </span>
+                            <div className="h-px w-4 bg-champagne/18 shrink-0 mt-[0.55rem]" aria-hidden="true" />
+                            <span className="text-sm text-offwhite/50 leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
                   {service.focusAreas && service.focusAreas.length > 0 && (
                     <div className="mb-6">

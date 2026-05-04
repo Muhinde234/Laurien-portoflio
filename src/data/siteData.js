@@ -1,4 +1,4 @@
-import { Award, BookOpen, Calendar, Globe, Mic, PenLine, Users } from "lucide-react";
+import { Award, BookOpen, Calendar, Mic, Users } from "lucide-react";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -68,32 +68,6 @@ export const services = [
       "Long-term student development",
     ],
     cta: "Invite me to your school or institution",
-  },
-  {
-    icon: PenLine,
-    title: "Writing Skills Development for Young Learners",
-    description:
-      "Coaching children and teens to improve writing through creative exercises and personalized feedback.",
-    featuresLabel: "What's included:",
-    features: [
-      "Creative writing exercises tailored to each child's age and level",
-      "Personalized feedback on structure, clarity, and expression",
-      "Building writing confidence through consistent, guided practice",
-    ],
-    cta: "Book Me",
-  },
-  {
-    icon: Globe,
-    title: "Online Writing Masterclass Series",
-    description:
-      "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
-    featuresLabel: "What's included:",
-    features: [
-      "Expert feedback on writing craft, voice, and structure",
-      "Publishing strategies and author branding guidance",
-      "Peer networking and collaborative learning environment",
-    ],
-    cta: "Book Me",
   },
 ];
 

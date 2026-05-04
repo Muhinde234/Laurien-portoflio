@@ -94,22 +94,6 @@ export default function ServicesSection({ onBook }) {
                     {service.description}
                   </p>
 
-                  {service.offerings && service.offerings.length > 0 && (
-                    <div className="mb-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
-                        Service extends to:
-                      </p>
-                      <div className="space-y-3">
-                        {service.offerings.map((offering, idx) => (
-                          <div key={idx} className="bg-champagne/4 border border-champagne/8 rounded-xl p-4">
-                            <p className="text-sm font-semibold text-offwhite/70 mb-1">{offering.title}</p>
-                            <p className="text-sm text-offwhite/45 leading-relaxed">{offering.description}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                   {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-6 bg-champagne/4 border border-champagne/8 rounded-xl p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
@@ -144,6 +128,22 @@ export default function ServicesSection({ onBook }) {
                         ))}
                       </ul>
                     </>
+                  )}
+
+                  {service.offerings && service.offerings.length > 0 && (
+                    <div className="mb-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
+                        Also available:
+                      </p>
+                      <div className="space-y-3">
+                        {service.offerings.map((offering, idx) => (
+                          <div key={idx} className="bg-champagne/4 border border-champagne/8 rounded-xl p-4">
+                            <p className="text-sm font-semibold text-offwhite/70 mb-1">{offering.title}</p>
+                            <p className="text-sm text-offwhite/45 leading-relaxed">{offering.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
 
                   {service.focusAreas && service.focusAreas.length > 0 && (

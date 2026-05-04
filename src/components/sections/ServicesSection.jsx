@@ -10,9 +10,10 @@ export default function ServicesSection({ onBook }) {
   const services = content.services.map((s, i) => ({
     ...s,
     icon: staticServices[i]?.icon,
+    offerings: staticServices[i]?.offerings,
   }));
 
-  const cardNumbers = ["01", "02", "03", "04"];
+  const cardNumbers = ["01", "02"];
 
   return (
     <section
@@ -92,6 +93,22 @@ export default function ServicesSection({ onBook }) {
                   <p className="text-base text-offwhite/45 leading-[1.85] mb-7">
                     {service.description}
                   </p>
+
+                  {service.offerings && service.offerings.length > 0 && (
+                    <div className="mb-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/28 mb-3">
+                        Service extends to:
+                      </p>
+                      <div className="space-y-3">
+                        {service.offerings.map((offering, idx) => (
+                          <div key={idx} className="bg-champagne/4 border border-champagne/8 rounded-xl p-4">
+                            <p className="text-sm font-semibold text-offwhite/70 mb-1">{offering.title}</p>
+                            <p className="text-sm text-offwhite/45 leading-relaxed">{offering.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-6 bg-champagne/4 border border-champagne/8 rounded-xl p-4">

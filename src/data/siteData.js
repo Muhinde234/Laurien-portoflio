@@ -24,6 +24,18 @@ export const services = [
   {
     icon: BookOpen,
     title: "Author's Coaching",
+    offerings: [
+      {
+        title: "Writing Skills Development for Young Learners",
+        description:
+          "Coaching children and teens to improve writing through creative exercises and personalized feedback.",
+      },
+      {
+        title: "Online Writing Masterclass Series",
+        description:
+          "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
+      },
+    ],
     intro: "For authors who want their work to stand,",
     description:
       "I provide structured, personalized coaching to help you write with confidence, clarity, authenticity, and purpose—from idea to final draft.",

@@ -14,7 +14,7 @@ export default function BookingSection({ onBook }) {
     <section
       ref={bookingRef}
       id="booking"
-      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative border-b border-champagne/10 scroll-reveal perf-section ${bookingVisible ? "visible" : ""}`}
       aria-labelledby="booking-heading"
     >
       <div className="max-w-6xl mx-auto">

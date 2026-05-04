@@ -17,11 +17,72 @@ export default function HeroSection({ onBook, onNavigate }) {
   return (
     <section
       ref={heroRef}
-      className={`min-h-svh flex items-center justify-center px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 relative scroll-reveal ${
+      className={`min-h-svh flex items-center justify-center px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 relative border-b border-champagne/10 scroll-reveal ${
         heroRevealed ? "visible" : ""
       }`}
       aria-label="Introduction"
     >
+      {/* ── Decorative writing-themed pattern ── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+
+        {/* Giant opening quotation mark — top left */}
+        <span className="absolute font-display text-champagne leading-none hidden sm:block"
+          style={{ top: '6%', left: '2%', fontSize: 'clamp(6rem, 14vw, 11rem)', opacity: 0.045, animation: 'float 9s ease-in-out infinite' }}>
+          "
+        </span>
+
+        {/* Giant closing quotation mark — bottom right */}
+        <span className="absolute font-display text-champagne leading-none hidden sm:block"
+          style={{ bottom: '8%', right: '2%', fontSize: 'clamp(5rem, 11vw, 9rem)', opacity: 0.035, animation: 'float 11s ease-in-out infinite 3s' }}>
+          "
+        </span>
+
+        {/* Em dashes floating around */}
+        <span className="absolute font-display text-champagne"
+          style={{ top: '20%', left: '7%', fontSize: '1.6rem', opacity: 0.08, animation: 'drift 7s ease-in-out infinite 0.5s' }}>—</span>
+        <span className="absolute font-display text-champagne hidden sm:block"
+          style={{ top: '68%', right: '8%', fontSize: '1.3rem', opacity: 0.06, animation: 'drift 8s ease-in-out infinite 2s' }}>—</span>
+        <span className="absolute font-display text-champagne hidden md:block"
+          style={{ top: '42%', left: '3%', fontSize: '1rem', opacity: 0.05, animation: 'float 6s ease-in-out infinite 1.5s' }}>—</span>
+
+        {/* Ellipsis — drifting */}
+        <span className="absolute font-display text-champagne hidden sm:block"
+          style={{ top: '32%', right: '6%', fontSize: '1.3rem', opacity: 0.07, animation: 'drift 9s ease-in-out infinite 1s', letterSpacing: '0.15em' }}>...</span>
+        <span className="absolute font-display text-champagne hidden md:block"
+          style={{ bottom: '28%', left: '6%', fontSize: '1rem', opacity: 0.05, animation: 'drift 10s ease-in-out infinite 4s', letterSpacing: '0.15em' }}>...</span>
+
+        {/* Blinking cursor — typewriter feel */}
+        <span className="absolute font-display text-champagne hidden sm:block"
+          style={{ bottom: '22%', left: '9%', fontSize: '1.8rem', fontWeight: 300, animation: 'blink-cursor 1.1s step-end infinite', opacity: 0.12 }}>_</span>
+
+        {/* Floating dots */}
+        <span className="absolute rounded-full bg-champagne"
+          style={{ top: '17%', right: '18%', width: 5, height: 5, opacity: 0.1, animation: 'pulse-dot 4s ease-in-out infinite' }} />
+        <span className="absolute rounded-full bg-champagne"
+          style={{ top: '58%', left: '13%', width: 3, height: 3, opacity: 0.08, animation: 'pulse-dot 5s ease-in-out infinite 1.5s' }} />
+        <span className="absolute rounded-full bg-champagne hidden sm:block"
+          style={{ bottom: '18%', right: '22%', width: 4, height: 4, opacity: 0.07, animation: 'pulse-dot 6s ease-in-out infinite 3s' }} />
+        <span className="absolute rounded-full bg-champagne hidden md:block"
+          style={{ top: '50%', right: '4%', width: 3, height: 3, opacity: 0.06, animation: 'pulse-dot 3.5s ease-in-out infinite 0.8s' }} />
+
+        {/* Manuscript lines — left column (looks like a page of text) */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-5 flex-col gap-2 opacity-[0.04] hidden lg:flex"
+          style={{ animation: 'float 12s ease-in-out infinite 2s' }}>
+          {[72, 88, 56, 94, 68, 80, 50, 76, 62].map((w, i) => (
+            <div key={i} className="h-px bg-champagne rounded-full" style={{ width: w }} />
+          ))}
+        </div>
+
+        {/* Manuscript lines — right column */}
+        <div className="absolute top-1/2 -translate-y-1/2 right-5 flex-col gap-2 opacity-[0.04] hidden lg:flex"
+          style={{ animation: 'float 14s ease-in-out infinite 5s' }}>
+          {[60, 84, 48, 78, 92, 54, 70, 86, 44].map((w, i) => (
+            <div key={i} className="h-px bg-champagne rounded-full" style={{ width: w }} />
+          ))}
+        </div>
+
+      </div>
+
       <div className="max-w-6xl mx-auto text-center relative z-10">
 
         <p

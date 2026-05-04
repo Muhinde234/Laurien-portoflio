@@ -18,7 +18,7 @@ export default function AboutSection({ onBook }) {
     <section
       ref={aboutRef}
       id="about"
-      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative border-b border-champagne/10 scroll-reveal perf-section ${aboutVisible ? "visible" : ""}`}
       aria-labelledby="about-heading"
     >
       <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />

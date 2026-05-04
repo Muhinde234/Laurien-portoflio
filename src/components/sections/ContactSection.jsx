@@ -46,7 +46,7 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className={`py-24 sm:py-28 px-4 sm:px-6 relative scroll-reveal perf-section ${visible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative border-b border-champagne/10 scroll-reveal perf-section ${visible ? "visible" : ""}`}
       aria-labelledby="contact-heading"
     >
    

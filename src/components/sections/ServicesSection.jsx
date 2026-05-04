@@ -12,7 +12,7 @@ export default function ServicesSection({ onBook }) {
     icon: staticServices[i]?.icon,
   }));
 
-  const cardNumbers = ["01", "02"];
+  const cardNumbers = ["01", "02", "03", "04"];
 
   return (
     <section

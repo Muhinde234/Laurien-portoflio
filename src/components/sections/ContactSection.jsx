@@ -64,7 +64,7 @@ export default function ContactSection() {
             {c.headlineStart}{" "}
             <span className="text-gold italic font-light">{c.headlineHighlight}</span>
           </h2>
-          <p className="text-base text-navy/75 max-w-lg leading-relaxed">
+          <p className="text-base text-navy max-w-lg leading-relaxed">
             {c.subtext}
           </p>
         </div>
@@ -103,11 +103,11 @@ export default function ContactSection() {
                   <Icon className="w-4 h-4 text-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-navy/55 font-medium mb-0.5">
+                  <p className="text-sm uppercase tracking-[0.18em] text-navy/75 font-medium mb-0.5">
                     {label}
                   </p>
-                  <p className="text-base font-medium text-navy/90 mb-0.5">{value}</p>
-                  <p className="text-sm text-navy/65">{sub}</p>
+                  <p className="text-base font-medium text-navy mb-0.5">{value}</p>
+                  <p className="text-sm text-navy/85">{sub}</p>
                 </div>
               </div>
             ))}
@@ -136,7 +136,7 @@ export default function ContactSection() {
                     <h3 className="font-display text-2xl font-semibold text-navy mb-2">
                       {c.successTitle}
                     </h3>
-                    <p className="text-navy/70 text-base leading-relaxed max-w-xs mx-auto">
+                    <p className="text-navy/90 text-base leading-relaxed max-w-xs mx-auto">
                       {c.successMessage}
                     </p>
                   </div>
@@ -256,7 +256,7 @@ export default function ContactSection() {
                         </>
                       )}
                     </button>
-                    <p className="mt-3 text-sm text-navy/50 tracking-wide">
+                    <p className="mt-3 text-sm text-navy/70 tracking-wide">
                       {c.disclaimer}
                     </p>
                   </div>

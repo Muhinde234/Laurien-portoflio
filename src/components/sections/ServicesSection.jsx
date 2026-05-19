@@ -35,7 +35,7 @@ export default function ServicesSection({ onBook }) {
             Structured engagements{" "}
             <span className="italic font-light text-gold">for serious outcomes.</span>
           </h2>
-          <p className="text-base text-navy/55 leading-relaxed max-w-lg">
+          <p className="text-base text-navy/75 leading-relaxed max-w-lg">
             From manuscript to publication, raw idea to school program — every engagement is
             designed to move work from its starting point to credible impact.
           </p>
@@ -90,18 +90,18 @@ export default function ServicesSection({ onBook }) {
                     </p>
                   )}
 
-                  <p className="text-base text-navy/60 leading-[1.85] mb-7">
+                  <p className="text-base text-navy/80 leading-[1.85] mb-7">
                     {service.description}
                   </p>
 
                   {service.partnerWith && service.partnerWith.length > 0 && (
                     <div className="mb-6 bg-navy/4 border border-navy/8 rounded-xl p-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/35 mb-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/55 mb-3">
                         {service.partnerLabel}
                       </p>
                       <ul className="space-y-2.5">
                         {service.partnerWith.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-sm text-navy/55 leading-relaxed">
+                          <li key={idx} className="flex items-start gap-3 text-sm text-navy/75 leading-relaxed">
                             <span className="text-gold/60 shrink-0 mt-0.5 font-display">—</span>
                             {item}
                           </li>
@@ -113,7 +113,7 @@ export default function ServicesSection({ onBook }) {
                   {service.features && service.features.length > 0 && (
                     <>
                       <div className="h-px bg-navy/8 mb-6" aria-hidden="true" />
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/35 mb-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/55 mb-4">
                         {service.featuresLabel}
                       </p>
                       <ul className="space-y-3.5 mb-7" role="list">
@@ -123,7 +123,7 @@ export default function ServicesSection({ onBook }) {
                               {String(idx + 1).padStart(2, "0")}
                             </span>
                             <div className="h-px w-4 bg-navy/15 shrink-0 mt-[0.55rem]" aria-hidden="true" />
-                            <span className="text-sm text-navy/60 leading-relaxed">{feature}</span>
+                            <span className="text-sm text-navy/75 leading-relaxed">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -132,14 +132,14 @@ export default function ServicesSection({ onBook }) {
 
                   {service.offerings && service.offerings.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/35 mb-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/55 mb-3">
                         Also available:
                       </p>
                       <div className="space-y-3">
                         {service.offerings.map((offering, idx) => (
                           <div key={idx} className="bg-section-light border border-navy/8 rounded-xl p-4">
-                            <p className="text-sm font-semibold text-navy/75 mb-1">{offering.title}</p>
-                            <p className="text-sm text-navy/55 leading-relaxed">{offering.description}</p>
+                            <p className="text-sm font-semibold text-navy/85 mb-1">{offering.title}</p>
+                            <p className="text-sm text-navy/75 leading-relaxed">{offering.description}</p>
                           </div>
                         ))}
                       </div>
@@ -148,7 +148,7 @@ export default function ServicesSection({ onBook }) {
 
                   {service.focusAreas && service.focusAreas.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/35 mb-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/55 mb-3">
                         Students leave with:
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -166,12 +166,12 @@ export default function ServicesSection({ onBook }) {
 
                   {service.suitedFor && service.suitedFor.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/35 mb-2.5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/55 mb-2.5">
                         Especially suited for institutions that value:
                       </p>
                       <div className="flex gap-3 flex-wrap">
                         {service.suitedFor.map((s, idx) => (
-                          <span key={idx} className="flex items-center gap-2 text-sm text-navy/55">
+                          <span key={idx} className="flex items-center gap-2 text-sm text-navy/75">
                             <span className="w-1 h-1 rounded-full bg-gold/60 shrink-0" aria-hidden="true" />
                             {s}
                           </span>
@@ -183,7 +183,7 @@ export default function ServicesSection({ onBook }) {
                   {service.note && (
                     <>
                       <div className="h-px bg-navy/8 mb-4" aria-hidden="true" />
-                      <p className="font-display italic font-light text-xs text-navy/35 leading-relaxed mb-6">
+                      <p className="font-display italic font-light text-xs text-navy/55 leading-relaxed mb-6">
                         {service.note}
                       </p>
                     </>

@@ -23,7 +23,7 @@ export default function FeaturedStrip() {
           {logos.map((logo) => (
             <span
               key={logo}
-              className="px-4 py-1.5 text-sm font-medium tracking-wide text-navy/55 border border-navy/12 rounded-full bg-white/60"
+              className="px-4 py-1.5 text-sm font-medium tracking-wide text-navy/75 border border-navy/12 rounded-full bg-white/60"
             >
               {logo}
             </span>

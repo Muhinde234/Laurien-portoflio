@@ -46,37 +46,35 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className={`py-24 sm:py-28 px-4 sm:px-6 relative border-b border-champagne/10 scroll-reveal perf-section ${visible ? "visible" : ""}`}
+      className={`py-24 sm:py-28 px-4 sm:px-6 relative bg-section-light border-b border-t border-navy/8 section-light scroll-reveal perf-section ${visible ? "visible" : ""}`}
       aria-labelledby="contact-heading"
     >
-   
-      <div className="absolute inset-0 bg-navy-light/15 pointer-events-none" aria-hidden="true" />
 
       <div className="max-w-6xl mx-auto relative z-10">
 
- 
+
         <div className="mb-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-champagne/60 mb-5">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-gold mb-5">
             {c.label}
           </p>
           <h2
             id="contact-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-offwhite leading-tight mb-4"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-navy leading-tight mb-4"
           >
             {c.headlineStart}{" "}
-            <span className="text-champagne italic font-light">{c.headlineHighlight}</span>
+            <span className="text-gold italic font-light">{c.headlineHighlight}</span>
           </h2>
-          <p className="text-base text-offwhite/45 max-w-lg leading-relaxed">
+          <p className="text-base text-navy/55 max-w-lg leading-relaxed">
             {c.subtext}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-start">
 
-        
+
           <aside className="lg:col-span-2 flex flex-col gap-6">
 
-          
+
             {[
               {
                 icon: Mail,
@@ -99,52 +97,52 @@ export default function ContactSection() {
             ].map(({ icon: Icon, label, value, sub }) => (
               <div
                 key={label}
-                className="flex items-start gap-4 p-4 sm:p-5 bg-navy-card/40 border border-champagne/10 rounded-xl"
+                className="flex items-start gap-4 p-4 sm:p-5 bg-white border border-navy/10 rounded-xl shadow-sm"
               >
-                <div className="w-9 h-9 shrink-0 rounded-lg bg-champagne/8 border border-champagne/15 flex items-center justify-center">
-                  <Icon className="w-4 h-4 text-champagne/60" aria-hidden="true" />
+                <div className="w-9 h-9 shrink-0 rounded-lg bg-gold/8 border border-gold/20 flex items-center justify-center">
+                  <Icon className="w-4 h-4 text-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-offwhite/30 font-medium mb-0.5">
+                  <p className="text-sm uppercase tracking-[0.18em] text-navy/40 font-medium mb-0.5">
                     {label}
                   </p>
-                  <p className="text-base font-medium text-offwhite/80 mb-0.5">{value}</p>
-                  <p className="text-sm text-offwhite/35">{sub}</p>
+                  <p className="text-base font-medium text-navy/80 mb-0.5">{value}</p>
+                  <p className="text-sm text-navy/45">{sub}</p>
                 </div>
               </div>
             ))}
 
-         
-            <p className="font-display italic text-champagne/40 text-base leading-relaxed pl-1 mt-2">
+
+            <p className="font-display italic text-gold/70 text-base leading-relaxed pl-1 mt-2">
               "{c.tagline}"
             </p>
           </aside>
 
           <div className="lg:col-span-3">
-            <div className="relative rounded-2xl border border-champagne/15 overflow-hidden">
-            
+            <div className="relative rounded-2xl border border-navy/12 overflow-hidden bg-white shadow-sm">
+
               <div
-                className="h-px bg-linear-to-r from-champagne/50 via-champagne/20 to-transparent"
+                className="h-px bg-linear-to-r from-gold/50 via-gold/15 to-transparent"
                 aria-hidden="true"
               />
 
               {submitted ? (
              
                 <div className="p-10 sm:p-14 flex flex-col items-center text-center gap-5">
-                  <div className="w-16 h-16 rounded-full bg-champagne/10 border border-champagne/20 flex items-center justify-center">
-                    <CheckCircle className="w-8 h-8 text-champagne" aria-hidden="true" />
+                  <div className="w-16 h-16 rounded-full bg-gold/8 border border-gold/20 flex items-center justify-center">
+                    <CheckCircle className="w-8 h-8 text-gold" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl font-semibold text-offwhite mb-2">
+                    <h3 className="font-display text-2xl font-semibold text-navy mb-2">
                       {c.successTitle}
                     </h3>
-                    <p className="text-offwhite/45 text-base leading-relaxed max-w-xs mx-auto">
+                    <p className="text-navy/50 text-base leading-relaxed max-w-xs mx-auto">
                       {c.successMessage}
                     </p>
                   </div>
                   <button
                     onClick={() => { setSubmitted(false); setForm(EMPTY_FORM); }}
-                    className="mt-2 text-sm text-champagne/50 hover:text-champagne transition-colors duration-300 underline underline-offset-4"
+                    className="mt-2 text-sm text-gold/60 hover:text-gold transition-colors duration-300 underline underline-offset-4"
                   >
                     Send another message
                   </button>
@@ -237,13 +235,13 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-champagne text-navy font-semibold px-8 py-4 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy disabled:opacity-60 disabled:cursor-not-allowed text-base"
+                      className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-navy text-champagne font-semibold px-8 py-4 rounded-full hover:bg-navy-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 focus:ring-offset-white disabled:opacity-60 disabled:cursor-not-allowed text-base"
                       aria-label="Send message"
                     >
                       {loading ? (
                         <>
                           <span
-                            className="w-4 h-4 border-2 border-navy/30 border-t-navy rounded-full animate-spin"
+                            className="w-4 h-4 border-2 border-champagne/30 border-t-champagne rounded-full animate-spin"
                             aria-hidden="true"
                           />
                           Sending…
@@ -258,7 +256,7 @@ export default function ContactSection() {
                         </>
                       )}
                     </button>
-                    <p className="mt-3 text-sm text-offwhite/20 tracking-wide">
+                    <p className="mt-3 text-sm text-navy/30 tracking-wide">
                       {c.disclaimer}
                     </p>
                   </div>

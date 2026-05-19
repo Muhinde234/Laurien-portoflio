@@ -96,23 +96,24 @@ button, [role="button"], a, label[for], select { cursor: pointer; }
 
 .section-light .form-input {
   background-color: #ffffff;
-  border-color: rgba(18, 24, 54, 0.15);
+  border-color: rgba(18, 24, 54, 0.28);
   color: #121836;
+  font-weight: 450;
 }
 
 .section-light .form-input::placeholder {
-  color: rgba(18, 24, 54, 0.38);
+  color: rgba(18, 24, 54, 0.45);
 }
 
 .section-light .form-input:focus {
-  border-color: rgba(154, 123, 62, 0.5);
-  box-shadow: 0 0 0 3px rgba(154, 123, 62, 0.08);
+  border-color: rgba(154, 123, 62, 0.7);
+  box-shadow: 0 0 0 3px rgba(154, 123, 62, 0.1);
 }
 
 .section-light .form-input:hover:not(:focus) {
-  border-color: rgba(18, 24, 54, 0.25);
+  border-color: rgba(18, 24, 54, 0.4);
 }
 
 .section-light .form-label {
-  color: rgba(18, 24, 54, 0.5);
+  color: rgba(18, 24, 54, 0.75);
 }

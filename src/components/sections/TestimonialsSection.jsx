@@ -14,7 +14,7 @@ export default function TestimonialsSection({ onBook }) {
       <div className="max-w-6xl mx-auto">
     
         <header className="mb-16 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-champagne/70 mb-5">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-champagne/90 mb-5">
             Client Results
           </p>
           <h3
@@ -31,7 +31,7 @@ export default function TestimonialsSection({ onBook }) {
           {testimonials.map((testimonial, index) => (
             <article
               key={index}
-              className="bg-navy-light border border-champagne/12 rounded-2xl p-6 sm:p-7 flex flex-col hover:border-champagne/22 transition-colors duration-300"
+              className="bg-navy-light border border-champagne/25 rounded-2xl p-6 sm:p-7 flex flex-col hover:border-champagne/45 transition-colors duration-300"
             >
         
               <div className="flex gap-1 mb-5" aria-label={`${testimonial.rating} out of 5`}>
@@ -43,7 +43,7 @@ export default function TestimonialsSection({ onBook }) {
               </div>
 
             
-              <blockquote className="font-display text-xl italic text-offwhite/65 leading-relaxed flex-1 mb-6">
+              <blockquote className="font-display text-xl italic text-offwhite/90 leading-relaxed flex-1 mb-6">
                 "{testimonial.content}"
               </blockquote>
 
@@ -57,8 +57,8 @@ export default function TestimonialsSection({ onBook }) {
                   className="w-10 h-10 rounded-full object-cover border border-champagne/20"
                 />
                 <div>
-                  <div className="text-base font-medium text-offwhite/80">{testimonial.name}</div>
-                  <div className="text-sm text-offwhite/40">{testimonial.role}</div>
+                  <div className="text-base font-medium text-offwhite">{testimonial.name}</div>
+                  <div className="text-sm text-offwhite/70">{testimonial.role}</div>
                 </div>
               </div>
             </article>
@@ -67,7 +67,7 @@ export default function TestimonialsSection({ onBook }) {
 
    
         <div className="border-t border-champagne/10 pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <p className="font-display text-2xl italic text-offwhite/50">
+          <p className="font-display text-2xl italic text-offwhite/85">
             Ready to produce work you are proud of?
           </p>
           <button

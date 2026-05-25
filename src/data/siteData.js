@@ -35,6 +35,13 @@ export const services = [
         description:
           "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
       },
+      {
+        title: "English Language Learning (ELL) Coaching for Adults",
+        description:
+          "Private and group English language coaching dedicated to proficiency development — taking adults from any level through interactive speaking and listening skills, from A1 to advanced B2, C1+.",
+        badge: "A1 → C1+",
+        type: "Private & Group",
+      },
     ],
     intro: "For authors who want their work to stand,",
     description:

@@ -132,14 +132,36 @@ export default function ServicesSection({ onBook }) {
 
                   {service.offerings && service.offerings.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/75 mb-3">
-                        Also available:
-                      </p>
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="h-px flex-1 bg-navy/8" aria-hidden="true" />
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold/70 shrink-0">
+                          Also Available
+                        </p>
+                        <div className="h-px flex-1 bg-navy/8" aria-hidden="true" />
+                      </div>
                       <div className="space-y-3">
                         {service.offerings.map((offering, idx) => (
-                          <div key={idx} className="bg-section-light border border-navy/8 rounded-xl p-4">
-                            <p className="text-sm font-semibold text-navy mb-1">{offering.title}</p>
-                            <p className="text-sm text-navy/90 leading-relaxed">{offering.description}</p>
+                          <div
+                            key={idx}
+                            className="group/offer relative bg-white border border-navy/8 rounded-xl overflow-hidden hover:border-gold/25 hover:shadow-sm transition-all duration-300"
+                          >
+                            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-linear-to-b from-gold/50 via-gold/30 to-transparent" aria-hidden="true" />
+                            <div className="pl-4 pr-4 py-4">
+                              <div className="flex items-start justify-between gap-3 mb-1.5">
+                                <p className="text-sm font-semibold text-navy leading-snug">{offering.title}</p>
+                                {offering.badge && (
+                                  <span className="shrink-0 text-[10px] font-bold tracking-wider text-gold border border-gold/30 rounded-full px-2.5 py-1 bg-gold/5 leading-none mt-0.5">
+                                    {offering.badge}
+                                  </span>
+                                )}
+                              </div>
+                              {offering.type && (
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy/40 mb-1.5">
+                                  {offering.type}
+                                </p>
+                              )}
+                              <p className="text-sm text-navy/80 leading-relaxed">{offering.description}</p>
+                            </div>
                           </div>
                         ))}
                       </div>

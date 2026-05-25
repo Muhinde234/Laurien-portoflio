@@ -54,17 +54,17 @@ export default function SiteFooter({ navItems, onNavigate }) {
                 <p className="font-display text-lg font-semibold text-champagne leading-none">
                   Coach Laurien
                 </p>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-offwhite/30 mt-1">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-offwhite/60 mt-1">
                   Founder, KELP Education
                 </p>
               </div>
             </div>
 
-            <p className="text-base text-offwhite/40 leading-relaxed whitespace-pre-line">
+            <p className="text-base text-offwhite/75 leading-relaxed whitespace-pre-line">
               {f.bio}
             </p>
 
-            <p className="font-display italic text-champagne/45 text-base leading-none">
+            <p className="font-display italic text-champagne/80 text-base leading-none">
               "{f.tagline}"
             </p>
 
@@ -79,7 +79,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-8 h-8 border border-champagne/15 rounded-full flex items-center justify-center text-offwhite/30 hover:border-champagne/50 hover:text-champagne transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40"
+                    className="w-8 h-8 border border-champagne/35 rounded-full flex items-center justify-center text-offwhite/65 hover:border-champagne/70 hover:text-champagne transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40"
                   >
                     <Icon className="w-3.5 h-3.5" />
                   </a>
@@ -90,7 +90,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
          
           <div>
-            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-5">
+            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/60 mb-5">
               Navigation
             </h5>
             <nav className="flex flex-col gap-3" aria-label="Footer navigation">
@@ -98,7 +98,7 @@ export default function SiteFooter({ navItems, onNavigate }) {
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className="text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
+                  className="text-base text-offwhite/80 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
                 >
                   {item.label}
                 </button>
@@ -108,23 +108,23 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
          
           <div>
-            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/30 mb-5">
+            <h5 className="text-sm font-semibold uppercase tracking-[0.2em] text-offwhite/60 mb-5">
               Get in Touch
             </h5>
             <div className="flex flex-col gap-4">
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center gap-2 text-base text-offwhite/45 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded min-w-0"
+                className="inline-flex items-center gap-2 text-base text-offwhite/80 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded min-w-0"
               >
-                <Mail className="w-4 h-4 shrink-0 text-champagne/45" aria-hidden="true" />
+                <Mail className="w-4 h-4 shrink-0 text-champagne/75" aria-hidden="true" />
                 <span className="break-all">{email}</span>
               </a>
 
               <div className="pt-3 border-t border-champagne/10">
-                <p className="text-sm text-offwhite/28 leading-relaxed mb-3">
+                <p className="text-sm text-offwhite/70 leading-relaxed mb-3">
                   For enquiries regarding author coaching, school programs, or institutional partnerships.
                 </p>
-                <p className="text-sm uppercase tracking-[0.18em] text-champagne/35 font-medium">
+                <p className="text-sm uppercase tracking-[0.18em] text-champagne/75 font-medium">
                   Response within 48 hours.
                 </p>
               </div>
@@ -134,10 +134,10 @@ export default function SiteFooter({ navItems, onNavigate }) {
 
        
         <div className="border-t border-champagne/10 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <span className="text-sm text-offwhite/20">
+          <span className="text-sm text-offwhite/55">
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.
           </span>
-          <span className="font-display italic text-base text-offwhite/15">
+          <span className="font-display italic text-base text-offwhite/45">
             {f.tagline}
           </span>
         </div>

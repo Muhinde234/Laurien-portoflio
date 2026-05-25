@@ -34,17 +34,7 @@ export default function AboutSection({ onBook }) {
          
           <div className="relative flex flex-col items-center md:items-start gap-5">
 
-            {/* Dot grid accent — top right */}
-            <div
-              className="absolute -top-6 -right-2 w-20 h-20 pointer-events-none hidden md:block"
-              aria-hidden="true"
-              style={{
-                backgroundImage: "radial-gradient(rgba(232,214,179,0.3) 1px, transparent 1px)",
-                backgroundSize: "8px 8px",
-              }}
-            />
-
-            {/* Outer glow ring */}
+       
             <div
               className="absolute rounded-full pointer-events-none"
               aria-hidden="true"
@@ -54,17 +44,16 @@ export default function AboutSection({ onBook }) {
               }}
             />
 
-            {/* Circle image */}
             <div className="relative w-56 sm:w-64 md:w-72 lg:w-80 shrink-0">
 
-              {/* Champagne gradient ring */}
+           
               <div
                 className="rounded-full p-0.75"
                 style={{
                   background: "conic-gradient(from 135deg, rgba(232,214,179,0.7) 0%, rgba(232,214,179,0.12) 40%, rgba(232,214,179,0.55) 70%, rgba(232,214,179,0.7) 100%)",
                 }}
               >
-                {/* Inner subtle ring gap */}
+            
                 <div className="rounded-full p-0.5 bg-navy">
                   <div className="relative rounded-full overflow-hidden aspect-square">
                     <img
@@ -79,10 +68,7 @@ export default function AboutSection({ onBook }) {
               </div>
 
               {/* Online indicator */}
-              <span
-                className="absolute bottom-4 right-4 w-4 h-4 bg-champagne rounded-full border-2 border-navy shadow-lg"
-                aria-hidden="true"
-              />
+            
             </div>
 
             {/* Name + role below the circle */}

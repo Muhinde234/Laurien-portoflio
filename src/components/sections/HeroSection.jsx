@@ -25,16 +25,7 @@ export default function HeroSection({ onBook, onNavigate }) {
       {/* ── Background: Dot Grid + Radial Glow ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
 
-        {/* Layer 1 — Dot grid */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Ccircle cx='1' cy='1' r='1.2' fill='%23E8D6B3' fill-opacity='0.18'/%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat',
-          }}
-        />
-
-        {/* Layer 2 — Warm center spotlight */}
+        {/* Layer 1 — Warm center spotlight */}
         <div
           className="absolute inset-0"
           style={{

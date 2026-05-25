@@ -17,14 +17,6 @@ export default function BackgroundDecor() {
         style={{ background: "rgba(245,240,232,0.02)" }}
       ></div>
      
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(232,214,179,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(232,214,179,0.015) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
-        }}
-      ></div>
     </div>
   );
 }

@@ -45,10 +45,6 @@ export default function SiteFooter({ navItems, onNavigate }) {
                   alt="Coach Laurien"
                   className="w-12 h-12 rounded-full object-cover object-top border-2 border-champagne/40 shadow-lg shadow-champagne/10"
                 />
-                <span
-                  className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-champagne rounded-full border-2 border-navy"
-                  aria-hidden="true"
-                />
               </div>
               <div>
                 <p className="font-display text-lg font-semibold text-champagne leading-none">

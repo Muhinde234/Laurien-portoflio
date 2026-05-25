@@ -67,8 +67,7 @@ export default function AboutSection({ onBook }) {
                 </div>
               </div>
 
-              {/* Online indicator */}
-            
+           
             </div>
 
             {/* Name + role below the circle */}

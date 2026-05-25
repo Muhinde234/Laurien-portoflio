@@ -32,78 +32,65 @@ export default function AboutSection({ onBook }) {
         <div className="grid md:grid-cols-[5fr_7fr] gap-6 lg:gap-10 items-start">
 
          
-          <div className="relative flex justify-center md:justify-start">
+          <div className="relative flex flex-col items-center md:items-start gap-5">
 
-          
+            {/* Dot grid accent — top right */}
             <div
-              className="absolute -bottom-4 -left-4 w-4/5 h-4/5 rounded-2xl pointer-events-none"
+              className="absolute -top-6 -right-2 w-20 h-20 pointer-events-none hidden md:block"
               aria-hidden="true"
               style={{
-                background: "linear-gradient(145deg, rgba(232,214,179,0.08) 0%, rgba(232,214,179,0.03) 100%)",
-                border: "1px solid rgba(232,214,179,0.1)",
-              }}
-            />
-
-           
-            <div
-              className="absolute -top-6 -right-6 w-20 h-20 pointer-events-none hidden md:block"
-              aria-hidden="true"
-              style={{
-                backgroundImage: "radial-gradient(rgba(232,214,179,0.25) 1px, transparent 1px)",
+                backgroundImage: "radial-gradient(rgba(232,214,179,0.3) 1px, transparent 1px)",
                 backgroundSize: "8px 8px",
               }}
             />
 
-            <div className="relative w-full max-w-sm md:max-w-none">
+            {/* Outer glow ring */}
+            <div
+              className="absolute rounded-full pointer-events-none"
+              aria-hidden="true"
+              style={{
+                inset: "-10px",
+                background: "radial-gradient(ellipse at 60% 40%, rgba(232,214,179,0.12) 0%, transparent 65%)",
+              }}
+            />
 
-         
+            {/* Circle image */}
+            <div className="relative w-56 sm:w-64 md:w-72 lg:w-80 shrink-0">
+
+              {/* Champagne gradient ring */}
               <div
-                className="relative rounded-2xl overflow-visible"
+                className="rounded-full p-0.75"
                 style={{
-                  padding: "3px",
-                  background: "linear-gradient(145deg, rgba(232,214,179,0.45) 0%, rgba(232,214,179,0.06) 55%, rgba(232,214,179,0.22) 100%)",
+                  background: "conic-gradient(from 135deg, rgba(232,214,179,0.7) 0%, rgba(232,214,179,0.12) 40%, rgba(232,214,179,0.55) 70%, rgba(232,214,179,0.7) 100%)",
                 }}
               >
-                <div className="relative rounded-[14px] overflow-hidden aspect-3/4">
-                  <img
-                    src={laurienPhoto}
-                    alt="Coach Laurien"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover object-top"
-                  />
-
-               
-                  <div
-                    className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
-                    aria-hidden="true"
-                    style={{
-                      background: "linear-gradient(to top, rgba(13,18,41,0.95) 0%, rgba(13,18,41,0.45) 55%, transparent 100%)",
-                    }}
-                  />
-
-               
-                  <div className="absolute top-4 left-4 w-7 h-7 pointer-events-none" aria-hidden="true">
-                    <div className="absolute top-0 left-0 w-full h-px bg-champagne/70" />
-                    <div className="absolute top-0 left-0 h-full w-px bg-champagne/70" />
-                  </div>
-                 
-                  <div className="absolute top-4 right-4 w-7 h-7 pointer-events-none" aria-hidden="true">
-                    <div className="absolute top-0 right-0 w-full h-px bg-champagne/70" />
-                    <div className="absolute top-0 right-0 h-full w-px bg-champagne/70" />
-                  </div>
-
-             
-                  <div className="absolute bottom-0 inset-x-0 px-5 pb-5">
-                    <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
-                    <p className="text-sm uppercase tracking-wider text-champagne/70 mt-1">
-                      Founder, KELP Education
-                    </p>
+                {/* Inner subtle ring gap */}
+                <div className="rounded-full p-0.5 bg-navy">
+                  <div className="relative rounded-full overflow-hidden aspect-square">
+                    <img
+                      src={laurienPhoto}
+                      alt="Coach Laurien"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                 </div>
               </div>
 
+              {/* Online indicator */}
+              <span
+                className="absolute bottom-4 right-4 w-4 h-4 bg-champagne rounded-full border-2 border-navy shadow-lg"
+                aria-hidden="true"
+              />
+            </div>
 
+            {/* Name + role below the circle */}
+            <div className="text-center md:text-left">
+              <p className="font-display text-base font-bold text-offwhite leading-tight">Coach Laurien</p>
+              <p className="text-sm uppercase tracking-wider text-champagne/80 mt-1">
+                Founder, KELP Education
+              </p>
             </div>
           </div>
 

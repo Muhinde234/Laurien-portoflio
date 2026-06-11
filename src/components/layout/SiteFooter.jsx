@@ -99,14 +99,14 @@ export default function SiteFooter({ navItems, onNavigate }) {
                   {item.label}
                 </button>
               ))}
-              <Link
-                to="https://survey.coachlaurien.com/"
+              <a
+                href="https://survey.coachlaurien.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base text-offwhite/80 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
               >
                 Take Survey
-              </Link>
+              </a>
             </nav>
           </div>
 
@@ -141,10 +141,10 @@ export default function SiteFooter({ navItems, onNavigate }) {
           <span className="text-sm text-offwhite/55">
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.
           </span>
-          {/* Developer Credit - Hidden from UI */}
-          <Link to="https://github.com/Muhinde234" className="hidden" aria-hidden="true" target="_blank" rel="noopener noreferrer">
+        
+          <a href="https://github.com/Muhinde234" className="hidden" aria-hidden="true" target="_blank" rel="noopener noreferrer">
             Website developed by IGIRIMPUHWE Dositha
-          </Link>
+          </a>
           <span className="font-display italic text-base text-offwhite/45">
             {f.tagline}
           </span>

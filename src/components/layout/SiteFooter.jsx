@@ -141,6 +141,10 @@ export default function SiteFooter({ navItems, onNavigate }) {
           <span className="text-sm text-offwhite/55">
             &copy; {new Date().getFullYear()} Coach Laurien. All rights reserved.
           </span>
+          {/* Developer Credit - Hidden from UI */}
+          <Link to="https://github.com/Muhinde234" className="hidden" aria-hidden="true" target="_blank" rel="noopener noreferrer">
+            Website developed by IGIRIMPUHWE Dositha
+          </Link>
           <span className="font-display italic text-base text-offwhite/45">
             {f.tagline}
           </span>

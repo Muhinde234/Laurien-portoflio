@@ -82,6 +82,14 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
                 {item.label}
               </button>
             ))}
+            <a
+              href="https://survey.coachlaurien.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-offwhite/50 hover:text-champagne transition-colors duration-300 focus:outline-none font-medium"
+            >
+              Take Survey
+            </a>
             <button
               onClick={onBook}
               className="bg-champagne text-navy text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-champagne-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-navy"
@@ -119,6 +127,14 @@ export default function SiteHeader({ navItems, onNavigate, onBook }) {
                 {item.label}
               </button>
             ))}
+            <a
+              href="https://survey.coachlaurien.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-left font-display text-base font-light text-offwhite/65 hover:text-champagne transition-colors duration-300 focus:outline-none py-3 border-b border-champagne/8"
+            >
+              Take Survey
+            </a>
             <button
               onClick={() => {
                 onBook();

@@ -99,6 +99,14 @@ export default function SiteFooter({ navItems, onNavigate }) {
                   {item.label}
                 </button>
               ))}
+              <a
+                href="https://survey.coachlaurien.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base text-offwhite/80 hover:text-champagne transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-champagne/40 rounded text-left"
+              >
+                Take Survey
+              </a>
             </nav>
           </div>
 

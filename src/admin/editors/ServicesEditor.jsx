@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContent } from "../../context/ContentContext";
-import { Field, Input, Textarea, ListEditor, SaveBar } from "../components/FormField";
+import { Field, Input, Textarea, ListEditor, OfferingsEditor, SaveBar } from "../components/FormField";
 
 function ServiceCard({ service, index, onChange }) {
   const set = (key, val) => onChange({ ...service, [key]: val });
@@ -88,6 +88,17 @@ function ServiceCard({ service, index, onChange }) {
               onChange={(v) => set("suitedFor", v)}
               addLabel="Add"
               placeholder="e.g. Structure"
+            />
+          </Field>
+        )}
+
+        {/* Also Available offerings (Author Coaching only) */}
+        {index === 0 && (
+          <Field label="Also Available" hint="Extra offerings shown below the features, e.g. Writing Skills Development for Young Learners">
+            <OfferingsEditor
+              items={service.offerings || []}
+              onChange={(v) => set("offerings", v)}
+              addLabel="Add an offering"
             />
           </Field>
         )}

@@ -10,7 +10,6 @@ export default function ServicesSection({ onBook }) {
   const services = content.services.map((s, i) => ({
     ...s,
     icon: staticServices[i]?.icon,
-    offerings: staticServices[i]?.offerings,
   }));
 
   const cardNumbers = ["01", "02"];

@@ -59,6 +59,13 @@ export const DEFAULT_CONTENT = {
           title: "Online Writing Masterclass Series",
           description: "Refine writing, publishing strategies, and author branding through expert feedback and peer networking.",
         },
+        {
+          title: "English Language Learning (ELL) Coaching for Adults",
+          description:
+            "Private and group English language coaching dedicated to proficiency development — taking adults from any level through interactive speaking and listening skills, from A1 to advanced B2, C1+.",
+          badge: "A1 → C1+",
+          type: "Private & Group",
+        },
       ],
       focusAreas: [],
       suitedFor: [],
@@ -128,8 +135,8 @@ export const DEFAULT_CONTENT = {
     linkedin: "https://linkedin.com/in/your-profile",
     x: "https://twitter.com/your-profile",
     facebook: "https://facebook.com/your-profile",
-    instagram: "https://instagram.com/your-profile",
-    youtube: "https://youtube.com/@your-channel",
+    instagram: "https://www.instagram.com/coach.laurien/",
+    youtube: "https://www.youtube.com/@Coach-Laurien",
   },
   contact: {
     email: "hello@coachlaurien.com",

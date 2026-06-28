@@ -93,9 +93,9 @@ export const services = [
 export const socialLinks = [
   { icon: LinkedInIcon, url: "https://linkedin.com/in/your-profile", label: "LinkedIn" },
   { icon: XIcon, url: "https://twitter.com/your-profile", label: "X (Twitter)" },
-  { icon: FacebookIcon, url: "https://facebook.com/your-profile", label: "Facebook" },
-  { icon: InstagramIcon, url: "https://instagram.com/your-profile", label: "Instagram" },
-  { icon: YouTubeIcon, url: "https://youtube.com/@your-channel", label: "YouTube" },
+  { icon: FacebookIcon, url: "https://www.facebook.com/share/1CxcnKH5m6/", label: "Facebook" },
+  { icon: InstagramIcon, url: "https://www.instagram.com/coach.laurien?igsh=dGN0ZGZ6d2Fib2Rk", label: "Instagram" },
+  { icon: YouTubeIcon, url: "https://youtube.com/@coach-laurien?si=wmtqvL8Nrnw-XJ9B", label: "YouTube" },
 ];
 
 export const testimonials = [

@@ -134,9 +134,9 @@ export const DEFAULT_CONTENT = {
   social: {
     linkedin: "https://linkedin.com/in/your-profile",
     x: "https://twitter.com/your-profile",
-    facebook: "https://facebook.com/your-profile",
-    instagram: "https://www.instagram.com/coach.laurien/",
-    youtube: "https://www.youtube.com/@Coach-Laurien",
+    facebook: "https://www.facebook.com/share/1CxcnKH5m6/",
+    instagram: "https://www.instagram.com/coach.laurien?igsh=dGN0ZGZ6d2Fib2Rk",
+    youtube: "https://youtube.com/@coach-laurien?si=wmtqvL8Nrnw-XJ9B",
   },
   contact: {
     email: "hello@coachlaurien.com",

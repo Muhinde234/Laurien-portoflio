@@ -37,7 +37,7 @@ export function Textarea({ value, onChange, placeholder, rows = 3, className = "
 }
 
 /** Editable list of strings — add / edit / remove / reorder */
-export function ListEditor({ items, onChange, addLabel = "Add item", placeholder = "Type here…" }) {
+export function ListEditor({ items = [], onChange, addLabel = "Add item", placeholder = "Type here…" }) {
   const update = (idx, val) => {
     const next = [...items];
     next[idx] = val;
@@ -109,7 +109,7 @@ export function ListEditor({ items, onChange, addLabel = "Add item", placeholder
 }
 
 /** Editable list of "Also Available" offering objects — title, description, optional badge & type */
-export function OfferingsEditor({ items, onChange, addLabel = "Add offering" }) {
+export function OfferingsEditor({ items = [], onChange, addLabel = "Add offering" }) {
   const update = (idx, key, val) => {
     const next = [...items];
     next[idx] = { ...next[idx], [key]: val };

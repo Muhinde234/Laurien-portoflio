@@ -27,7 +27,7 @@ import SettingsEditor from "./editors/SettingsEditor";
 const TABS = [
   { id: "hero",      label: "Hero",             Icon: Home,          desc: "Main headline & buttons" },
   { id: "about",     label: "About",            Icon: User,          desc: "Your story & values" },
-  { id: "services",  label: "Services",         Icon: ClipboardList, desc: "Author & Youth coaching" },
+  { id: "services",  label: "Services",         Icon: ClipboardList, desc: "Add, edit, or remove service cards" },
   { id: "booking",   label: "Work With Me",     Icon: CalendarDays,  desc: "Booking section" },
   { id: "trustedBy", label: "Trusted By",       Icon: Tag,           desc: "Strip of client tags" },
   { id: "social",    label: "Social Links",     Icon: Link2,         desc: "Social media URLs" },

@@ -1,18 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useContent } from "../../context/ContentContext";
-import { services as staticServices } from "../../data/siteData";
+import { SERVICE_ICONS, DEFAULT_SERVICE_ICON } from "../../data/serviceIcons";
 
 export default function ServicesSection({ onBook }) {
   const [servicesRef, servicesVisible] = useScrollReveal();
   const { content } = useContent();
 
-  const services = content.services.map((s, i) => ({
+  const services = content.services.map((s) => ({
     ...s,
-    icon: staticServices[i]?.icon,
+    icon: SERVICE_ICONS[s.icon] || SERVICE_ICONS[DEFAULT_SERVICE_ICON],
   }));
-
-  const cardNumbers = ["01", "02"];
 
   return (
     <section
@@ -43,7 +41,7 @@ export default function ServicesSection({ onBook }) {
         <div className="grid md:grid-cols-2 gap-5 items-start">
           {services.map((service, index) => {
             const IconComponent = service.icon;
-            const num = cardNumbers[index];
+            const num = String(index + 1).padStart(2, "0");
 
             return (
               <article

@@ -37,6 +37,7 @@ export const DEFAULT_CONTENT = {
   },
   services: [
     {
+      icon: "BookOpen",
       title: "Author's Coaching",
       intro: "For authors who want their work to stand,",
       subtitle: "",
@@ -73,6 +74,7 @@ export const DEFAULT_CONTENT = {
       cta: "Book Me",
     },
     {
+      icon: "Mic",
       title: "Youth Coaching",
       intro: "",
       subtitle:
@@ -169,30 +171,36 @@ export const DEFAULT_CONTENT = {
   aboutPhoto: null,
 };
 
+const isPlainObject = (val) =>
+  val !== null && typeof val === "object" && !Array.isArray(val);
+
 function deepMerge(defaults, saved) {
   const result = { ...defaults };
   for (const key of Object.keys(saved)) {
-    if (
-      key in defaults &&
-      Array.isArray(defaults[key]) &&
-      Array.isArray(saved[key])
-    ) {
-      // Keep saved items but append any new default items not yet in saved
-      result[key] =
-        saved[key].length < defaults[key].length
-          ? [...saved[key], ...defaults[key].slice(saved[key].length)]
-          : saved[key];
-    } else if (
-      key in defaults &&
-      typeof defaults[key] === "object" &&
-      !Array.isArray(defaults[key]) &&
-      saved[key] !== null &&
-      typeof saved[key] === "object" &&
-      !Array.isArray(saved[key])
-    ) {
-      result[key] = deepMerge(defaults[key], saved[key]);
+    const defaultVal = defaults[key];
+    const savedVal = saved[key];
+
+    if (Array.isArray(defaultVal) && Array.isArray(savedVal)) {
+      const isObjectArray = defaultVal.some(isPlainObject) || savedVal.some(isPlainObject);
+      if (isObjectArray) {
+        // Merge each saved entry with its matching default template so any
+        // field missing from older saved data (or a newly added section
+        // item) always falls back to a safe default instead of undefined.
+        const template = defaultVal[0] || {};
+        result[key] = savedVal.map((item, i) =>
+          isPlainObject(item) ? deepMerge(defaultVal[i] || template, item) : item
+        );
+      } else {
+        // Keep saved items but append any new default items not yet in saved
+        result[key] =
+          savedVal.length < defaultVal.length
+            ? [...savedVal, ...defaultVal.slice(savedVal.length)]
+            : savedVal;
+      }
+    } else if (key in defaults && isPlainObject(defaultVal) && isPlainObject(savedVal)) {
+      result[key] = deepMerge(defaultVal, savedVal);
     } else {
-      result[key] = saved[key];
+      result[key] = savedVal;
     }
   }
   return result;

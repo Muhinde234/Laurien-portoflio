@@ -142,7 +142,7 @@ export const DEFAULT_CONTENT = {
   },
   contact: {
     email: "hello@coachlaurien.com",
-    calendlyUrl: "https://calendly.com/laurienikuzwe25",
+    calendlyUrl: "https://calendly.com/coachlaurien",
     label: "Ready to Begin?",
     headlineStart: "Let's start a",
     headlineHighlight: "conversation.",
@@ -165,7 +165,7 @@ export const DEFAULT_CONTENT = {
     ctaHeadingHighlight: "that holds.",
   },
   settings: {
-    adminPassword: "laurien2024",
+    adminPassword: "",
   },
   profilePhoto: null,
   aboutPhoto: null,

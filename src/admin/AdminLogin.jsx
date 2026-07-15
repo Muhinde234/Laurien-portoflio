@@ -125,15 +125,7 @@ export default function AdminLogin({ onLogin }) {
           </div>
         </div>
 
-        {/* Hint */}
-        <p className="text-center text-sm text-offwhite/20 mt-6 leading-relaxed">
-          Default password:{" "}
-          <span className="font-mono text-champagne/40 bg-champagne/5 border border-champagne/10 px-1.5 py-0.5 rounded">
-            laurien2024
-          </span>
-          <br />
-          <span className="text-offwhite/15">Change it anytime in Settings.</span>
-        </p>
+
       </div>
     </div>
   );

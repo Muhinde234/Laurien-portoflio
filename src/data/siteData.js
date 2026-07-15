@@ -9,7 +9,7 @@ import {
 import laurien from "../assets/laurien.jpeg";
 import prof1 from "../assets/prof1.jpg";
 
-export const CALENDLY_URL = "https://calendly.com/laurienikuzwe25";
+export const CALENDLY_URL = "https://calendly.com/coachlaurien";
 export const FAQ_URL = "/faq.html";
 export const CHATBASE_ID = "oVsrKnGcv-xjLc4RbEmVE";
 

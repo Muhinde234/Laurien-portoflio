@@ -37,7 +37,20 @@ export default function ContactSection() {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      const { ref: dbRef, push, serverTimestamp } = await import("firebase/database");
+      const { db } = await import("../../lib/firebase");
+      await push(dbRef(db, "messages"), {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        message: form.message,
+        read: false,
+        createdAt: Date.now(),
+      });
+    } catch (err) {
+      console.error("Failed to save message:", err);
+    }
     setLoading(false);
     setSubmitted(true);
   };

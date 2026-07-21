@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Home,
   User,
@@ -7,12 +7,15 @@ import {
   Tag,
   Link2,
   Mail,
+  Inbox,
   Settings,
   Menu,
   X,
   ExternalLink,
   LogOut,
 } from "lucide-react";
+import { ref, onValue } from "firebase/database";
+import { db } from "../lib/firebase";
 import defaultPhoto from "../assets/laurien.jpeg";
 import { useContent } from "../context/ContentContext";
 import HeroEditor from "./editors/HeroEditor";
@@ -23,6 +26,7 @@ import TrustedByEditor from "./editors/TrustedByEditor";
 import SocialEditor from "./editors/SocialEditor";
 import ContactEditor from "./editors/ContactEditor";
 import SettingsEditor from "./editors/SettingsEditor";
+import MessagesViewer from "./MessagesViewer";
 
 const TABS = [
   { id: "hero",      label: "Hero",             Icon: Home,          desc: "Main headline & buttons" },
@@ -32,6 +36,7 @@ const TABS = [
   { id: "trustedBy", label: "Trusted By",       Icon: Tag,           desc: "Strip of client tags" },
   { id: "social",    label: "Social Links",     Icon: Link2,         desc: "Social media URLs" },
   { id: "contact",   label: "Contact & Footer", Icon: Mail,          desc: "Email, booking link & footer" },
+  { id: "messages",  label: "Messages",         Icon: Inbox,         desc: "Contact form submissions" },
   { id: "settings",  label: "Settings",         Icon: Settings,      desc: "Password & backup" },
 ];
 
@@ -40,6 +45,19 @@ export default function AdminDashboard({ onLogout }) {
   const laurienPhoto = content.profilePhoto || defaultPhoto;
   const [activeTab, setActiveTab] = useState("hero");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  useEffect(() => {
+    const unsub = onValue(ref(db, "messages"), (snap) => {
+      const data = snap.val();
+      if (data) {
+        setUnreadCount(Object.values(data).filter((m) => !m.read).length);
+      } else {
+        setUnreadCount(0);
+      }
+    });
+    return () => unsub();
+  }, []);
 
   const renderEditor = () => {
     switch (activeTab) {
@@ -50,6 +68,7 @@ export default function AdminDashboard({ onLogout }) {
       case "trustedBy": return <TrustedByEditor />;
       case "social":    return <SocialEditor />;
       case "contact":   return <ContactEditor />;
+      case "messages":  return <MessagesViewer />;
       case "settings":  return <SettingsEditor onLogout={onLogout} />;
       default:          return null;
     }
@@ -112,7 +131,7 @@ export default function AdminDashboard({ onLogout }) {
                 <Icon
                   className={`w-4 h-4 shrink-0 transition-colors duration-200 ${active ? "text-champagne" : "text-gray-400"}`}
                 />
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <p className={`leading-none truncate ${active ? "font-semibold text-gray-900" : "font-medium"}`}>
                     {tab.label}
                   </p>
@@ -120,6 +139,11 @@ export default function AdminDashboard({ onLogout }) {
                     {tab.desc}
                   </p>
                 </div>
+                {tab.id === "messages" && unreadCount > 0 && (
+                  <span className="shrink-0 px-1.5 py-0.5 rounded-full bg-champagne text-navy text-[10px] font-bold">
+                    {unreadCount}
+                  </span>
+                )}
               </button>
             );
           })}
